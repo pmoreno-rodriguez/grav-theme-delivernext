@@ -1,0 +1,60 @@
+{% extends 'partials/base.html.twig' %}
+
+{% import 'macros/macros.html.twig' as nav_macros %}
+{% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
+
+{% block bottom %}
+    {{ parent() }}
+    {% if show_onpage_menu == true %}
+    <script defer>
+        
+        window.onload = function () {
+            scrollSpy('#navbar', {
+              sectionClass: '.scrollspy',
+              menuActiveTarget: 'li > a.menu-item',
+              offset: 100,
+              // smooth scroll
+              smoothScroll: true,
+              smoothScrollBehavior: function(element) {
+                element.scrollIntoView({ behavior: 'smooth' }) // default behavior
+              }
+            })
+          }
+    
+      </script>
+    {% endif %}
+{% endblock %}
+
+
+{% block header_navigation %}
+    {% if show_onpage_menu == true %}
+        <ul class="navigation">
+            {% for module in page.collection() %}
+                {% set current_module = (module.active or module.activeChild) ? 'active' : '' %}
+                <li class="{{ current_module }}"><a class="menu-item" href="#{{ _self.pageLinkName(module.menu) }}">{{ module.menu }}</a></li>
+            {% endfor %}
+            {% if theme_var('custommenus.enabled') %}
+                {% for mitem in theme_var('custommenu') %}
+                    <li>
+                        <a href="{{ mitem.url }}" target="{{ mitem.target }}">
+                        {% if mitem.icon %}
+                            <i class="fa fa-{{ mitem.icon }}"></i>
+                        {% endif %}
+                        {{ mitem.text|raw }}
+                        </a>
+                    </li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    {% else %}
+        {{ parent() }}
+    {% endif %}
+{% endblock %}
+
+
+{% block content %}
+    {% for module in page.collection() %}
+        <div id="{{ _self.pageLinkName(module.menu) }}"></div>
+        {{ module.content|raw }}
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,30 @@
+<div class="modular-row team {{ page.header.module_classes }}">
+    {{ content|raw }}
+
+    {% if page.header.members %}
+    <div class="members">
+        {% for member in page.header.members %}
+        <div class="member">
+            <img src="{{page.media[member.image].url}}" alt="">
+            <h4>{{ member.name }}</h4>
+            <span>{{ member.title }}</span>
+            <hr>
+            <p>{{ member.info }}</p>
+            <ul class="social-icons">
+                {% for item in member.social_media %}
+                <li>
+                    <a target="_blank" 
+                    href="{{ item.url }}" 
+                    alt="{{ item.name|raw }}" 
+                    title="{{ item.name|capitalize|raw }}">
+                    <i class="fa fa-{{ item.name|lower|raw }}"></i>
+                    </a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="callout-line"></div>
+    {% endif %}
+</div>

@@ -1,0 +1,11 @@
+form:
+  fields:
+  
+    header.blog_url:
+      type: text
+      toggleable: true
+      label: DELIVERNEXT.ADMIN.BLOG.CONFIGURATION.BLOG_ROUTE
+      help: DELIVERNEXT.ADMIN.BLOG.CONFIGURATION.BLOG_ROUTE_HELP
+      default: '/blog'
+      placeholder: '/blog'
+      size: medium

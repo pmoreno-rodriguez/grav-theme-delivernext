@@ -1,0 +1,131 @@
+#delivernext {
+   --primary-bg: #4a6a8a; 
+  --secondary-bg: #4a6a8a30; 
+  --hover-bg: #5b7ea5; 
+  --highlight-bg: #7a9bc0a0; 
+  --active-bg: #2f4c6a; 
+  --primary-color: #ffffff;
+  --secondary-color: #1f3348; 
+  --bold-color: #122232; 
+  --input-checked: #6f7b8a; 
+}
+#delivernext #admin-main {
+  --list-items: #7e909010;
+  --list-item: #414147;
+  --border-color: #d8e1e1;
+}
+
+#delivernext .admin_options {
+  background-color: var(--highlight-bg);
+}
+
+#delivernext .admin_section,
+#delivernext .admin-block h1,
+#delivernext .gpm-item-info {
+  border: 1px solid var(--highlight-bg) !important;
+}
+
+#delivernext .switch-grav.switch-toggle input.highlight:checked + label,
+#delivernext .form-field .button,
+#delivernext .button-small,
+#delivernext .remove-times,
+#delivernext .form-tabs .tabs-nav a {
+  background-color: var(--primary-bg);
+  color: var(--primary-color);
+}
+
+#delivernext .switch-grav.switch-toggle input:checked + label {
+  color: var(--input-checked);
+  background: var(--secondary-bg);
+}
+
+#delivernext .form-field .button:hover,
+#delivernext .button-small:hover {
+  background-color: var(--hover-bg);
+}
+
+#delivernext .form-tabs .tabs-nav a {
+  background-color: var(--highlight-bg) !important;
+  color: var(--secondary-color) !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+}
+
+#delivernext .form-tabs .tabs-nav a.active,
+#delivernext .form-tabs .tabs-nav a:hover,
+#delivernext .admin-block .button {
+  background-color: var(--active-bg) !important;
+  color: var(--primary-color) !important;
+}
+
+#delivernext .admin-block {
+  padding: 1em;
+}
+
+#delivernext .admin-block h1 {
+  background-color: var(--secondary-bg);
+  font-size: 2rem;
+}
+
+#delivernext .admin-block h1,
+#delivernext .admin-block h2,
+#delivernext .admin-block h3,
+#delivernext .admin-block h4,
+#delivernext .admin-block h5,
+#delivernext .admin-block h6 {
+  padding: 0.8rem !important;
+  margin: 0 0 1rem !important;
+}
+
+#delivernext .bold {
+  font-weight: 600;
+  color: var(--bold-color);
+}
+
+#delivernext .bold-light {
+  font-weight: 600;
+}
+
+#delivernext .form-list-wrapper .collection-actions {
+  margin: 1em 0;
+}
+
+#delivernext #admin-main .admin-block h2,
+#delivernext #admin-main .admin-block h3,
+#delivernext #admin-main .admin-block h4,
+#delivernext #admin-main .admin-block h5,
+#delivernext #admin-main .admin-block h6 {
+  padding: 0 1.5rem 0.5rem;
+  margin: 0 0 1rem;
+}
+
+#delivernext #admin-main .admin-block .list-title {
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  font-size: 1.25rem;
+  color: var(--list-item);
+}
+#delivernext #admin-main .admin-block .list-item {
+  text-rendering: optimizeLegibility;
+  font-weight: 600;
+  color: var(--list-item);
+}
+
+#delivernext #admin-main .admin-block .form-list-wrapper ul[data-collection-holder] > li {
+  background: var(--list-items);
+  border-color: var(--border-color);
+}
+#delivernext #admin-main .admin-block .form-list-wrapper .collection-sort {
+  background: var(--border-color);
+}
+#delivernext #admin-main .admin-block .form-list-wrapper .collection-actions {
+  margin-top: 1em;
+}
+
+#delivernext #admin-main .admin-block .admin_section {
+  border: 1px solid var(--border-color) !important;
+}
+
+#delivernext .admin-block .colum_admin {
+  margin: 0.5em;
+}

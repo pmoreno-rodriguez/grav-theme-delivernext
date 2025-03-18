@@ -1,0 +1,18 @@
+{% extends 'partials/base.html.twig' %}
+
+{% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
+
+{% block content %}
+{% if title_choice == 'image' and show_featured_image %}
+    <div class="flush-top blog-header blog-header-image" style="background: {{ title_bg_color }} url({{ featured_image.url }}) no-repeat right;">
+{% else %}
+    <div class="flush-top blog-header" style="background-color: {{ title_bg_color }};">
+{% endif %}
+    <h1 style="color: {{ title_text_color }}">{{ page.title|raw }}</h1>
+    </div>
+    {{ page.content|raw }}
+    {% for module in page.collection() %}
+        <div id="{{ _self.pageLinkName(module.menu) }}"></div>
+        {{ module.content|raw }}
+    {% endfor %}
+{% endblock %}

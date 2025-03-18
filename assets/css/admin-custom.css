@@ -1,0 +1,55 @@
+#delivernext .footer_options {
+  background-color: #87b6727a;
+}
+#delivernext .footer_section {
+  border: 1px solid #87b6727a;
+  margin-bottom: 1rem;
+}
+#delivernext .colum-admin {
+  margin: 0.5em 0.5em;
+}
+
+#delivernext .switch-grav.switch-toggle input.highlight:checked + label,
+#delivernext .form-field .button,
+#delivernext .button-small {
+  background-color: #628553;
+  color: rgb(255, 255, 255);
+}
+#delivernext .form-field .button:hover,
+#delivernext .button-small:hover {
+  background-color: #729263;
+}
+#delivernext .switch-grav.switch-toggle input:checked + label {
+  color: #6f7b8a;
+  background: #62855354;
+}
+#delivernext .remove-times,
+#delivernext .form-tabs .tabs-nav a {
+  background-color: #628553;
+}
+
+#delivernext .form-tabs .tabs-nav a.active,
+#delivernext .form-tabs .tabs-nav a:hover,
+#delivernext .admin-block .button {
+  background-color: #4c723ada !important;
+  color: rgb(255, 255, 255) !important;
+}
+#delivernext .form-tabs .tabs-nav a {
+  background-color: #7ca7689d !important;
+  color: rgb(59, 59, 59) !important;
+}
+
+#delivernext .admin-block h1,
+#delivernext .gpm-item-info  {
+  border: 1px solid #87b6727a !important;
+}
+
+#delivernext .admin-block h1 {
+  background-color: #62855354;
+  padding: 0.8rem;
+  font-size: 2rem;
+}
+#delivernext .admin-block h2 {
+  padding: 0.8rem !important;
+  margin: 0 0 1rem 0 !important;
+}

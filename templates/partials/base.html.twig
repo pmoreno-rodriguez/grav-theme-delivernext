@@ -1,0 +1,116 @@
+{% set theme_name = config.system.pages.theme %}
+{% set blueprint_path = "user://themes/#{theme_name}/blueprints.yaml" %}
+{% set blueprint_content = read_file(blueprint_path) %}
+{% if blueprint_content %}
+{% set blueprint_data = blueprint_content|yaml_decode %}
+<!--
+    DeliverNext Theme for Grav
+
+    Fork from Deliver Grav theme by Pedro Moreno <https://github.com/pmoreno-rodriguez>
+    https://github.com/pmoreno-rodriguez/grav-theme-delivernext
+    
+    Grav theme version: {{ blueprint_data.version }}
+-->
+{% endif %}
+
+{# SET THEME OPTIONS #}
+{% set theme_config = attribute(config.themes, config.system.pages.theme) %}
+{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+{% set logo_enabled = theme_var('theme_logo_enabled')|defined(false) %}
+
+{# Canonical URL #}
+{% set canonical_url = page.url(true, true) %}
+
+{# Tile settings #}
+{% set show_title = header_var('show_title')|defined(true) %}
+{% set page_title = page.title %}
+{% set title_text_color = header_var('title_text_color')|defined('#ffffff') %}
+{% set title_bg_color = header_var('title_bg_color')|defined('#b4b093') %}
+{% set title_choice = header_var('title_bg_choice')|defined('color') %}
+{% set site_title = site.title|e('html') %}
+{% set meta_title = page_title is defined ? page_title|e ~ ' | ' ~ site_title : site_title %}
+
+{# Description #}
+{% if not page.home() %}
+    {% set meta_description = page.summary|trim|striptags|raw|e('html_attr') %}
+{% elseif site.metadata.description %}
+    {% set meta_description = site.metadata.description %}
+{% else %}
+    {% set meta_description = site_title %}
+{% endif %}
+
+{# Featured Image #}
+{% set show_featured_image = header_var('show_featured_image')|defined(false) %}
+{% set featured_image = page.media[header.featured_image] ?: page.media.images|first %}
+{% set big_header = header_var('big_header')|defined(true) %}
+
+{# Social Media #}
+{% set social = theme_var('social_enabled')|defined(false) %}
+
+{# SET DEFAULT GRAV LANGUAGE #}
+{% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
+
+{# SET ONEPAGE_MENU #}
+{% set show_onpage_menu = header_var('onpage_menu')|defined(false) %}
+
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+   
+{% block head %}
+    {% include 'partials/head.html.twig' %}
+{% endblock %}
+
+<body id="top" {% if page.header.body_classes %}class="{{ page.header.body_classes }}"{% endif %}>
+    <div id="sb-site">
+        {% block header %}
+        <header id="header">
+            {% if logo_enabled %}
+                {% include 'partials/logo.html.twig' %}
+            {% endif %}
+            <div id="navbar">
+                {% block header_extra %}{% endblock %}
+                {% block header_navigation %}
+                    {% include 'partials/navigation.html.twig' %}
+                {% endblock %}
+                {% include 'partials/search.html.twig' %}
+                <span class="panel-activation sb-toggle-left navbar-left menu-btn fa fa-bars"></span>
+            </div>
+        </header>
+        {% endblock %}
+
+        {% block showcase %}{% endblock %}
+
+        {% block body %}
+            <section id="body" {% if bodyclass %}class="{{ bodyclass }}" {% endif %}>
+                {% block content %}{% endblock %}
+            </section>
+        {% endblock %}
+
+        {% block footer %}
+            {% include 'partials/footer.html.twig' %}
+        {% endblock %}
+
+        {% include 'partials/page/backtotop.html.twig' %}
+
+    </div>
+    <div class="sb-slidebar sb-left sb-width-thin">
+        <div id="panel">
+            {% include 'partials/navigation.html.twig' %}
+        </div>
+    </div>
+    {% block bottom %}
+        {{ assets.js('bottom')|raw }}
+        <script>
+            $(function () {
+                $(document).ready(function () {
+                    $.slidebars({
+                        hideControlClasses: true,
+                        scrollLock: true
+                    });
+                });
+            });
+        </script>
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+{% import 'macros/macros.html.twig' as nav_macros %}
+
+<ul class="navigation">
+    {% if theme_config.dropdown.enabled %}
+        {{ nav_macros.nav_loop(pages) }}
+    {% else %}
+        {% for page in pages.children %}
+            {% if page.visible %}
+                {% set current_page = (page.active or page.activeChild) ? 'active' : '' %}
+                <li class="{{ current_page }}">
+                    <a href="{{ page.url }}">
+                        {% if page.header.icon %}<i class="fa fa-{{ page.header.icon }}"></i>{% endif %}
+                        {{ page.menu }}
+                    </a>
+                </li>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    
+    {% if theme_var('custommenus.enabled') %}
+        {% for mitem in theme_var('custommenu') %}
+        <li>
+            <a href="{{ mitem.url }}" target="{{ mitem.target }}">
+            {% if mitem.icon %}
+                <i class="fa fa-{{ mitem.icon }}"></i>
+            {% endif %}
+            {{ mitem.text|raw }}
+            </a>
+        </li>
+        {% endfor %}
+    {% endif %}
+</ul>           
