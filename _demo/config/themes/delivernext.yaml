@@ -1,0 +1,91 @@
+enabled: true
+dropdown:
+  enabled: true
+sticky_menu:
+  enabled: false
+production-mode: false
+custom_css: '0'
+custom_js: '0'
+social_enabled: true
+social:
+  -
+    name: Facebook
+    url: '#'
+    target: _blank
+    icon: 'fa fa-facebook'
+  -
+    name: Instagram
+    url: 'https://www.instagram.com/hukawati.es/'
+    target: _self
+    icon: 'fa fa-instagram'
+  -
+    name: 'Send Mail'
+    url: 'mailto:#'
+    target: _self
+    icon: 'fa fa-envelope-o'
+footer:
+  copyright_text: 'Copyright 2024 Grav Team. All rights reserved.'
+  contact_section_label: Contact
+  quick_links_label: 'Quick Links'
+  about:
+    description: "Developed by **<a href=\"https://getgrav.org/about\">Grav Team</a>**<br>\nMade with **[Grav CMS](https://getgrav.org?target=_blank)**.\n\nPraesent commodo cursus magna, vel scelerisque nisl consectetur et. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+  gps: '40.65258514990599, -73.78125222264696'
+  address:
+    -
+      line: '222 Ave C South'
+    -
+      line: 'Saskatoon, Saskatchewan'
+    -
+      line: 'Canada S7K 2N5'
+  quick_links_items:
+    -
+      text: Portfolio
+      url: portfolio
+      target: _self
+    -
+      text: About
+      url: about
+      target: _self
+    -
+      text: Services
+      url: services
+      target: _self
+    -
+      text: Archive
+      url: archive
+      target: _self
+    -
+      text: Blog
+      url: blog
+      target: _self
+    -
+      text: 'Contact Us'
+      url: contact
+      target: _self
+  other_menu:
+    -
+      text: About
+      url: about
+      target: _self
+    -
+      text: 'Privacy Policy'
+      url: '#'
+      target: _self
+    -
+      text: Contact
+      url: contact
+      target: _self
+custommenus:
+  enabled: true
+custommenu:
+  -
+    text: 'Grav CMS'
+    icon: home
+    url: 'https://getgrav.org'
+    target: _blank
+theme_logo_enabled: true
+type_logo_header: text
+theme_logo: {  }
+theme_logo_mobile: {  }
+back_to_top_button:
+  enabled: false
