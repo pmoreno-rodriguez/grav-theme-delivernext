@@ -2417,6 +2417,7 @@ ul.pagination {
   border-radius: 100%;
   display: none;
   transition: all 0.3s ease;
+  z-index: 10000;
 }
 #back-to-top i, #back-to-top svg {
   color: #fff;

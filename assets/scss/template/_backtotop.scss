@@ -16,6 +16,7 @@ $transition-duration: 0.3s;
   border-radius: 100%;
   display: none;
   transition: all $transition-duration ease;
+  z-index: 10000;
 
   & i,
   & svg {
