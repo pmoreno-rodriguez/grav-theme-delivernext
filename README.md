@@ -46,7 +46,7 @@ You should now have all the theme files under
 
     /your/site/grav/user/themes/delivernext
 
->> NOTE: This theme requires the [Grav](http://github.com/getgrav/grav), [Error](https://github.com/getgrav/grav-theme-error), [Problems](https://github.com/getgrav/grav-plugin-problems), [Translate Date](https://github.com/getgrav/grav-plugin-translate-date), and [Twig Extensions](https://github.com/getgrav/grav-plugin-twig-extensions) plugins.
+>> NOTE: This theme requires the [Grav](http://github.com/getgrav/grav), [Error](https://github.com/getgrav/grav-theme-error), [Problems](https://github.com/getgrav/grav-plugin-problems), [Translate Date](https://github.com/Karmalakas/grav-plugin-translate-date) and [Twig Extensions](https://github.com/bitstarr/grav-plugin-twig-extensions) plugins.
 
 # Updating
 
