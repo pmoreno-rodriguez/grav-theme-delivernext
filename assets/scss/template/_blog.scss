@@ -148,16 +148,128 @@
 }
 
 .related-pages {
-    li {
-        a {
-            display: block;
+    margin: 1rem 0;
+    font-family: inherit;
+    
+    .related-item {
+        display: flex;
+        gap: 1rem;
+        margin-bottom: 1.25rem;
+        align-items: flex-start;
+        padding: 0.75rem;
+        background: lighten($border-color, 6%);
+        border-radius: 4px;
+        transition: all 0.2s ease;
+        border: 1px solid $border-color;
+        
+        &:hover {
+            background: $white;
+            box-shadow: 0 2px 8px rgba($black, 0.08);
+            border-color: darken($border-color, 5%);
         }
-    }
-    .score {
-        display: block;
-        float: right;
-        color: #999;
-        font-size: 85%
+        
+        .related-image {
+            flex: 0 0 80px;
+            max-width: 80px;
+            
+            a {
+                display: block;
+                overflow: hidden;
+                border-radius: 3px;
+                border: 1px solid $border-color;
+                
+                img {
+                    width: 100%;
+                    height: auto;
+                    display: block;
+                    transition: transform 0.3s ease;
+                }
+                
+                &:hover img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+        
+        .related-content {
+            flex: 1;
+            min-width: 0;
+            
+            a {
+                display: block;
+                text-decoration: none;
+                color: $core-accent-dark;
+                font-weight: 500;
+                margin-bottom: 0.25rem;
+                line-height: 1.3;
+                
+                &:hover {
+                    color: $secondary-link;
+                    text-decoration: underline;
+                }
+            }
+            
+            &.full-width {
+                padding-left: 0;
+            }
+            
+            .published {
+                display: block;
+                color: $core-text;
+                font-size: 0.85rem;
+                line-height: 1.4;
+            }
+            
+            .catlist {
+                a {
+                    display: inline;
+                    color: $core-accent;
+                    font-weight: normal;
+                    font-size: 0.8rem;
+                    
+                    &:hover {
+                        color: $secondary-link;
+                        text-decoration: underline;
+                    }
+                }
+                
+                .sep {
+                    color: $light-gray;
+                }
+            }
+            
+            .score {
+                display: inline-block;
+                margin-left: 0.5rem;
+                color: $white;
+                font-size: 0.75rem;
+                background: $core-accent;
+                padding: 0.15rem 0.5rem;
+                border-radius: 12px;
+                font-weight: 500;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            flex-direction: row;
+            align-items: center;
+            
+            .related-image {
+                flex: 0 0 60px;
+                max-width: 60px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            flex-direction: column;
+            align-items: flex-start;
+            
+            .related-image {
+                flex: 0 0 100%;
+                max-width: 120px;
+                margin-bottom: 0.5rem;
+            }
+        }
     }
 }
 
