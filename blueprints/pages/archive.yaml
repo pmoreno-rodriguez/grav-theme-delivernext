@@ -1,0 +1,19 @@
+extends@: default
+
+form:
+  fields:
+    tabs:
+
+      fields:
+        archive:
+          type: tab
+          title: DELIVERNEXT.ADMIN.BLOG.TAB
+
+          fields:
+             _configTitle:
+                type: section
+                title: DELIVERNEXT.ADMIN.BLOG.CONFIGURATION.LABEL
+                import@:
+                  type: partials/blog-url
+                  context: blueprints://pages
+        
