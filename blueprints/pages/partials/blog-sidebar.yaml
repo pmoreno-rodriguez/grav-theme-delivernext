@@ -13,6 +13,14 @@ form:
       validate:
         type: bool
     
+    header.sidebar_content:
+      type: textarea
+      label: DELIVERNEXT.ADMIN.BLOG.CONFIGURATION.SIDEBAR_CONTENT
+      placeholder: DELIVERNEXT.ADMIN.BLOG.CONFIGURATION.SIDEBAR_DEFAULT_TEXT
+      style: vertical
+      rows: 5            
+      markdown: true 
+    
     # header.show_featured:
     #   type: toggle
     #   toggleable: true
