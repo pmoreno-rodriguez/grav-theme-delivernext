@@ -1,3 +1,11 @@
+# v1.1.1
+## 03/27/2025
+
+1. [](#improved)
+    * Added `blog_url` variable to Archives blueprint 
+2. [](#bugfix)
+    * Fixed taxonomy and archives link paths in Archive template
+
 # v1.1.0
 ## 03/27/2025
 
