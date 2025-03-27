@@ -16,6 +16,17 @@
 {% set feed_url = base_url~'/'~page.slug %}
 {% endif  %}
 
+{# Set page title by taxonomy #}
+{% if uri.param('category') %}
+	{% set listing_title = 'DELIVERNEXT.BLOG.LISTING_TITLE_CATEGORY'|t ~ uri.param('category') %}
+{% elseif uri.param('tag') %}
+	{% set listing_title = 'DELIVERNEXT.BLOG.LISTING_TITLE_TAG'|t ~ uri.param('tag') %}
+{% elseif uri.param('author') %}
+	{% set listing_title = 'DELIVERNEXT.BLOG.LISTING_TITLE_AUTHOR'|t ~ uri.param('author') %}
+{% elseif uri.param('archives_month') %}
+    {% set listing_title = 'DELIVERNEXT.BLOG.LISTING_TITLE_MONTH'|t ~ uri.param('archives_month')|replace({'_': ' '}) %}
+{% endif %}
+
 {% block content %}
 
 {% if title_choice == 'image' %}
@@ -24,6 +35,7 @@
 	<div class="flush-top blog-header" style="background-color: {{ title_bg_color }};">
 {% endif %}
 	<h1 style="color: {{ title_text_color }}">{{ page.title|raw }}</h1>
+	{% if listing_title %}<p style="color: {{ title_text_color }}">{{ listing_title|raw }}</p>{% endif %}
 </div>
 	<div class="content-wrapper">
 	{% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
