@@ -90,13 +90,22 @@
   margin: 1em 0;
 }
 
-#delivernext #admin-main .admin-block h2,
-#delivernext #admin-main .admin-block h3,
-#delivernext #admin-main .admin-block h4,
-#delivernext #admin-main .admin-block h5,
-#delivernext #admin-main .admin-block h6 {
+#delivernext #blueprints .admin-block h2,
+#delivernext #blueprints .admin-block h3,
+#delivernext #blueprints .admin-block h4,
+#delivernext #blueprints .admin-block h5,
+#delivernext #blueprints .admin-block h6 {
+  padding: 0 1.5rem 0.5rem !important;
+  margin: 0 1rem 1rem !important;
+}
+
+#admin-main .admin-block h2,
+#admin-main .admin-block h3,
+#admin-main .admin-block h4,
+#admin-main .admin-block h5,
+#admin-main .admin-block h6 {
   padding: 0 1.5rem 0.5rem;
-  margin: 0 0 1rem;
+  margin: 0 0.2rem 1rem;
 }
 
 #delivernext #admin-main .admin-block .list-title {
