@@ -1,41 +1,63 @@
-{% if config.plugins.simplesearch.enabled %}
+{# OPTIONS FOR SIDEBAR #}
+{% set SidebarContent = page.header.sidebar_content|markdown %}
+
+{# Plugin Settings in Sidebar #}
+{% set showSyndicate = config.plugins.feed.enabled %}
+{% set showBreadcrumbs = config.plugins.breadcrumbs.enabled %}
+{% set showTaxonomyList = config.plugins.taxonomylist.enabled %}
+{% set showRelatedPages = config.plugins.relatedpages.enabled and related_pages|length > 0 %}
+{% set showRandom = config.plugins.random.enabled %}
+{% set showFeed = config.plugins.feed.enabled %}
+{% set showSimpleSearch = config.plugins.simplesearch.enabled %}
+{% set showArchives = config.plugins.archives.enabled and archives_data is not empty %}
+
+{# Show Search if plugin is enabled #}
+{% if showSimpleSearch %}
 <div class="sidebar-content">
-    <h4>SimpleSearch</h4>
-    {% include 'partials/simplesearch_searchbox.html.twig' %}
+    <h4>{{ 'DELIVERNEXT.SIDEBAR.SEARCH'|t }}</h4>
+    {% include 'partials/sidebar/simplesearch_searchbox.html.twig' %}
 </div>
 {% endif %}
-{% if config.plugins.relatedpages.enabled and related_pages|length > 0 %}
+{# Show Related Pages if plugin is enabled #}
+{% if showRelatedPages %}
 <div class="sidebar-content">
-    <h4>Related Posts</h4>
-    {% include 'partials/relatedpages.html.twig' %}
+    <h4>{{ 'DELIVERNEXT.SIDEBAR.RELATEDPAGES_SECTION'|t }}</h4>
+    {% include 'partials/sidebar/relatedpages.html.twig' %}
 </div>
 {% endif %}
-{% if config.plugins.random.enabled %}
+{# Show Random button if plugin is enabled #}
+{% if showRandom %}
 <div class="sidebar-content">
-	<h4>Random Article</h4>
-	<a class="button" href="{{ base_url_relative }}/random"><i class="fa fa-retweet"></i> I'm Feeling Lucky!</a>
+	<h4>{{ 'DELIVERNEXT.SIDEBAR.RANDOM_ARTICLE.LABEL'|t }}</h4>
+	<a class="button" href="{{ base_url_relative }}/random"><i class="fa fa-retweet"></i> {{ 'EDITORIAL.SIDEBAR.RANDOM_ARTICLE.BUTTON'|t }}</a>
 </div>
 {% endif %}
+{# Show Widget content if content is not empty #}
+{% if SidebarContent is not empty %}
 <div class="sidebar-content">
-	<h4>Some Text Widget</h4>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-</div>
-{% if config.plugins.taxonomylist.enabled %}
-<div class="sidebar-content">
-    <h4>Popular Tags</h4>
-    {% include 'partials/taxonomylist.html.twig' with {'taxonomy':'tag'} %}
+    {{ SidebarContent|raw }}
 </div>
 {% endif %}
-{% if config.plugins.archives.enabled %}
+{# Show Taxonomylist if plugin is enabled #}
+{% if showTaxonomyList %}
 <div class="sidebar-content">
-    <h4>Archives</h4>
-	{% include 'partials/archives.html.twig' %}
+    <h4>{{ 'DELIVERNEXT.SIDEBAR.TAXONOMYLIST.LABEL'|t }}</h4>
+    {% include 'partials/sidebar/taxonomylist.html.twig' with {'base_url':base_url, 'taxonomy':'tag'}  %}
 </div>
 {% endif %}
-{% if config.plugins.feed.enabled %}
+{# Show Archives if plugin is enabled #}
+{% if showArchives %}
+<div class="sidebar-content">
+    <h4>{{ 'DELIVERNEXT.SIDEBAR.ARCHIVES_SECTION'|t }}</h4>
+	{% include 'partials/sidebar/archives.html.twig'  with {'base_url': base_url} %}
+</div>
+{% endif %}
+{# Show Feeds if plugin is enabled #}
+{% if showFeed %}
 <div class="sidebar-content syndicate">
-    <h4>Syndicate</h4>
+    <h4>{{ 'DELIVERNEXT.SIDEBAR.SYNDICATE.LABEL'|t }}</h4>
     <a class="button-outline" href="{{ feed_url }}.atom"><i class="fa fa-rss-square"></i> Atom 1.0</a>
     <a class="button-outline" href="{{ feed_url }}.rss"><i class="fa fa-rss-square"></i> RSS</a>
+    {% if config.plugins.feed.enable_json_feed %}<a class="btn" href="{{ feed_url }}.json"><i class="fa fa-rss-square"></i> JSON</a>{% endif %}
 </div>
 {% endif %}

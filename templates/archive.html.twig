@@ -24,13 +24,13 @@
 			<div id="listing" class="g-block pure-u-2-3">
             {{ page.content|raw }}
 			  {% if config.plugins.taxonomylist.enabled %}
-             <h4>Archives by tags</h4>
-             {% include 'partials/taxonomylist.html.twig' with {'taxonomy':'tag'} %}
+             <h4>{{ 'DELIVERNEXT.ARCHIVES.BY_TAG'|t }}</h4>
+                {% include 'partials/taxonomylist.html.twig' with {'taxonomy':'tag'} %}
              {% endif  %}
 
              {% if config.plugins.archives.enabled %}
-             <h4>Archives by month</h4>
-	         {% include 'partials/archives.html.twig' %}
+             <h4>{{ 'DELIVERNEXT.ARCHIVES.BY_MONTH'|t }}</h4>
+	            {% include 'partials/archives.html.twig' with {'taxonomy':'month'} %}
              {% endif  %}
 			</div>
 			<div id="sidebar" class="g-block size-1-3 pure-u-1-3">
