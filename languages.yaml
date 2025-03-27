@@ -129,6 +129,7 @@ en:
             > Additionally, on modular alt type pages, you can add **`services`** or **`about`** if your page is some of these types.
       MODULAR:
         COMMON:
+          ORDER_HELP: '"desc" or "asc" are valid values' 
           SHOW_ONPAGE_MENU: Show navigation on one-page sites
           SHOW_ONPAGE_MENU_HELP: On single-page sites, it adds smooth scrolling on click navigation and automatically selects the correct navigation elements as you scroll through different sections.
           BUTTONS_SECTION:
@@ -252,6 +253,8 @@ en:
           SHOW_BREADCRUMBS: Show Breadcrumbs
           SIDEBAR_SETTINGS: Sidebar settings
           SHOW_SIDEBAR: Show Sidebar
+          SIDEBAR_CONTENT: "Sidebar Content"
+          SIDEBAR_DEFAULT_TEXT: "#### Widget de Texto\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
           SHOW_FEATURED_POSTS: Show Featured Posts
           SHOW_CATEGORIES: Show Categories
         CONTENT:
@@ -299,9 +302,39 @@ en:
         TITLE_BG_COLOR: Background Color for Title
         MODULE_CLASSES: CSS Classes for Module
         MODULE_CLASSES_HELP: Additional CSS classes for Module
+    BLOG:
+      LISTING_TITLE_CATEGORY: 'Posts in Category: '
+      LISTING_TITLE_TAG: 'Posts with Tag: '
+      LISTING_TITLE_AUTHOR: 'Posts written by Author: '
+      LISTING_TITLE_MONTH: 'Post of the month: '
+      PAGINATION: 
+        PREV: Previous Post
+        NEXT: Next Post
+      CONTINUE_READING: Continue Reading...
+    ARCHIVES:
+      BY_TAG: By Tag
+      BY_MONTH: By Month
+    SIDEBAR:
+      LANGSWITCHER: Choose language
+      SEARCH: Search
+      FEATURED_POSTS: Featured Posts
+      FEATURED_MORE: More featured posts
+      NO_FEATURED: No featured posts
+      LOGIN_SECTION: Login
+      LOGGUED_AS: 'Logged as: '
+      RELATEDPAGES_SECTION: Related pages
+      ARCHIVES_SECTION: Archives
+      RANDOM_ARTICLE:
+        LABEL: Random Article
+        BUTTON: I'm Feeling Lucky!
+      SYNDICATE:
+        LABEL: Syndicate 
+      TAXONOMYLIST:
+        LABEL: Popular Tags
     MISC:
       BACK_TO_TOP: Back to top
       GPS_LOCATION: GPS Address
+      IN: in
 es:
   DELIVERNEXT:
     ADMIN:
@@ -433,6 +466,7 @@ es:
             > Además, en páginas de tipo modular alt, puedes agregar **`services`** o **`about`** si tu página es de alguno de estos tipos.
       MODULAR:
         COMMON:
+          ORDER_HELP: '"desc" o "asc" son valores válidos'
           SHOW_ONPAGE_MENU: Mostrar navegación en sitios de una página
           SHOW_ONPAGE_MENU_HELP: En sitios de una sola página, añade desplazamiento suave al hacer clic en la navegación y selecciona automáticamente los elementos de navegación correctos a medida que te desplazas por las diferentes secciones.
           BUTTONS_SECTION:
@@ -556,6 +590,8 @@ es:
           SHOW_BREADCRUMBS: Mostrar Migas de Pan
           SIDEBAR_SETTINGS: Configuración de la barra lateral
           SHOW_SIDEBAR: Mostrar Barra Lateral
+          SIDEBAR_CONTENT: "Contenido del Sidebar"
+          SIDEBAR_DEFAULT_TEXT: "#### Widget de Texto\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
           SHOW_FEATURED_POSTS: Mostrar Publicaciones Destacadas
           SHOW_CATEGORIES: Mostrar Categorías
         CONTENT:
@@ -602,7 +638,36 @@ es:
         TEXT_COLOR_HELP: Color del texto para el Título
         TITLE_BG_COLOR: Color de fondo del Título
         MODULE_CLASSES: Clases CSS para el Módulo
-        MODULE_CLASSES_HELP: Clases CSS adicionales para el Módulo
+    BLOG:
+      LISTING_TITLE_CATEGORY: 'Publicaciones en la categoría: '
+      LISTING_TITLE_TAG: 'Publicaciones con la etiqueta: '
+      LISTING_TITLE_AUTHOR: 'Publicaciones escritas por: '
+      LISTING_TITLE_MONTH: 'Publicaciones del mes: '
+      PAGINATION:
+        PREV: Entrada Anterior
+        NEXT: Siguiente Entrada
+      CONTINUE_READING: Continuar leyendo...
+    ARCHIVES:
+      BY_TAG: Por Etiqueta
+      BY_MONTH: Por Mes
+    SIDEBAR:
+      LANGSWITCHER: Elegir idioma
+      SEARCH: Buscar
+      FEATURED_POSTS: Entradas destacadas
+      FEATURED_MORE: Más entradas destacadas
+      NO_FEATURED: No hay entradas destacadas
+      LOGIN_SECTION: Acceder
+      LOGGUED_AS: 'Autenticado como: '
+      RELATEDPAGES_SECTION: Páginas relacionadas
+      ARCHIVES_SECTION: Archivo
+      RANDOM_ARTICLE:
+        LABEL: Artículo Aleatorio
+        BUTTON: Voy a tener suerte!
+      SYNDICATE:
+        LABEL: Distribuir
+      TAXONOMYLIST:
+        LABEL: Etiquetas populares
     MISC:
       BACK_TO_TOP: Volver arriba
       GPS_LOCATION: Dirección GPS
+      IN: en
