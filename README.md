@@ -140,6 +140,14 @@ Upload a `.png` or `.ico` file through the theme options or place it in `user/th
 **Custom CSS/JS**  
 Create `custom.css` or `custom.js` files in `user/themes/delivernext/css` or `.../js` respectively. They will load automatically when enabled in theme options.
 
+# Demo page
+
+[https://delivernext.pmdesign.dev](https://delivernext.pmdesign.dev)
+
+# Documentation 
+
+You can read extra documentation of DeliverNext Theme at [https://pmoreno-rodriguez.github.io/#/./gravthemes/delivernext/index](https://pmoreno-rodriguez.github.io/#/./gravthemes/delivernext/index). This is [Spanish document site for DeliverNext Theme](https://pmdesign.dev/temas/delivernext)
+
 # To do
 
 - [ ] Improve css classes for image type logo
