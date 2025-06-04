@@ -1,3 +1,10 @@
+# v1.1.2
+## 06/04/2025
+
+1. [](#improved)
+    * Added `archives.yaml` to demo content
+    * Added demo page and extra documentation links to README 
+
 # v1.1.1
 ## 03/27/2025
 
