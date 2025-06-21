@@ -2,10 +2,6 @@
 #header #navbar .panel-activation, #header #navbar ul.navigation, #header .search-box, #header .logo ul.social-icons, #header .logo h3 {
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
 
@@ -46,7 +42,7 @@ a:hover {
   color: #263748;
 }
 
-b, strong, th, label {
+b, strong, th {
   font-weight: 600;
 }
 
@@ -94,8 +90,6 @@ b, strong, th, label {
   font-style: normal;
 }
 .default-animation, .notebook .screen .screen-content-hover, .logo ul.social-icons li a, .logo ul.social-icons li, .logo h3, .team .members .social-icons li a, .team .members .social-icons li, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item, .contact input, .contact textarea, .modular .slideme_container .pagination .numbers li, .modular .slideme_container .arrow, .modular .showcase .button, .modular .showcase .contact button, .contact .modular .showcase button, .modular .showcase .archive-list button, .archive-list .modular .showcase button, .modal, .button-outline-info, .button-outline-warning, .button-outline-secondary, .button-outline, .button-info, .button-warning, .button-secondary, .button, .contact button, .archive-list button, #body {
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
 
@@ -215,8 +209,6 @@ b, strong, th, label {
   height: 1.3rem;
   margin-bottom: 0;
   font-size: 0.9rem;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
   transition: all 0.5s;
 }
 #header .search-box input[type=search]:focus {
@@ -237,10 +229,6 @@ b, strong, th, label {
     position: absolute;
     right: 10px;
     top: 50%;
-    -webkit-transform: translateY(1rem);
-    -moz-transform: translateY(1rem);
-    -ms-transform: translateY(1rem);
-    -o-transform: translateY(1rem);
     transform: translateY(1rem);
   }
   #header .search-box i {
@@ -256,20 +244,12 @@ b, strong, th, label {
 @media only all and (max-width: 59.938em) {
   #header .fixed .search-box {
     top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
     transform: translateY(-50%);
   }
 }
 @media only all and (max-width: 59.938em) {
   #header .fixed .panel-activation {
     top: 50% !important;
-    -webkit-transform: translateY(-50%) !important;
-    -moz-transform: translateY(-50%) !important;
-    -ms-transform: translateY(-50%) !important;
-    -o-transform: translateY(-50%) !important;
     transform: translateY(-50%) !important;
   }
 }
@@ -377,18 +357,12 @@ b, strong, th, label {
     position: absolute;
     left: 0;
     top: 50%;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -ms-transform: translateY(0);
-    -o-transform: translateY(0);
     transform: translateY(0);
   }
 }
 
 .modular.header-image #header .fixed {
   background: #666;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
   transition: background 0.3s ease-in-out;
 }
 
@@ -470,7 +444,7 @@ b, strong, th, label {
   width: 100%;
   padding-top: 2rem;
 }
-.footer:after {
+.footer::after {
   content: "";
   display: table;
   clear: both;
@@ -519,7 +493,7 @@ b, strong, th, label {
     overflow: hidden;
   }
 }
-.footer .footer-items:after {
+.footer .footer-items::after {
   content: "";
   display: table;
   clear: both;
@@ -546,12 +520,12 @@ b, strong, th, label {
     width: 100%;
   }
 }
-.footer .footer-module span:after {
+.footer .footer-module span::after {
   content: "";
   display: table;
   clear: both;
 }
-.footer .footer-module strong, .footer .footer-module th, .footer .footer-module label {
+.footer .footer-module strong, .footer .footer-module th {
   color: #fff;
 }
 @media only all and (max-width: 47.938em) {
@@ -564,7 +538,7 @@ b, strong, th, label {
   border-bottom: 0 none;
   color: #fff;
 }
-.footer .logo:after {
+.footer .logo::after {
   content: "";
   display: table;
   clear: both;
@@ -586,7 +560,7 @@ b, strong, th, label {
   display: block;
   padding-bottom: 1.5rem;
 }
-.footer .footer-modules:after {
+.footer .footer-modules::after {
   content: "";
   display: table;
   clear: both;
@@ -871,17 +845,66 @@ fieldset {
   border: 1px solid #CBCBCB;
 }
 
-textarea, input[type=email], input[type=number], input[type=password], input[type=search], input[type=tel], input[type=text], input[type=url], input[type=color], input[type=date], input[type=datetime], input[type=datetime-local], input[type=month], input[type=time], input[type=week], select[multiple=multiple] {
+textarea,
+input[type=text],
+input[type=email],
+input[type=url],
+input[type=password],
+input[type=search],
+input[type=number],
+input[type=tel],
+input[type=color],
+input[type=date],
+input[type=datetime],
+input[type=datetime-local],
+input[type=month],
+input[type=time],
+input[type=week],
+select[multiple=multiple] {
   background-color: white;
   border: 1px solid #CBCBCB;
   box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.06);
 }
-textarea:hover, input[type=email]:hover, input[type=number]:hover, input[type=password]:hover, input[type=search]:hover, input[type=tel]:hover, input[type=text]:hover, input[type=url]:hover, input[type=color]:hover, input[type=date]:hover, input[type=datetime]:hover, input[type=datetime-local]:hover, input[type=month]:hover, input[type=time]:hover, input[type=week]:hover, select[multiple=multiple]:hover {
+textarea:hover,
+input[type=text]:hover,
+input[type=email]:hover,
+input[type=url]:hover,
+input[type=password]:hover,
+input[type=search]:hover,
+input[type=number]:hover,
+input[type=tel]:hover,
+input[type=color]:hover,
+input[type=date]:hover,
+input[type=datetime]:hover,
+input[type=datetime-local]:hover,
+input[type=month]:hover,
+input[type=time]:hover,
+input[type=week]:hover,
+select[multiple=multiple]:hover {
   border-color: #b2b2b2;
 }
-textarea:focus, input[type=email]:focus, input[type=number]:focus, input[type=password]:focus, input[type=search]:focus, input[type=tel]:focus, input[type=text]:focus, input[type=url]:focus, input[type=color]:focus, input[type=date]:focus, input[type=datetime]:focus, input[type=datetime-local]:focus, input[type=month]:focus, input[type=time]:focus, input[type=week]:focus, select[multiple=multiple]:focus {
+textarea:focus,
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=url]:focus,
+input[type=password]:focus,
+input[type=search]:focus,
+input[type=number]:focus,
+input[type=tel]:focus,
+input[type=color]:focus,
+input[type=date]:focus,
+input[type=datetime]:focus,
+input[type=datetime-local]:focus,
+input[type=month]:focus,
+input[type=time]:focus,
+input[type=week]:focus,
+select[multiple=multiple]:focus {
   border-color: #4a6a8a;
   box-shadow: inset 0 1px 3px hsla(0, 0%, 0%, 0.06), 0 0 5px rgba(65, 93, 121, 0.7);
+}
+
+label {
+  font-weight: bold;
 }
 
 .form-field .required {
@@ -1201,7 +1224,7 @@ td {
 .modal .client-details li {
   display: inline-block;
 }
-.modal .client-details li strong, .modal .client-details li label, .modal .client-details li th {
+.modal .client-details li strong, .modal .client-details li th {
   color: #4a6a8a;
   font-weight: normal;
 }
@@ -1632,7 +1655,7 @@ ul.pagination {
   padding-top: 15rem;
   height: 34.7rem;
 }
-.modular .slideme_container:after {
+.modular .slideme_container::after {
   content: "";
   display: table;
   clear: both;
@@ -1669,7 +1692,7 @@ ul.pagination {
     margin-right: 4rem;
   }
 }
-.modular .showcase h1 strong, .modular .showcase h1 label, .modular .showcase h1 th {
+.modular .showcase h1 strong, .modular .showcase h1 th {
   color: #4a6a8a;
 }
 .modular .showcase h2 {
@@ -1770,8 +1793,6 @@ ul.pagination {
   bottom: 5%;
 }
 .modular .slideme_container .pagination .numbers li {
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
   transition-duration: 0.2s;
   background: #fff;
   width: 0.5rem;
@@ -1792,7 +1813,7 @@ ul.pagination {
   padding-bottom: 1rem;
   text-align: center;
 }
-.modular .features:after {
+.modular .features::after {
   content: "";
   display: table;
   clear: both;
@@ -1883,7 +1904,7 @@ ul.pagination {
   text-align: center;
   padding-bottom: 4rem;
 }
-.modular .bottom:after {
+.modular .bottom::after {
   content: "";
   display: table;
   clear: both;
@@ -2029,7 +2050,7 @@ ul.pagination {
 .contact #simple_form-success, .contact #simple_form-submit {
   display: inline-block;
 }
-.contact #simple_form-success strong, .contact #simple_form-success label, .contact #simple_form-success th, .contact #simple_form-submit strong, .contact #simple_form-submit label, .contact #simple_form-submit th {
+.contact #simple_form-success strong, .contact #simple_form-success th, .contact #simple_form-submit strong, .contact #simple_form-submit th {
   margin-left: 1rem;
 }
 .contact #simple_form-success .close, .contact #simple_form-submit .close {
@@ -2067,7 +2088,7 @@ ul.pagination {
   min-height: 31rem;
   text-align: center;
 }
-.callout .pricing-container:after {
+.callout .pricing-container::after {
   content: "";
   display: table;
   clear: both;
@@ -2096,10 +2117,6 @@ ul.pagination {
   }
 }
 .callout .pricing-container .pricing-item:hover {
-  -webkit-transform: scale(1, 1.08);
-  -moz-transform: scale(1, 1.08);
-  -ms-transform: scale(1, 1.08);
-  -o-transform: scale(1, 1.08);
   transform: scale(1, 1.08);
 }
 .callout .pricing-container .pricing-item div {
@@ -2151,7 +2168,7 @@ ul.pagination {
   padding: 4rem 0;
   text-align: center;
 }
-.team:after {
+.team::after {
   content: "";
   display: table;
   clear: both;
@@ -2548,6 +2565,93 @@ ul.pagination {
   background-color: #a7e9f4;
   color: #0c525d;
   border-color: #17a2b8;
+}
+
+/* Gallery */
+.gallery_container {
+  padding: 1em 0;
+  float: left;
+  width: 50%;
+}
+.gallery_container .title {
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.gallery_content {
+  position: relative;
+  margin: 1em;
+  overflow: hidden;
+}
+.gallery_content a {
+  border: unset;
+}
+.gallery_content .gallery_content-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 97%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out 0s;
+  border-radius: 0.375em;
+}
+.gallery_content:hover .gallery_content-overlay {
+  opacity: 1;
+}
+.gallery_content:hover .gallery_content-details {
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+}
+
+.gallery_content-image {
+  width: 100%;
+  border-radius: 0.375em;
+}
+
+.gallery_content-details {
+  position: absolute;
+  text-align: center;
+  padding-left: 1em;
+  padding-right: 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out 0s;
+}
+.gallery_content-details h3 {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+.gallery_content-details p {
+  color: #fff;
+  font-size: 0.8em;
+}
+
+.fadeIn-bottom {
+  top: 80%;
+}
+
+.fadeIn-top {
+  top: 20%;
+}
+
+.fadeIn-left {
+  left: 20%;
+}
+
+.fadeIn-right {
+  left: 80%;
 }
 
 .grav-lightslider .lSSlideOuter .lSPager.lSpg > li a {

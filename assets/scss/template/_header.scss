@@ -99,7 +99,7 @@
       height: 1.3rem;
       margin-bottom: 0;
       font-size: $core-font-size - 0.1rem;
-      @include transition(all 0.5s);
+      transition: all 0.5s;
 
       &:focus {
         width: 10rem;
@@ -122,7 +122,7 @@
       right: 10px;
 
       top: 50%;
-      @include transform(translateY(1rem));
+      transform: translateY(1rem);
 
       i {
         left: 0.6rem;
@@ -140,14 +140,14 @@
     .search-box {
       @include breakpoint(desktop-only) {
         top: 50%;
-        @include transform(translateY(-50%));
+       transform: translateY(-50%);
       }
     }
 
     .panel-activation {
       @include breakpoint(desktop-only) {
         top: 50% !important;
-        @include transform(translateY(-50%) !important);
+        transform: translateY(-50%) !important;
       }
     }
   }
@@ -272,7 +272,7 @@
         position: absolute;
         left: 0;
         top: 50%;
-        @include transform(translateY(0));
+        transform: translateY(0);
       }
     }
   }
@@ -280,7 +280,7 @@
 
 .modular.header-image #header .fixed {
   background: #666;
-  @include transition(background 0.3s ease-in-out);
+  transition: background 0.3s ease-in-out;
 }
 
 .header-image {

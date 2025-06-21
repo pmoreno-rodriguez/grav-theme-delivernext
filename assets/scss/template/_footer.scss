@@ -4,7 +4,11 @@
     width: 100%;
     @extend .padding-horiz;
     padding-top: 2rem;
-    @include clearfix;
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
     a {
       color: $core-text;
     }
@@ -44,7 +48,11 @@
       @supports not (flex-wrap: wrap) {
         overflow: hidden;
       }
-      @include clearfix;
+      &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
     }
     .footer-module {
       &.large {
@@ -64,7 +72,11 @@
         width: 100%;
       }
       span {
-        @include clearfix;
+        &::after {
+          content: "";
+          display: table;
+          clear: both;
+        }
       }
       strong {
         color: $white;
@@ -76,7 +88,11 @@
     }
     .logo {
       border-bottom: 0 none;
-      @include clearfix;
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
       color: $white;
       h3 a {
         color: $white;
@@ -93,7 +109,11 @@
       }
     }
     .footer-modules {
-      @include clearfix;
+      &::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
       display: block;
       padding-bottom: 1.5rem;
     }

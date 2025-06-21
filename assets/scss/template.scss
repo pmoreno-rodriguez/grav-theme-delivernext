@@ -2,9 +2,6 @@
 
 @use "sass:math";
 
-// Load Third Party Libraries
-@import "vendor/bourbon/bourbon";
-
 // Load Nucleus Configuration
 @import "configuration/nucleus/base";
 
@@ -76,6 +73,9 @@
 
 // Alerts
 @import "template/alerts";
+
+// Gallery
+@import "template/gallery";
 
 // Custom
 @import "template/custom";

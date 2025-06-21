@@ -22,7 +22,11 @@
     }
 }
 .slideme_container {
-     @include clearfix;
+    &::after {
+        content: "";
+        display: table;
+        clear: both;
+    }
      overflow: hidden;
      margin-top: - $header-height - 3rem;
      padding-top: $header-height + 3rem;
@@ -143,7 +147,7 @@ padding-top: 0;
         .numbers {
             li {
                 @extend .default-animation;
-                @include transition-duration(0.2s);
+                transition-duration: 0.2s;
                 background: $white;
                 width: 0.5rem;
                 height: 0.5rem;

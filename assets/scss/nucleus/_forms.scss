@@ -1,3 +1,5 @@
+@use "sass:math";
+
 fieldset {
 	border: 0;
 	padding: $content-padding;
@@ -22,11 +24,19 @@ label {
 	}
 }
 
-textarea, #{$all-text-inputs}, select[multiple=multiple] {
-	@include transition(border-color);
+textarea,
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+select[multiple="multiple"] {
+	transition: border-color 0.2s ease;
 	border-radius: $core-border-radius;
 	margin-bottom: math.div($leading-margin, 2);
-	padding: (math.div($leading-margin, 4)) (math.div($leading-margin, 4));
+	padding: math.div($leading-margin, 4) math.div($leading-margin, 4);
 
 	&:focus {
 		outline: none;
@@ -37,7 +47,8 @@ textarea {
 	resize: vertical;
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
 	display: inline;
 	margin-right: math.div($leading-margin, 4);
 }

@@ -2,7 +2,11 @@
 .modular {
     .bottom {
         text-align: center;
-        @include clearfix;
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
         padding-bottom: 4rem;
 
         h2 {

@@ -10,8 +10,8 @@
         <h1 style="color: {{ title_text_color }}">{{ page.title|raw }}</h1>
         </div>
 
-		<div class="content-wrapper archive-list g-grid pure-g-r">
-			<div id="listing" class="g-block pure-u-2-3">
+		<div class="content-wrapper archive-list g-grid ">
+			<div id="listing" class="g-block size-2-3">
                 {{ page.content|raw }}
                 <div class="g-grid">
                     {% if config.plugins.taxonomylist.enabled %}
@@ -29,7 +29,7 @@
                     {% endif  %}
                 </div>
             </div>
-			<div id="sidebar" class="g-block size-1-3 pure-u-1-3">
+			<div id="sidebar" class="g-block size-1-3">
 				{% include 'partials/sidebar.html.twig' with {'archives_url': blog_url, 'base_url': blog_url} %}
 			</div>
 		</div>

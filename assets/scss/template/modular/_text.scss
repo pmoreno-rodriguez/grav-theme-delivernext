@@ -29,7 +29,11 @@ $image-margin:      2rem;
     .pricing-container {
         position: relative;
         z-index: 10;
-        @include clearfix;
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
         margin-top: 2rem;
         min-height: 31rem;
         text-align: center;

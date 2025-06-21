@@ -4,7 +4,11 @@
         padding: 4rem 0;
         padding-bottom: 1rem;
         text-align: center;
-        @include clearfix;
+        &::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
 
         h2 {
             margin: 0;

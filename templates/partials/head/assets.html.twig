@@ -1,6 +1,6 @@
 <!-- PAGE STYLES -->
 {% block stylesheets %}
-    {% do assets.addCss('theme://assets/css/nucleus.css', {'priority': 102}) %}
+    {% do assets.addCss('theme://assets/css/nucleus' ~ compress,102) %}
     {% do assets.addCss('theme://assets/css/template' ~ compress,101) %}
     {% do assets.addCss('theme://assets/css/font-awesome.min.css',100) %}
     {% do assets.addCss('theme://assets/css/slidebars.min.css') %}

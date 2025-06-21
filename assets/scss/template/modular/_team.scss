@@ -6,7 +6,11 @@ $module-bg:        #EEEEEE;
     background: $module-bg;
     padding: 4rem 0;
     text-align: center;
-    @include clearfix;
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
     h2 {
         color: $light-gray;
         margin: 0;
