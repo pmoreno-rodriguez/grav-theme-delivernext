@@ -1,5 +1,5 @@
 # v1.2.0
-## 21/06/2025
+## 06/21/2025
 
 1. [](#improved)
     * Removed **Bourbon Sass** dependency and all related imports/mixins from SCSS files
