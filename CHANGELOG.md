@@ -1,3 +1,13 @@
+# v1.2.0
+## 21/06/2025
+
+1. [](#improved)
+    * Removed **Bourbon Sass** dependency and all related imports/mixins from SCSS files
+    * Removed **Color-Schemer** functionality from Sass files
+    * Removed all references to **Pure CSS** framework throughout the theme
+    * Enhanced CSS classes for better styling and functionality in the theme's admin panel
+    * Restructured all SCSS files that previously relied on Bourbon, implementing native Sass solutions where needed
+
 # v1.1.2
 ## 06/04/2025
 
