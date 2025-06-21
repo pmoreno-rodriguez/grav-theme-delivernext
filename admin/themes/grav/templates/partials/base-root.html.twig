@@ -43,8 +43,9 @@
 
     </head>
     {% block body %}
-        {% set is_theme_page = uri.path starts with '/admin/themes/' %}
-        {% set current_theme = is_theme_page ? uri.path|replace({'/admin/themes/': ''})|split('/')[0] : null %}
+        {% set admin_route = config.plugins.admin.route %}
+        {% set is_theme_page = uri.path starts with admin_route ~ '/themes/' %}
+        {% set current_theme = is_theme_page ? uri.path|replace({(admin_route ~ '/themes/'): ''})|split('/')[0] : null %}
     
         {% set sidebarStatus = get_cookie('grav-admin-sidebar') %}
         {% set sidebarStatus = (sidebarStatus is not null and sidebarStatus == 'false') or config.plugins.admin.sidebar.size == 'small' ? 'sidebar-closed' : '' %}
