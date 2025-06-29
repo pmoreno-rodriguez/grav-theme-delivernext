@@ -1,0 +1,129 @@
+// Variables
+$module-bg: #EEEEEE;
+
+/* Gallery Container */
+.gallery {
+  background: $module-bg;
+  padding: 2rem 0;
+  text-align: center;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .gallery_item {
+    padding: 1em 0;
+    float: left;
+    width: 100%;
+
+    .title {
+      color: #656161;
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    /* Content wrapper */
+    .gallery_item_content {
+      position: relative;
+      margin: 1em;
+      overflow: hidden;
+
+      a {
+        border: unset;
+      }
+
+      .gallery_item_content_overlay {
+        background: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        transition: all 0.4s ease-in-out;
+        border-radius: 0.375em;
+      }
+
+      &:hover {
+        .gallery_item_content_overlay {
+          opacity: 1;
+        }
+
+        .gallery_item_content_details {
+          opacity: 1;
+          transform: translate(-50%, -50%) !important;
+        }
+      }
+
+      .gallery_item_content_image {
+        width: 100%;
+        border-radius: 0.375em;
+      }
+
+      .gallery_item_content_details {
+        position: absolute;
+        text-align: center;
+        padding: 0 1em;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        transition: all 0.4s ease-in-out;
+
+        .gallery_item_content_title {
+          color: #fff;
+          font-weight: 500;
+          letter-spacing: 0.15em;
+          margin-bottom: 0.5em;
+          text-transform: uppercase;
+          font-size: 1.1em;
+        }
+
+        .gallery_item_content_text {
+          color: #fff;
+          font-size: 0.9em;
+        }
+
+        /* Directional fade-in support */
+        &.fadeIn-bottom {
+          transform: translate(-50%, 30%);
+        }
+
+        &.fadeIn-top {
+          transform: translate(-50%, -30%);
+        }
+
+        &.fadeIn-left {
+          transform: translate(-80%, -50%);
+        }
+
+        &.fadeIn-right {
+          transform: translate(-20%, -50%);
+        }
+
+        &.fadeIn-top.fadeIn-right {
+          transform: translate(-20%, -30%);
+        }
+
+        &.fadeIn-top.fadeIn-left {
+          transform: translate(-80%, -30%);
+        }
+
+        &.fadeIn-bottom.fadeIn-right {
+          transform: translate(-20%, 30%);
+        }
+
+        &.fadeIn-bottom.fadeIn-left {
+          transform: translate(-80%, 30%);
+        }
+      }
+    }
+  }
+}
+
+.gdesc-inner h4 {
+  text-align: initial;
+}

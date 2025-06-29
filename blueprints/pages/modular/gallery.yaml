@@ -1,0 +1,396 @@
+'@extends':
+    type: default
+    context: blueprints://pages
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          fields:
+             header.page_index:
+              unset@: true
+        advanced:
+          fields:
+            columns:
+              fields:
+                column1:
+                  fields:
+                    header.body_classes:
+                      unset@: true
+                    _body_classes_help:
+                      unset@: true
+                    header.module_classes:
+                      type: text
+                      markdown: true
+                      label: DELIVERNEXT.ADMIN.COMMON.MODULE_CLASSES
+                      help: DELIVERNEXT.ADMIN.COMMON.MODULE_CLASSES_HELP
+        gallery_images:
+          type: tab
+          title: DELIVERNEXT.ADMIN.MODULAR.GALLERY.TAB
+          fields:
+            content_title:
+              type: spacer
+              title: DELIVERNEXT.ADMIN.MODULAR.GALLERY.TITLE
+            header.layout:
+              type: select
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.LAYOUT.LABEL
+              default: standard
+              size: medium
+              options:
+                medium: DELIVERNEXT.ADMIN.MODULAR.GALLERY.LAYOUT.TWOCOLS
+                standard: DELIVERNEXT.ADMIN.MODULAR.GALLERY.LAYOUT.THREECOLS
+                compact: DELIVERNEXT.ADMIN.MODULAR.GALLERY.LAYOUT.FOURCOLS
+            header.thumb_width:
+              type: number
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.THUMB_WIDTH
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.THUMB_WIDTH_HELP
+              size: small
+              default: 640
+              validate:
+                min: 50
+                max: 1000
+            header.thumb_height:
+              type: number
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.THUMB_HEIGHT
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.THUMB_HEIGHT_HELP
+              size: small
+              default: 360
+              validate:
+                min: 50
+                max: 1000
+            header.images:
+              type: list
+              style: vertical
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.IMAGES.LABEL
+              collapsed: true
+              fields:
+                .image:
+                  type: pagemediaselect
+                  size: medium
+                  label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.IMAGES.IMAGE
+                  preview_images: true
+                  accept:
+                  - .png
+                  - .jpg
+                  - .gif
+                  - .svg
+                  validate:
+                    required: true
+                .title:
+                  type: text
+                  size: medium
+                  label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.IMAGES.IMAGE_TITLE
+                  validate:
+                    required: true
+                .description:
+                  type: textarea
+                  rows: 3
+                  label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.IMAGES.IMAGE_DESCRIPTION
+                .descPosition:
+                  type: select
+                  label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.IMAGES.DESCPOSITION.LABEL
+                  help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.IMAGES.DESCPOSITION.HELP
+                  default: bottom
+                  size: medium
+                  options:
+                    bottom: DELIVERNEXT.ADMIN.MODULAR.GALLERY.IMAGES.DESCPOSITION.BOTTOM
+                    top: DELIVERNEXT.ADMIN.MODULAR.GALLERY.IMAGES.DESCPOSITION.TOP
+                    left: DELIVERNEXT.ADMIN.MODULAR.GALLERY.IMAGES.DESCPOSITION.LEFT
+                    right: DELIVERNEXT.ADMIN.MODULAR.GALLERY.IMAGES.DESCPOSITION.RIGHT
+            Videos_title:
+              type: spacer
+              title: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEO_TITLE
+
+            header.video_width:
+              type: text
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEO_WIDTH
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEO_WIDTH_HELP
+              placeholder: '960px'
+              size: small
+              default: '960px'
+
+            header.autofocus_videos:
+              type: toggle
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEO_AUTOFOCUS
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEO_AUTOFOCUS_HELP
+              default: 1
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+
+            header.autoplay_videos:
+              type: toggle
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEO_AUTOPLAY
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEO_AUTOPLAY_HELP
+              default: 1
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            header.videos:
+              type: list
+              style: vertical
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEOS.LABEL
+              collapsed: true
+              fields:
+                .source:
+                  type: select
+                  label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEOS.SOURCE
+                  description: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEOS.SOURCE_DESCRIPTION
+                  size: medium
+                  default: local
+                  options:
+                      remote: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEOS.SOURCE_OPTIONS.REMOTE
+                      local: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEOS.SOURCE_OPTIONS.LOCAL
+                .remote_video:
+                  type: text
+                  label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEOS.REMOTE_VIDEO
+                  description: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEOS.REMOTE_VIDEO_DESCRIPTION
+                  size: medium
+                .remote_thumbnail:
+                  type: text
+                  label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEOS.REMOTE_THUMBNAIL
+                  description: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEOS.REMOTE_THUMBNAIL_DESCRIPTION
+                  size: medium
+                .video:
+                  type: pagemediaselect
+                  size: medium
+                  label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEOS.LOCAL_VIDEO
+                  preview_images: false
+                  accept:
+                    - .mp4
+                    - .webm
+                    - .ogv
+                .local_thumbnail:
+                  type: pagemediaselect
+                  label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEOS.LOCAL_THUMBNAIL
+                  description: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEOS.LOCAL_THUMBNAIL_DESCRIPTION
+                  size: medium
+                  preview_images: true
+                  accept:
+                    - .png
+                    - .jpg
+                    - .jpeg
+                    - .gif
+                .title:
+                  type: text
+                  size: medium
+                  label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEOS.TITLE
+                  validate:
+                    required: true
+                .description:
+                  type: textarea
+                  rows: 3
+                  label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.VIDEOS.DESCRIPTION
+        gallery_options:
+          type: tab
+          title: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.TAB
+          fields:
+            Effects_title:
+              type: spacer
+              title: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.EFFECTS_TITLE
+            header.lightbox_selector:
+              type: text
+              label: CSS Selector for Lightbox
+              size: medium
+              placeholder: 'glightbox'
+              help: >
+                Define the CSS selector for the elements that trigger the lightbox.
+              default: 'glightbox'
+            header.overlay_hover_effect:
+              type: select
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.LABEL
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.HELP
+              default: fadeIn-bottom
+              size: medium
+              options:
+                fadeIn-bottom: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_BOTTOM
+                fadeIn-top: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_TOP
+                fadeIn-left: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_LEFT
+                fadeIn-right: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_RIGHT
+                fadeIn-top_fadeIn-right: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_TOP_RIGHT
+                fadeIn-top_fadeIn-left: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_TOP_LEFT
+                fadeIn-bottom_fadeIn-right: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_BOTTOM_RIGHT
+                fadeIn-bottom_fadeIn-left: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.OVERLAY_HOVER_EFFECT.FADEIN_BOTTOM_LEFT
+            header.open_effect:
+              type: select
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.OPEN_EFFECT.LABEL
+              default: zoom
+              size: medium
+              options:
+                zoom: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.OPEN_EFFECT.ZOOM
+                fade: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.OPEN_EFFECT.FADE
+                none: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.OPEN_EFFECT.NONE
+            header.close_effect:
+              type: select
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.CLOSE_EFFECT.LABEL
+              default: zoom
+              size: medium
+              options:
+                zoom: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.CLOSE_EFFECT.ZOOM
+                fade: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.CLOSE_EFFECT.FADE
+                none: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.CLOSE_EFFECT.NONE
+            header.slide_effect:
+              type: select
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.SLIDE_EFFECT.LABEL
+              default: slide
+              size: medium
+              options:
+                slide: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.SLIDE_EFFECT.SLIDE
+                zoom: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.SLIDE_EFFECT.ZOOM
+                fade: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.SLIDE_EFFECT.FADE
+                none: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.SLIDE_EFFECT.NONE
+            header.more_text:
+              type: text
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.MORE_TEXT
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.MORE_TEXT_HELP
+              placeholder: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.MORE_TEXT_DEFAULT
+              size: medium
+            header.more_length:
+              type: number
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.MORE_LENGTH
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.MORE_LENGTH_HELP
+              size: small
+              default: 60
+              validate:
+                min: 0
+                max: 500
+            Actions_title:
+              type: spacer
+              title: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.ACTIONS_TITLE
+            header.close_button:
+              type: toggle
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.CLOSE_BUTTON
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.CLOSE_BUTTON_HELP
+              default: 1
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            header.touch_navigation:
+              type: toggle
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.TOUCH_NAVIGATION
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.TOUCH_NAVIGATION_HELP
+              default: 1
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            header.touch_axis:
+              type: toggle
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.TOUCH_AXIS
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.TOUCH_AXIS_HELP
+              default: 1
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            header.keyboard_navigation:
+              type: toggle
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.KEYBOARD
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.KEYBOARD_HELP
+              default: 1
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            header.closeOutside:
+              type: toggle
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.CLOSE_OUTSIDE
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.CLOSE_OUTSIDE_HELP
+              default: 1
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            header.startAt:
+              type: number
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.MORE_STARTAT
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.MORE_STARTAT_HELP
+              size: small
+              validate:
+                min: 0
+                max: 1000
+            Styling_title:
+              type: spacer
+              title: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.STYLING_TITLE
+            header.width:
+              type: text
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.WIDTH
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.WIDTH_HELP
+              placeholder: '100vw'
+              size: small
+            header.height:
+              type: text
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.HEIGHT
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.HEIGHT_HELP
+              placeholder: '100vh'
+              size: small
+            Behavior_title:
+              type: spacer
+              title: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.BEHAVIOR_TITLE
+            header.loop:
+              type: toggle
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.LOOP
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.LOOP_HELP
+              default: 0
+              highlight: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            header.zoomable:
+              type: toggle
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.ZOOMABLE
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.ZOOMABLE_HELP
+              default: 1
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            header.draggable:
+              type: toggle
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.DRAGGABLE
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.DRAGGABLE_HELP
+              default: 1
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            header.draggableX:
+              type: number
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.DRAGGABLE_X
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.DRAGGABLE_X_HELP
+              size: small
+              default: 40
+              validate:
+                min: 1
+                max: 500
+            header.draggableY:
+              type: number
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.DRAGGABLE_Y
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.DRAGGABLE_Y_HELP
+              size: small
+              default: 65
+              validate:
+                min: 1
+                max: 500
+            header.dragAuto:
+              type: toggle
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.DRAG_AUTO_SNAP
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.DRAG_AUTO_SNAP_HELP
+              default: 0
+              highlight: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+            header.preload:
+              type: toggle
+              label: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.PRELOAD
+              help: DELIVERNEXT.ADMIN.MODULAR.GALLERY.OPTIONS.PRELOAD_HELP
+              default: 1
+              highlight: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED     

@@ -1,0 +1,175 @@
+{# Set gallery options #}
+{% set columns = 
+    page.header.layout == 'medium' ? 'size-1-2' :
+    page.header.layout == 'standard' ? 'size-1-3' :
+	page.header.layout == 'compact' ? 'size-1-4' :
+    'size-1-3' 
+%}
+{% set images_gallery = page.header.images %}
+{% set videos_gallery = page.header.videos %}
+{% set thumb_w = page.header.thumb_width|default(640) %}
+{% set thumb_h = page.header.thumb_height|default(360) %}
+{% set selector = page.header.lightbox_selector|default('glightbox')|replace({' ': '_', '.': '_', '#': '_', ',': '_', ';': '_', ':': '_', '/': '_', '\\': '_'}) %}
+
+{% block stylesheets %}
+	{% do assets.addCss('theme://assets/css/glightbox.min.css') %}
+	{% set styling %}
+	button.gclose.gbtn, button.gnext.gbtn, button.gprev.gbtn {
+			box-shadow: none !important;
+		}
+	.gvideo-container .gslide-description,
+	.gvideo-container .gslide-video {
+		max-width: {{ page.header.video_width|default('960px') }} !important;
+	} 
+	{% endset %}
+{% do assets.addInlineCss(styling) %}
+{{ assets.css()|raw }}
+{% endblock %}
+<!-- Image Gallery -->
+	<div class="modular-row gallery {{ page.header.module_classes }}" itemscope itemtype="http://schema.org/ImageGallery">
+		{% if page.header.title %}
+			<h2 class="gallery_title" itemprop="name">{{ page.header.title|raw }}</h2>
+		{% endif %}
+	
+		{{ page.content|raw }}
+		
+		<div class="g-grid">
+			{% if images_gallery %}
+				{% for item in images_gallery %}
+					{% set item_image = page.media[item.image] %}
+					{% set item_title = item.title %}
+					{% set item_desc = item.description %}
+					{% set img_thumbnail = item_image.cropZoom(thumb_w, thumb_h).attribute('itemprop','http://schema.org/image').html(item_title,item_title,'gallery_item_content_image') %}
+					{% set zoomable = page.header.zoomable == 1 ? "true" : "false"  %}
+					{% set draggable = page.header.draggable == 1 ? "true" : "false"  %}
+					{% set descPosition = item.descPosition|default('bottom') %}
+					
+					<div class="gallery_item g-block {{columns}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
+						<h3 class="title">{{item_title|raw}}</h3>
+						<div class="gallery_item_content">
+							<a href="{{item_image.url}}" class="{{ selector }}" 
+								data-height="{{page.header.height}}" 
+								data-width="{{page.header.width}}" 
+								data-title="{{item_title}}" 
+								data-description="{{item_desc|e('html_attr')}}" 
+								data-desc-position="{{descPosition}}" 
+								data-zoomable="{{ zoomable }}"
+								data-draggable="{{ draggable }}"
+								data-type="image">
+							<div class="gallery_item_content_overlay"></div>
+								{{ img_thumbnail|raw }}
+							<div class="gallery_item_content_details {{ page.header.overlay_hover_effect|replace({'_': ' '}) }}">
+								<h3 class="gallery_item_content_title">{{item_title|raw}}</h3>
+								<p class="gallery_item_content_text">{{item_desc|striptags|truncate(75, true)|raw}}</p>
+							</div>
+							</a>
+						</div>
+					</div>
+				{% endfor %}
+			{% endif %}
+			{% if videos_gallery %}
+				{% for videoItem in videos_gallery %}
+					{% if videoItem.source == 'local' %}
+						{% set videoURL = page.media[videoItem.video].url %}
+						{% set videoItemThumbnail = page.media[videoItem.thumbnail].cropZoom(thumb_w, thumb_h).html(videoItem.title, videoItem.title, 'gallery_item_content_image') %}
+					{% else %}
+						{% set videoURL = videoItem.remote_video %}
+						{% set videoItemThumbnail = 
+							'<img src="' ~ videoItem.remote_thumbnail ~ '" ' ~
+							'alt="' ~ videoItem.title|e ~ '" ' ~
+							'class="gallery_item_content_image" ' ~
+							'itemprop="http://schema.org/image" />' 
+						%}
+					{% endif %}
+					<div class="gallery_item g-block {{ columns }}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
+					<h3 class="title">{{ videoItem.title|raw }}</h3>
+					<div class="gallery_item_content">
+						<a 
+						href="{{ videoURL }}" 
+						class="{{ selector }}" 
+						data-type="video" 
+						data-title="{{ videoItem.title }}"
+						data-description="{{ videoItem.description|e('html_attr') }}"
+						>
+						
+						{% if videoItemThumbnail %}
+						<div class="gallery_item_content_overlay"></div>
+    					{{ videoItemThumbnail|raw }}
+						<div class="gallery_item_content_details {{ page.header.overlay_hover_effect|replace({'_': ' '}) }}">
+							<h3 class="gallery_item_content_title">{{ videoItem.title|raw }}</h3>
+							<p class="gallery_item_content_text">{{ videoItem.description|striptags|truncate(75)|raw }}</p>
+						</div>
+						{% else %}
+							{{ videoItem.title|raw }}
+						{% endif %}
+						</a>
+					</div>
+					</div>
+				{% endfor %}
+			{% endif %}
+		</div>
+	</div>
+<!-- Video Gallery -->
+
+{% block javascripts %}
+	{% set script %}
+	{% set lightbox_var = 'lightbox_' ~ page.slug|replace({'(?i)[^a-z0-9_]': '_'}, 'regex') %}
+
+	const {{ lightbox_var }} = GLightbox({
+		selector: ".{{ selector }}",
+	    {% if page.header.close_button is defined %}closeButton: {{ page.header.close_button }},{% endif %}
+		{% if page.header.touch_axis is defined %}touchFollowAxis: {{ page.header.touch_axis }},{% endif %}
+		{% if page.header.touch_navigation is defined %}touchNavigation: {{ page.header.touch_navigation }},{% endif %}
+		{% if page.header.keyboard_navigation is defined %}keyboardNavigation: {{ page.header.keyboard_navigation }},{% endif %}
+		{% if page.header.loop is defined %}loop: {{ page.header.loop }},{% endif %}
+		{% if page.header.open_effect is defined %}openEffect: '{{ page.header.open_effect }}',{% endif %}
+		{% if page.header.close_effect is defined %}closeEffect: '{{ page.header.close_effect }}',{% endif %}
+		{% if page.header.slide_effect is defined %}slideEffect: '{{ page.header.slide_effect }}',{% endif %}
+		{% if page.header.closeOutside is defined %}closeOnOutsideClick: {{ page.header.closeOutside }},{% endif %}
+		{% if page.header.draggableX is defined %}dragToleranceX: {{ page.header.draggableX }},{% endif %}
+		{% if page.header.draggableY is defined %}dragToleranceY: {{ page.header.draggableY }},{% endif %}
+		{% if page.header.preload is defined %}preload: {{ page.header.preload }},{% endif %}
+		{% if page.header.dragAuto is defined %}dragAutoSnap: {{ page.header.dragAuto }},{% endif %}
+		{% if page.header.more_text is defined %}moreText: '{{ page.header.more_text }}',{% endif %}
+		{% if page.header.startAt is defined %}startAt: {{ page.header.startAt }},{% endif %}
+		{% if page.header.more_length is defined %}moreLength: {{ page.header.more_length }},{% endif %}
+		{% if page.header.autoplay_videos is defined %}autoplayVideos: {{ page.header.autoplay_videos }},{% endif %}
+		{% if page.header.autofocus_videos is defined %}autofocusVideos: {{ page.header.autofocus_videos }},{% endif %}
+		{% if page.header.video_width is defined %}videosWidth: '{{ page.header.video_width }}',{% endif %}
+
+		{% if page.header.videos %}
+		plyr: {
+			config: {
+			autoplay: {{ page.header.autoplay_videos == 1 ? "true" : "false" }},
+			keyboard: true,
+			muted: {{ page.header.autoplay_videos ? "true" : "false" }},
+			ratio: '16:9',
+			clickToPlay: true,
+			hideControls: true,
+			fullscreen: {
+				enabled: true,
+				iosNative: true,
+				},
+			youtube: {
+				noCookie: true,
+				rel: 0,
+				showinfo: 0,
+				iv_load_policy: 3
+				}
+			},
+			vimeo: {
+				byline: false,
+				portrait: false,
+				title: false,
+				speed: true,
+				transparent: false
+			}
+		}
+		{% endif %}
+	});
+	{% endset %}
+
+	{% do assets.addJs('theme://assets/js/glightbox.min.js', {group:'bottom'}) %}
+	{% do assets.addInlineJs(script,{'group':'bottom'}) %}
+	{{ assets.js()|raw }}
+{% endblock %}

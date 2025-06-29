@@ -2337,6 +2337,111 @@ ul.pagination {
   }
 }
 
+/* Gallery Container */
+.gallery {
+  background: #EEEEEE;
+  padding: 2rem 0;
+  text-align: center;
+}
+.gallery::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.gallery .gallery_item {
+  padding: 1em 0;
+  float: left;
+  width: 100%;
+  /* Content wrapper */
+}
+.gallery .gallery_item .title {
+  color: #656161;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.gallery .gallery_item .gallery_item_content {
+  position: relative;
+  margin: 1em;
+  overflow: hidden;
+}
+.gallery .gallery_item .gallery_item_content a {
+  border: unset;
+}
+.gallery .gallery_item .gallery_item_content .gallery_item_content_overlay {
+  background: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: all 0.4s ease-in-out;
+  border-radius: 0.375em;
+}
+.gallery .gallery_item .gallery_item_content:hover .gallery_item_content_overlay {
+  opacity: 1;
+}
+.gallery .gallery_item .gallery_item_content:hover .gallery_item_content_details {
+  opacity: 1;
+  transform: translate(-50%, -50%) !important;
+}
+.gallery .gallery_item .gallery_item_content .gallery_item_content_image {
+  width: 100%;
+  border-radius: 0.375em;
+}
+.gallery .gallery_item .gallery_item_content .gallery_item_content_details {
+  position: absolute;
+  text-align: center;
+  padding: 0 1em;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease-in-out;
+  /* Directional fade-in support */
+}
+.gallery .gallery_item .gallery_item_content .gallery_item_content_details .gallery_item_content_title {
+  color: #fff;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+  font-size: 1.1em;
+}
+.gallery .gallery_item .gallery_item_content .gallery_item_content_details .gallery_item_content_text {
+  color: #fff;
+  font-size: 0.9em;
+}
+.gallery .gallery_item .gallery_item_content .gallery_item_content_details.fadeIn-bottom {
+  transform: translate(-50%, 30%);
+}
+.gallery .gallery_item .gallery_item_content .gallery_item_content_details.fadeIn-top {
+  transform: translate(-50%, -30%);
+}
+.gallery .gallery_item .gallery_item_content .gallery_item_content_details.fadeIn-left {
+  transform: translate(-80%, -50%);
+}
+.gallery .gallery_item .gallery_item_content .gallery_item_content_details.fadeIn-right {
+  transform: translate(-20%, -50%);
+}
+.gallery .gallery_item .gallery_item_content .gallery_item_content_details.fadeIn-top.fadeIn-right {
+  transform: translate(-20%, -30%);
+}
+.gallery .gallery_item .gallery_item_content .gallery_item_content_details.fadeIn-top.fadeIn-left {
+  transform: translate(-80%, -30%);
+}
+.gallery .gallery_item .gallery_item_content .gallery_item_content_details.fadeIn-bottom.fadeIn-right {
+  transform: translate(-20%, 30%);
+}
+.gallery .gallery_item .gallery_item_content .gallery_item_content_details.fadeIn-bottom.fadeIn-left {
+  transform: translate(-80%, 30%);
+}
+
+.gdesc-inner h4, .gdesc-inner .archive-list label, .archive-list .gdesc-inner label, .gdesc-inner .modular .bottom table th, .modular .bottom table .gdesc-inner th, .gdesc-inner .contact label, .contact .gdesc-inner label, .gdesc-inner .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .gdesc-inner .name, .gdesc-inner .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .gdesc-inner .button, .gdesc-inner .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .gdesc-inner button, .gdesc-inner .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .gdesc-inner button, .gdesc-inner .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .gdesc-inner button, .gdesc-inner .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .gdesc-inner button {
+  text-align: initial;
+}
+
 .logo {
   border-bottom: 1px solid #eaeaea;
 }
@@ -2565,93 +2670,6 @@ ul.pagination {
   background-color: #a7e9f4;
   color: #0c525d;
   border-color: #17a2b8;
-}
-
-/* Gallery */
-.gallery_container {
-  padding: 1em 0;
-  float: left;
-  width: 50%;
-}
-.gallery_container .title {
-  color: #1a1a1a;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.gallery_content {
-  position: relative;
-  margin: 1em;
-  overflow: hidden;
-}
-.gallery_content a {
-  border: unset;
-}
-.gallery_content .gallery_content-overlay {
-  background: rgba(0, 0, 0, 0.7);
-  position: absolute;
-  height: 97%;
-  width: 100%;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  opacity: 0;
-  transition: all 0.4s ease-in-out 0s;
-  border-radius: 0.375em;
-}
-.gallery_content:hover .gallery_content-overlay {
-  opacity: 1;
-}
-.gallery_content:hover .gallery_content-details {
-  top: 50%;
-  left: 50%;
-  opacity: 1;
-}
-
-.gallery_content-image {
-  width: 100%;
-  border-radius: 0.375em;
-}
-
-.gallery_content-details {
-  position: absolute;
-  text-align: center;
-  padding-left: 1em;
-  padding-right: 1em;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  opacity: 0;
-  transform: translate(-50%, -50%);
-  transition: all 0.3s ease-in-out 0s;
-}
-.gallery_content-details h3 {
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 0.15em;
-  margin-bottom: 0.5em;
-  text-transform: uppercase;
-}
-.gallery_content-details p {
-  color: #fff;
-  font-size: 0.8em;
-}
-
-.fadeIn-bottom {
-  top: 80%;
-}
-
-.fadeIn-top {
-  top: 20%;
-}
-
-.fadeIn-left {
-  left: 20%;
-}
-
-.fadeIn-right {
-  left: 80%;
 }
 
 .grav-lightslider .lSSlideOuter .lSPager.lSpg > li a {
