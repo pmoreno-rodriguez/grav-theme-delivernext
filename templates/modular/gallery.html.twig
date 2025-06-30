@@ -71,7 +71,7 @@
 				{% for videoItem in videos_gallery %}
 					{% if videoItem.source == 'local' %}
 						{% set videoURL = page.media[videoItem.video].url %}
-						{% set videoItemThumbnail = page.media[videoItem.thumbnail].cropZoom(thumb_w, thumb_h).html(videoItem.title, videoItem.title, 'gallery_item_content_image') %}
+						{% set videoItemThumbnail = page.media[videoItem.local_thumbnail].cropZoom(thumb_w, thumb_h).html(videoItem.title, videoItem.title, 'gallery_item_content_image') %}
 					{% else %}
 						{% set videoURL = videoItem.remote_video %}
 						{% set videoItemThumbnail = 
