@@ -4,6 +4,12 @@
 1. [](#bugfix)
     * Fixed thumbnail display issue for local videos by changing `videoItem.thumbnail` to `videoItem.local_thumbnail` in gallery template
 
+# v1.3.0
+## 06/29/2025
+
+1. [](#new)
+    * New modular template for image galleries, featuring [GLightbox JS](https://biati-digital.github.io/glightbox/) integration—responsive, lightweight, and customizable, with native support for both local videos (MP4/WebM/OGV) and embedded content (YouTube/Vimeo).
+
 # v1.2.0
 ## 06/21/2025
 
