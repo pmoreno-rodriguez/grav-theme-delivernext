@@ -89,7 +89,7 @@ b, strong, th {
   font-weight: normal;
   font-style: normal;
 }
-.default-animation, .notebook .screen .screen-content-hover, .logo ul.social-icons li a, .logo ul.social-icons li, .logo h3, .team .members .social-icons li a, .team .members .social-icons li, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item, .contact input, .contact textarea, .modular .slideme_container .pagination .numbers li, .modular .slideme_container .arrow, .modular .showcase .button, .modular .showcase .contact button, .contact .modular .showcase button, .modular .showcase .archive-list button, .archive-list .modular .showcase button, .modal, .button-outline-info, .button-outline-warning, .button-outline-secondary, .button-outline, .button-info, .button-warning, .button-secondary, .button, .contact button, .archive-list button, #body {
+.default-animation, .notebook .screen .screen-content-hover, .logo ul.social-icons li a, .logo ul.social-icons li, .logo h3, .team .members .social-icons li a, .team .members .social-icons li, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item, .contact input, .contact textarea, .modular .features .feature, .modular .slideme_container .pagination .numbers li, .modular .slideme_container .arrow, .modular .showcase .button, .modular .showcase .contact button, .contact .modular .showcase button, .modular .showcase .archive-list button, .archive-list .modular .showcase button, .modal, .button-outline-info, .button-outline-warning, .button-outline-secondary, .button-outline, .button-info, .button-warning, .button-secondary, .button, .contact button, .archive-list button, #body {
   transition: all 0.5s ease;
 }
 
@@ -1809,8 +1809,7 @@ ul.pagination {
 }
 
 .modular .features {
-  padding: 4rem 0;
-  padding-bottom: 1rem;
+  padding: 4rem 0 1rem;
   text-align: center;
 }
 .modular .features::after {
@@ -1839,14 +1838,25 @@ ul.pagination {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: stretch;
+  gap: 1rem;
 }
 .modular .features .feature {
   display: flex;
   flex-direction: column;
+  justify-content: stretch;
   align-items: center;
   width: 32%;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  flex: 1 1 auto;
+  border: none;
+  background: none;
+  -webkit-transform: translateZ(0);
+}
+.modular .features .feature:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+  transform: scale(1, 1.08);
 }
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
   .modular .features .feature {
@@ -1861,15 +1871,36 @@ ul.pagination {
 }
 .modular .features .feature i.fa {
   font-size: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
 }
-.modular .features .feature h4, .modular .features .feature .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .modular .features .feature .button, .modular .features .feature .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .modular .features .feature button, .modular .features .feature .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .modular .features .feature button, .modular .features .feature .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .modular .features .feature button, .modular .features .feature .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .modular .features .feature button, .modular .features .feature .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .modular .features .feature .name, .modular .features .feature .contact label, .contact .modular .features .feature label, .modular .features .feature .bottom table th, .modular .bottom table .features .feature th, .modular .features .feature .archive-list label, .archive-list .modular .features .feature label {
-  margin: 0;
+.modular .features .feature .feature-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+.modular .features .feature .feature-content.icon-offset {
+  margin-left: 0;
+}
+.modular .features .feature .feature-content h4, .modular .features .feature .feature-content .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .modular .features .feature .feature-content .button, .modular .features .feature .feature-content .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .modular .features .feature .feature-content button, .modular .features .feature .feature-content .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .modular .features .feature .feature-content button, .modular .features .feature .feature-content .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .modular .features .feature .feature-content button, .modular .features .feature .feature-content .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .modular .features .feature .feature-content button, .modular .features .feature .feature-content .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .modular .features .feature .feature-content .name, .modular .features .feature .feature-content .contact label, .contact .modular .features .feature .feature-content label, .modular .features .feature .feature-content .bottom table th, .modular .bottom table .features .feature .feature-content th, .modular .features .feature .feature-content .archive-list label, .archive-list .modular .features .feature .feature-content label {
+  margin: 0 0 0.5rem 0;
   font-size: 1.1rem;
 }
-.modular .features .feature p {
-  display: inline-block;
+.modular .features .feature .feature-content p {
+  margin: 0.2rem 0;
   font-size: 1rem;
-  margin: 0.2rem 0 1rem;
+  text-align: center;
+}
+.modular .features .feature .feature-content p:last-of-type {
+  margin-top: auto;
+}
+.modular .features .feature .feature-content p a {
+  display: inline-block;
+  margin-top: 1rem;
+  text-align: center;
 }
 .modular .features.big {
   text-align: center;
@@ -1879,8 +1910,8 @@ ul.pagination {
 }
 @media only all and (max-width: 47.938em) {
   .modular .features.big .feature {
-    margin-top: 1rem;
     width: 100%;
+    margin-top: 1rem;
   }
 }
 .modular .features.big i.fa {
@@ -1891,7 +1922,7 @@ ul.pagination {
   padding-right: 2rem;
 }
 .modular .features.big .feature-content.icon-offset {
-  margin-left: 1rem;
+  margin-left: 0;
 }
 .modular .features.big .feature-content h4, .modular .features.big .feature-content .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .modular .features.big .feature-content .button, .modular .features.big .feature-content .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .modular .features.big .feature-content button, .modular .features.big .feature-content .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .modular .features.big .feature-content button, .modular .features.big .feature-content .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .modular .features.big .feature-content button, .modular .features.big .feature-content .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .modular .features.big .feature-content button, .modular .features.big .feature-content .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .modular .features.big .feature-content .name, .modular .features.big .feature-content .contact label, .contact .modular .features.big .feature-content label, .modular .features.big .feature-content .bottom table th, .modular .bottom table .features.big .feature-content th, .modular .features.big .feature-content .archive-list label, .archive-list .modular .features.big .feature-content label {
   font-size: 1.2rem;
