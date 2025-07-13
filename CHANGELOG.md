@@ -1,3 +1,9 @@
+# v1.3.2
+## 07/13/2025
+
+1. [](#improved)
+    * Updated features styling: equal height blocks, centered icons, hover shadow, and consistent spacing
+
 # v1.3.1
 ## 06/30/2025
 
