@@ -61,7 +61,6 @@
       display: block;
       float: left;
       width: 30%;
-      vertical-align: top;
       padding-right: 2rem;
       @include breakpoint(large-mobile-range) {
         margin-top: 1rem;
@@ -120,7 +119,6 @@
     .footer-copyright {
       width: 50%;
       font-family: $font-family-header;
-      display: inline-block;
       float: left;
       text-align: left;
       text-transform: uppercase;
@@ -133,7 +131,6 @@
     }
     .footer-menu {
       float: right;
-      display: inline-block;
       width: 50%;
       text-align: right;
       text-transform: uppercase;

@@ -74,6 +74,7 @@ b, strong, th {
   src: url("../fonts/Novecentosanswide-DemiBold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Novecentosanswide-DemiBold-webfont.woff2") format("woff2"), url("../fonts/Novecentosanswide-DemiBold-webfont.woff") format("woff"), url("../fonts/Novecentosanswide-DemiBold-webfont.ttf") format("truetype"), url("../fonts/Novecentosanswide-DemiBold-webfont.svg#novecento_sans_widedemibold") format("svg");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "novecento_sans_widenormal";
@@ -81,6 +82,7 @@ b, strong, th {
   src: url("../fonts/Novecentosanswide-Normal-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Novecentosanswide-Normal-webfont.woff2") format("woff2"), url("../fonts/Novecentosanswide-Normal-webfont.woff") format("woff"), url("../fonts/Novecentosanswide-Normal-webfont.ttf") format("truetype"), url("../fonts/Novecentosanswide-Normal-webfont.svg#novecento_sans_widenormal") format("svg");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 @font-face {
   font-family: "novecento_sans_widemedium";
@@ -88,6 +90,7 @@ b, strong, th {
   src: url("../fonts/Novecentosanswide-Medium-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Novecentosanswide-Medium-webfont.woff2") format("woff2"), url("../fonts/Novecentosanswide-Medium-webfont.woff") format("woff"), url("../fonts/Novecentosanswide-Medium-webfont.ttf") format("truetype"), url("../fonts/Novecentosanswide-Medium-webfont.svg#novecento_sans_widemedium") format("svg");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 .default-animation, .notebook .screen .screen-content-hover, .logo ul.social-icons li a, .logo ul.social-icons li, .logo h3, .team .members .social-icons li a, .team .members .social-icons li, .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot .contact button, .contact .callout .pricing-container .pricing-item .foot button, .callout .pricing-container .pricing-item .foot, .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item, .contact input, .contact textarea, .modular .features .feature, .modular .slideme_container .pagination .numbers li, .modular .slideme_container .arrow, .modular .showcase .button, .modular .showcase .contact button, .contact .modular .showcase button, .modular .showcase .archive-list button, .archive-list .modular .showcase button, .modal, .button-outline-info, .button-outline-warning, .button-outline-secondary, .button-outline, .button-info, .button-warning, .button-secondary, .button, .contact button, .archive-list button, #body {
   transition: all 0.5s ease;
@@ -197,8 +200,10 @@ b, strong, th {
 #header .search-box input[type=search] {
   outline: none;
   cursor: pointer;
+  -moz-appearance: textfield;
+       appearance: textfield;
   -webkit-appearance: textfield;
-  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
   font-family: inherit;
   font-size: 100%;
   border: 0 none;
@@ -502,7 +507,6 @@ b, strong, th {
   display: block;
   float: left;
   width: 30%;
-  vertical-align: top;
   padding-right: 2rem;
 }
 .footer .footer-module.large {
@@ -568,7 +572,6 @@ b, strong, th {
 .footer .footer-copyright {
   width: 50%;
   font-family: "novecento_sans_widedemibold", "Helvetica", "Tahoma", "Geneva", "Arial", sans-serif;
-  display: inline-block;
   float: left;
   text-align: left;
   text-transform: uppercase;
@@ -583,7 +586,6 @@ b, strong, th {
 }
 .footer .footer-menu {
   float: right;
-  display: inline-block;
   width: 50%;
   text-align: right;
   text-transform: uppercase;
@@ -1807,6 +1809,30 @@ ul.pagination {
   width: 1rem;
   height: 1rem;
 }
+.modular .showcase-content-fullscreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  padding: 0 2rem;
+}
+.modular .showcase-content-fullscreen h1, .modular .showcase-content-fullscreen h2 {
+  margin: 0 0 1rem;
+}
+.modular .showcase-content-fullscreen .button, .modular .showcase-content-fullscreen .contact button, .contact .modular .showcase-content-fullscreen button, .modular .showcase-content-fullscreen .archive-list button, .archive-list .modular .showcase-content-fullscreen button {
+  margin-top: 1rem;
+}
+@media only all and (max-width: 47.938em) {
+  .modular .showcase-content-fullscreen {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+.modular .showcase-content {
+  padding: 0 2rem;
+}
 
 .modular .features {
   padding: 4rem 0 1rem;
@@ -1834,85 +1860,56 @@ ul.pagination {
   }
 }
 .modular .features .feature-items {
-  margin-top: 2rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: stretch;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
 }
 .modular .features .feature {
-  display: flex;
-  flex-direction: column;
-  justify-content: stretch;
-  align-items: center;
-  width: 32%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
   padding: 1rem;
   box-sizing: border-box;
-  flex: 1 1 auto;
+  height: 100%;
   border: none;
   background: none;
-  -webkit-transform: translateZ(0);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 .modular .features .feature:hover {
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-  transform: scale(1, 1.08);
-}
-@media only all and (min-width: 48em) and (max-width: 59.938em) {
-  .modular .features .feature {
-    width: 48%;
-  }
-}
-@media only all and (max-width: 47.938em) {
-  .modular .features .feature {
-    width: 100%;
-    margin-top: 1rem;
-  }
+  transform: scale(1.03);
 }
 .modular .features .feature i.fa {
   font-size: 2rem;
   margin-bottom: 1rem;
-  text-align: center;
+  justify-self: center;
 }
 .modular .features .feature .feature-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 1;
-  width: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  text-align: center;
 }
 .modular .features .feature .feature-content.icon-offset {
   margin-left: 0;
 }
 .modular .features .feature .feature-content h4, .modular .features .feature .feature-content .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .modular .features .feature .feature-content .button, .modular .features .feature .feature-content .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .modular .features .feature .feature-content button, .modular .features .feature .feature-content .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .modular .features .feature .feature-content button, .modular .features .feature .feature-content .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .modular .features .feature .feature-content button, .modular .features .feature .feature-content .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .modular .features .feature .feature-content button, .modular .features .feature .feature-content .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .modular .features .feature .feature-content .name, .modular .features .feature .feature-content .contact label, .contact .modular .features .feature .feature-content label, .modular .features .feature .feature-content .bottom table th, .modular .bottom table .features .feature .feature-content th, .modular .features .feature .feature-content .archive-list label, .archive-list .modular .features .feature .feature-content label {
-  margin: 0 0 0.5rem 0;
+  margin: 0 0 0.5rem;
   font-size: 1.1rem;
 }
 .modular .features .feature .feature-content p {
   margin: 0.2rem 0;
   font-size: 1rem;
-  text-align: center;
-}
-.modular .features .feature .feature-content p:last-of-type {
-  margin-top: auto;
 }
 .modular .features .feature .feature-content p a {
   display: inline-block;
   margin-top: 1rem;
   text-align: center;
 }
+.modular .features .feature .feature-content p:last-of-type {
+  align-self: end;
+}
 .modular .features.big {
   text-align: center;
-}
-.modular .features.big .feature {
-  width: 32%;
-}
-@media only all and (max-width: 47.938em) {
-  .modular .features.big .feature {
-    width: 100%;
-    margin-top: 1rem;
-  }
 }
 .modular .features.big i.fa {
   font-size: 4.5rem;
@@ -2125,7 +2122,7 @@ ul.pagination {
   clear: both;
 }
 .callout .pricing-container .pricing-item {
-  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
   display: inline-block;
   width: 24.3%;
   margin-right: 0.3rem;
@@ -2218,7 +2215,6 @@ ul.pagination {
   padding-top: 2rem;
 }
 .team .members .member {
-  display: inline-block;
   float: left;
   width: 22%;
   margin: 0 1rem;

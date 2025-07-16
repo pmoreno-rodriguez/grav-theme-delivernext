@@ -87,8 +87,10 @@
     input[type="search"] {
       outline: none;
       cursor: pointer;
+      appearance: textfield;
       -webkit-appearance: textfield;
       -webkit-box-sizing: content-box;
+      box-sizing: content-box;
       font-family: inherit;
       font-size: 100%;
       border: 0 none;

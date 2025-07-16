@@ -10,7 +10,7 @@
                                 <h4>{{ portfolio.title|raw }}</h4>
                                 <p>{{ portfolio.desc|raw }}</p>
                             </div>
-                            <a href="#portfolioModal{{ portfolio.modalid }}" class="portfolio-link" data-toggle="modal">
+                            <a href="#portfolioModal{{ portfolio.modalid }}" class="portfolio-link" data-toggle="modal" aria-label="{{ portfolio.title|raw }}">
                                 <div class='screen'>
                                     <div class="screen-content" style="background-image: url({{ page.media[portfolio.image].cropZoom(400,250).url }})"></div>
                                     <div class="screen-content-hover"><i class="fa fa-plus-square"></i></div>
