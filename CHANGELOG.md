@@ -1,8 +1,13 @@
-# v1.3.2
-## 07/13/2025
+# v1.4.0
+## 07/16/2025
 
-1. [](#improved)
+1. [](#new)
+    * Added support in the Showcase template for displaying slides in fullscreen mode
+    * Added lazy-loading support for images in the Showcase template
+2. [](#improved)
     * Updated features styling: equal height blocks, centered icons, hover shadow, and consistent spacing
+    * Optimized styles and asset loading to improve Lighthouse performance
+    * Updated `features.md` demo page
 
 # v1.3.1
 ## 06/30/2025
