@@ -1,16 +1,29 @@
 {% block showcase %}
-<div id="content-slide">
+<div id="content-slide"{% if page.header.fullscreen %}style="height: 100vh;"{% endif %}>
   <div class="slideme">
     {% for slide in page.header.slides %}
-       <div class="modular-row showcase flush-top" {% if page.media[slide.image] %}style="background-image: url({{ page.media[slide.image].url }});background-blend-mode:{{slide.blend}};background-color: {{slide.backcolor}};"{% endif %}>
-          <h1>{{ slide.heading|raw }}</h1>
-          <h2>{{ slide.subheading|raw }}</h2>
-          {% if slide.button_text %}<a class="button" href="{{ slide.button_url }}">{{ slide.button_text }}</a>
-          
-          {% endif %}
+      <div class="modular-row showcase flush-top"
+        {% if page.header.fullscreen %}style="height: 100vh;"{% endif %}
+        {% if page.media[slide.image] %}
+          data-bg="{{ page.media[slide.image].url }}"
+          data-blend="{{ slide.blend }}"
+          data-backcolor="{{ slide.backcolor }}"
+        {% endif %}
+      >
+        {% if page.header.fullscreen %}
+          <div class="showcase-content-fullscreen">
+        {% else %}
+          <div class="showcase-content">
+        {% endif %}
+            <h1>{{ slide.heading|raw }}</h1>
+            <h2>{{ slide.subheading|raw }}</h2>
+            {% if slide.button_text %}
+              <a class="button" href="{{ slide.button_url }}">{{ slide.button_text }}</a>
+            {% endif %}
+          </div>
       </div>
-  {% endfor %}
-</div>
+    {% endfor %}
+  </div>
 </div>
 
 {% block content %}
@@ -20,20 +33,29 @@
 {% endblock %}
 
 <script type="text/javascript">
-
 $('#content-slide').slideme({
-  arrows: {{ page.header.slide_settings.arrows}},
+  arrows: {{ page.header.slide_settings.arrows }},
   autoslide: {{ page.header.slide_settings.autoslide }},
-  autoslideHoverStop: {{ page.header.slide_settings.autoslideHoverStop}},
-  interval: {{ page.header.slide_settings.interval}},
+  autoslideHoverStop: {{ page.header.slide_settings.autoslideHoverStop }},
+  interval: {{ page.header.slide_settings.interval }},
   loop: {{ page.header.slide_settings.loop }},
   pagination: "numbers",
-  transition : '{{ page.header.slide_settings.transition }}',
+  transition: '{{ page.header.slide_settings.transition }}',
   itemsForSlide: {{ page.header.slide_settings.itemsForSlide }},
-  touch: {{ page.header.slide_settings.touch}},
-  swipe: {{ page.header.slide_settings.swipe}}
-
+  touch: {{ page.header.slide_settings.touch }},
+  swipe: {{ page.header.slide_settings.swipe }}
 });
 </script>
-{% endblock %}
+<script>
+  const prevBtn = document.querySelector('.arrow.prev');
+  const nextBtn = document.querySelector('.arrow.next');
 
+  if (prevBtn) {
+    prevBtn.setAttribute('aria-label', '{{ "DELIVERNEXT.SHOWCASE.ARROW_PREV"|t }}');
+  }
+  if (nextBtn) {
+    nextBtn.setAttribute('aria-label', '{{ "DELIVERNEXT.SHOWCASE.ARROW_NEXT"|t }}');
+  }
+</script>
+
+{% endblock %}
