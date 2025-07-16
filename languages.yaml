@@ -181,6 +181,8 @@ en:
             LINK_URL: Link URL
         SHOWCASE: 
           TAB: Showcase
+          SHOW_FULLSCREEN: Fullscreen Mode
+          SHOW_FULLSCREEN_HELP: Display the showcase in fullscreen mode
           SLIDES: 
             LABEL: Slides
             DESCRIPTION: Showcase is a modular page that uses images uploaded in the Page Media box below
@@ -447,6 +449,9 @@ en:
         LABEL: Syndicate 
       TAXONOMYLIST:
         LABEL: Popular Tags
+    SHOWCASE:
+      ARROW_PREV: Previous
+      ARROW_NEXT: Next
     MISC:
       BACK_TO_TOP: Back to top
       GPS_LOCATION: GPS Address
@@ -633,7 +638,9 @@ es:
             LINK_TEXT: Texto del enlace
             LINK_URL: URL del enlace
         SHOWCASE: 
-          TAB: Muestra
+          TAB: Presentación
+          SHOW_FULLSCREEN: Modo pantalla completa
+          SHOW_FULLSCREEN_HELP: Mostrar la presentación en modo pantalla completa
           SLIDES: 
             LABEL: Diapositivas
             DESCRIPTION: Muestra es una página modular que usa imágenes cargadas en el cuadro de Medios de la página
@@ -900,6 +907,9 @@ es:
         LABEL: Distribuir
       TAXONOMYLIST:
         LABEL: Etiquetas populares
+    SHOWCASE:
+      ARROW_PREV: Anterior
+      ARROW_NEXT: Siguiente
     MISC:
       BACK_TO_TOP: Volver arriba
       GPS_LOCATION: Dirección GPS
