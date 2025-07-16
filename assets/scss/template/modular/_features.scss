@@ -29,76 +29,51 @@
     }
 
     .feature-items {
-      margin-top: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: stretch;
+      margin-top: 4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1rem;
     }
 
     .feature {
-      display: flex;
-      flex-direction: column;
-      justify-content: stretch;
-      align-items: center;
-      width: 32%;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
       padding: 1rem;
       box-sizing: border-box;
-      flex: 1 1 auto;
+      height: 100%;
       border: none;
       background: none;
-        @extend .default-animation;
-            -webkit-transform:translateZ(0);
+      @extend .default-animation;
+      transition: box-shadow 0.3s ease, transform 0.3s ease;
+
       &:hover {
         box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
-        -webkit-transform:scale(1,1.08);
-        -moz-transform:scale(1,1.08);
-        -ms-transform:scale(1,1.08);
-        -o-transform:scale(1,1.08);
-        transform:scale(1,1.08);
-      }
-
-      @include breakpoint(tablet-range) {
-        width: 48%;
-      }
-
-      @include breakpoint(mobile-only) {
-        width: 100%;
-        margin-top: 1rem;
+        transform: scale(1.03);
       }
 
       i.fa {
         font-size: 2rem;
         margin-bottom: 1rem;
-        text-align: center;
+        justify-self: center;
       }
 
       .feature-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: center;
-        flex-grow: 1;
-        width: 100%;
+        display: grid;
+        grid-template-rows: auto 1fr auto;
+        text-align: center;
 
         &.icon-offset {
           margin-left: 0;
         }
 
         h4 {
-          margin: 0 0 0.5rem 0;
+          margin: 0 0 0.5rem;
           font-size: 1.1rem;
         }
 
         p {
           margin: 0.2rem 0;
           font-size: $core-font-size;
-          text-align: center;
-
-          &:last-of-type {
-            margin-top: auto;
-          }
 
           a {
             display: inline-block;
@@ -106,20 +81,15 @@
             text-align: center;
           }
         }
+
+        p:last-of-type {
+          align-self: end;
+        }
       }
     }
 
     &.big {
       text-align: center;
-
-      .feature {
-        width: 32%;
-
-        @include breakpoint(mobile-only) {
-          width: 100%;
-          margin-top: 1rem;
-        }
-      }
 
       i.fa {
         font-size: 4.5rem;
