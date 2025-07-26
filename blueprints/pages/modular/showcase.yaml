@@ -153,7 +153,9 @@ form:
                           type: select
                           label: DELIVERNEXT.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.TRANSITIONS.LABEL
                           labelclasses: list-item
+                          size: small
                           options:
+                            slide: DELIVERNEXT.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.TRANSITIONS.SLIDE
                             fade: DELIVERNEXT.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.TRANSITIONS.FADE
                             zoom: DELIVERNEXT.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.TRANSITIONS.ZOOM
                           help: DELIVERNEXT.ADMIN.MODULAR.SHOWCASE.SLIDES_SETTINGS.TRANSITIONS.HELP

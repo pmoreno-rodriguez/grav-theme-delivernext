@@ -1,3 +1,9 @@
+# v1.4.1
+## 07/26/2025
+
+1. [](#improved)
+    * **Fixed**: Added missing Slide effect to the transition options in the Showcase template
+
 # v1.4.0
 ## 07/16/2025
 

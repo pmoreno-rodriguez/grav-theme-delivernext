@@ -215,6 +215,7 @@ en:
             TRANSITIONS: 
               LABEL: Select the transition effect
               HELP: Choose the transition effect between slides
+              SLIDE: Slide
               FADE: Fade
               ZOOM: Zoom 
         PORTFOLIO:
@@ -673,6 +674,7 @@ es:
             TRANSITIONS: 
               LABEL: Selecciona el efecto de transición
               HELP: Elige el efecto de transición entre diapositivas
+              SLIDE: Deslizar
               FADE: Fundido
               ZOOM: Zoom 
         PORTFOLIO:
