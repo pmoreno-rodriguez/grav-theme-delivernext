@@ -70,17 +70,23 @@
 			{% if videos_gallery %}
 				{% for videoItem in videos_gallery %}
 					{% if videoItem.source == 'local' %}
-						{% set videoURL = page.media[videoItem.video].url %}
-						{% set videoItemThumbnail = page.media[videoItem.local_thumbnail].cropZoom(thumb_w, thumb_h).html(videoItem.title, videoItem.title, 'gallery_item_content_image') %}
-					{% else %}
-						{% set videoURL = videoItem.remote_video %}
-						{% set videoItemThumbnail = 
-							'<img src="' ~ videoItem.remote_thumbnail ~ '" ' ~
-							'alt="' ~ videoItem.title|e ~ '" ' ~
-							'class="gallery_item_content_image" ' ~
-							'itemprop="http://schema.org/image" />' 
-						%}
-					{% endif %}
+                        {% set videoURL = page.media[videoItem.video].url %}
+                    {% else %}
+                        {% set videoURL = videoItem.remote_video %}
+                    {% endif %}
+
+                    {% if videoItem.local_thumbnail and page.media[videoItem.local_thumbnail] %}
+                        {% set videoItemThumbnail = page.media[videoItem.local_thumbnail].cropZoom(thumb_w, thumb_h).html(videoItem.title, videoItem.title, 'gallery_item_content_image') %}
+                    {% elseif videoItem.remote_thumbnail %}
+                        {% set videoItemThumbnail = 
+                            '<img src="' ~ videoItem.remote_thumbnail ~ '" ' ~
+                            'alt="' ~ videoItem.title|e ~ '" ' ~
+                            'class="gallery_item_content_image" ' ~
+                            'itemprop="http://schema.org/image" />' 
+                        %}
+                    {% else %}
+                        {% set videoItemThumbnail = '<div class="gallery_content-image no-thumbnail">' ~ videoItem.title|e ~ '</div>' %}
+                    {% endif %}
 					<div class="gallery_item g-block {{ columns }}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/MediaObject">
 					<h3 class="title">{{ videoItem.title|raw }}</h3>
 					<div class="gallery_item_content">
