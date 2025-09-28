@@ -5,21 +5,21 @@ features:
     -
         icon: comment-o
         header: 'First Service'
-        text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rhoncus aliquam libero id tempor. Phasellus fringilla turpis tellus, ut ultricies dui porttitor ac.'
+        text: 'Sed posuere consectetur est at lobortis. Vivamus aoreet faucibus dolor auctor.'
         linktext: 'Find Out More'
         linkurl: 'http://www.getgrav.org'
         linkstyle: button-outline-info
     -
         icon: heart-o
         header: 'Second Service'
-        text: 'Etiam sollicitudin, lacus ac posuere tempor, sem tellus ornare arcu, scelerisque facilisis augue dui ac lectus. Vestibulum vel congue felis. Fusce vulputate neque non lacus varius interdum. Donec volutpat rutrum volutpat.'
+        text: 'Duis mollis, est non commodo eget urna mollis ornare vel eu leo faucibus.'
         linktext: 'Find Out More'
         linkurl: 'http://www.getgrav.org'
         linkstyle: button-outline
     -
         icon: star-o
         header: 'Third Service'
-        text: 'Donec efficitur ipsum eu consectetur gravida. Suspendisse congue cursus pretium.'
+        text: 'Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.'
         linktext: 'Find Out More'
         linkurl: 'http://www.getgrav.org'
         linkstyle: button-outline-secondary
