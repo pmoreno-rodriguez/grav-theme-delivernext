@@ -96,6 +96,15 @@
       h3 a {
         color: $white;
       }
+      @include breakpoint(desktop-range) {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .social-icons {
+          margin-top: 1rem;
+        }
+      }
     }
     .quickmenu {
       margin: 0;
