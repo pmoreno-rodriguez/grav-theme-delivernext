@@ -1,3 +1,10 @@
+# v1.4.2
+## 09/28/2025
+
+1. [](#improved)
+    * Improved thumbnail logic to prefer local images and fallback to title in gallery template
+    * Improved styles for footer social icons and form buttons
+
 # v1.4.1
 ## 07/26/2025
 
