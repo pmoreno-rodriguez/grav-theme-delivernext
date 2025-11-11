@@ -4,6 +4,12 @@
 
 DeliverNext theme is a port of the [Grav Deliver](https://github.com/getgrav/grav-theme-deliver) by [Grav Team](https://getgrav.org). Whether you’re a creative looking to show off your portfolio, or a business looking to promote your company, this theme is for you.
 
+### ❤️ Support This Project
+
+If you find this theme useful, consider supporting its development:
+
+[![Donate with PayPal](https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=A2H2GMZDJDKCC)
+
 # Features
 
 * Fully responsive
