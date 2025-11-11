@@ -1,3 +1,9 @@
+# v1.4.3
+## 11/11/2025
+
+1. [](#improved)
+   * Set the dependency for the Grav version to 1.7.49.5
+
 # v1.4.2
 ## 09/28/2025
 
