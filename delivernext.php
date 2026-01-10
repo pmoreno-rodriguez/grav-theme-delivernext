@@ -14,14 +14,16 @@ class DeliverNext extends Theme
 
     public function onTwigSiteVariables(): void
     {
-        $themeConfig = $this->config->get('themes.delivernext');
+        if (!$this->isAdmin()) {
+            $themeConfig = $this->config->get('themes.delivernext');
 
-        if (isset($themeConfig['custom_css']) && $themeConfig['custom_css'] && file_exists(__DIR__ . '/assets/css/custom.css')) {
-            $this->grav['assets']->addCss('theme://assets/css/custom.css', ['priority' => 5]);
-        }
+            if (isset($themeConfig['custom_css']) && $themeConfig['custom_css'] && file_exists(__DIR__ . '/assets/css/custom.css')) {
+                $this->grav['assets']->addCss('theme://assets/css/custom.css', ['priority' => 5]);
+            }
 
-        if (isset($themeConfig['custom_js']) && $themeConfig['custom_js'] && file_exists(__DIR__ . '/assets/js/custom.js')) {
-            $this->grav['assets']->addJs('theme://assets/js/custom.js', ['group' => 'bottom', 'priority' => 15]);
+            if (isset($themeConfig['custom_js']) && $themeConfig['custom_js'] && file_exists(__DIR__ . '/assets/js/custom.js')) {
+                $this->grav['assets']->addJs('theme://assets/js/custom.js', ['group' => 'bottom', 'priority' => 15]);
+            }
         }
     }
 }
