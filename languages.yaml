@@ -249,7 +249,7 @@ en:
             BUTTON_URL_LABEL: Button URL
         GALLERY:
           TAB: Gallery
-          IMAGE_TITLE: Image Gallery
+          TITLE: Image Gallery
           LAYOUT: 
             LABEL: Layout
             TWOCOLS: "Medium   = 2 / 1 columns"
