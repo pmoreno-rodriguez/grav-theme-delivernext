@@ -2,7 +2,12 @@
 {% for month,items in archives_data %}
     <li>
         <a href="{{ archives_url ?? base_url }}/{{ config.plugins.archives.taxonomy_names.month }}{{ config.system.param_sep }}{{ month|date(config.plugins.archives.taxonomy_values.month)|lower|e('url') }}">
+        {% if config.plugins['translate-date'].enabled %}
+            {% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
+            <span class="archive_date">{{ month|td(lang,config.plugins.archives.date_display_format) }} </span>
+        {% else %}
             <span class="archive_date">{{ month|date(config.plugins.archives.date_display_format) }} </span>
+        {% endif %}
         </a>
         {% if archives_show_count %}
         <span>({{ items|length }})</span>
