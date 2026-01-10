@@ -10,6 +10,16 @@ form:
           title: DELIVERNEXT.ADMIN.ITEM.TAB
 
           fields:
+
+            _authorConfig:
+              type: spacer
+              title: DELIVERNEXT.ADMIN.ITEM.AUTHOR_OPTIONS.LABEL
+            header.author:
+              type: text
+              toggleable: true
+              size: medium
+              label: DELIVERNEXT.ADMIN.ITEM.AUTHOR_OPTIONS.NAME
+
             _summaryConfig:
               type: spacer
               title: DELIVERNEXT.ADMIN.ITEM.CONTENT.SUMMARY.LABEL
