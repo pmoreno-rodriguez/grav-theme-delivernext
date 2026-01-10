@@ -24,8 +24,7 @@
             {% if site.author.email %}<p><strong>E-mail: </strong><a href="mailto:{{ site.author.email|safe_email }}">{{ site.author.email|safe_email }}</a></p>{% endif %}
             {% if theme_config.footer.gps %}<p><strong>
                 {{ 'DELIVERNEXT.MISC.GPS_LOCATION'|t }}<br>
-                <a href="
-                https://www.google.com/maps/search/?api=1&query={{ theme_config.gps }}">{{ theme_config.footer.gps }}</a></strong></p>{% endif %}
+                <a href="https://www.google.com/maps/search/?api=1&query={{ theme_config.footer.gps }}" target="_blank">{{ theme_config.footer.gps }}</a></strong></p>{% endif %}
         </div>
         
         <div class="footer-module"><h4>{{ theme_config.footer.quick_links_label }}</h4>
