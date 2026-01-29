@@ -4,13 +4,7 @@
 
 DeliverNext theme is a port of the [Grav Deliver](https://github.com/getgrav/grav-theme-deliver) by [Grav Team](https://getgrav.org). Whether you’re a creative looking to show off your portfolio, or a business looking to promote your company, this theme is for you.
 
-### ❤️ Support This Project
-
-If you find this theme useful, consider supporting its development:
-
-[![Donate with PayPal](https://www.paypalobjects.com/en_US/ES/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=A2H2GMZDJDKCC)
-
-# Features
+## Features
 
 * Fully responsive
 * Automatic and custom navigation menus included
@@ -30,13 +24,13 @@ If you find this theme useful, consider supporting its development:
 * Automatic loading of `custom.css` and `custom.js` files
 * SCSS files included for deeper customization options
 
-# Installation
+## Installation
 
 Installing the DeliverNext theme can be done in one of two ways. Our GPM (Grav Package Manager) installation method enables you to quickly and easily install the theme with a simple terminal command, while the manual method enables you to do so via a zip file.
 
 The theme by itself is useful, but you may have an easier time getting up and running by installing a skeleton. The [DeliverNext Site Skeleton](https://github.com/pmoreno-rodriguez/grav-skeleton-delivernext-site) is a self-contained repository for a complete sites which includes: sample content, configuration, theme, and plugins.
 
-## GPM Installation (Preferred)
+### GPM Installation (Preferred)
 
 The simplest way to install this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm) through your system's Terminal (also called the command line).  From the root of your Grav install type:
 
@@ -44,7 +38,7 @@ The simplest way to install this theme is via the [Grav Package Manager (GPM)](h
 
 This will install the DeliverNext theme into your `/user/themes` directory within Grav. Its files can be found under `/your/site/grav/user/themes/delivernext`.
 
-## Manual Installation
+### Manual Installation
 
 To install this theme, just download the zip version of this repository and unzip it under `/your/site/grav/user/themes`. Then, rename the folder to `delivernext`. You can find these files either on [GitHub](https://github.com/pmoreno-rodriguez/grav-theme-delivernext) or via [GetGrav.org](http://getgrav.org/downloads/themes).
 
@@ -54,11 +48,22 @@ You should now have all the theme files under
 
 >> NOTE: This theme requires the [Grav](http://github.com/getgrav/grav), [Error](https://github.com/getgrav/grav-theme-error), [Problems](https://github.com/getgrav/grav-plugin-problems), [Translate Date](https://github.com/Karmalakas/grav-plugin-translate-date) and [Twig Extensions](https://github.com/bitstarr/grav-plugin-twig-extensions) plugins.
 
-# Updating
+### Post Installation
+
+Enable the **DeliverNext** theme, either via the Admin plugin at admin/themes or in the system.yaml file under pages.theme.
+
+```
+pages:
+  theme: delivernext
+```
+
+Do not directly edit the delivernext.yaml file found in the theme folder. Copy the delivernext.yaml file to user/config/themes and edit the new file there.
+
+## Updating
 
 As development for the DeliverNext theme continues, new versions may become available that add additional features and functionality, improve compatibility with newer Grav releases, and generally provide a better user experience. Updating DeliverNext is easy, and can be done through Grav's GPM system, as well as manually.
 
-## GPM Update (Preferred)
+### GPM Update (Preferred)
 
 The simplest way to update this theme is via the [Grav Package Manager (GPM)](http://learn.getgrav.org/advanced/grav-gpm). You can do this with this by navigating to the root directory of your Grav install using your system's Terminal (also called command line) and typing the following:
 
@@ -66,7 +71,7 @@ The simplest way to update this theme is via the [Grav Package Manager (GPM)](ht
 
 This command will check your Grav install to see if your DeliverNext theme is due for an update. If a newer release is found, you will be asked whether or not you wish to update. To continue, type `y` and hit enter. The theme will automatically update and clear Grav's cache.
 
-## Manual Update
+### Manual Update
 
 Manually updating DeliverNext is pretty simple. Here is what you will need to do to get this done:
 
@@ -77,7 +82,7 @@ Manually updating DeliverNext is pretty simple. Here is what you will need to do
 
 > Note: Any changes you have made to any of the files listed under this directory will also be removed and replaced by the new set. Any files located elsewhere (for example a YAML settings file placed in `user/config/themes`) will remain intact.
 
-# Setup
+## Setup
 
 If you want to set DeliverNext as the default theme, you can do so by following these steps:
 
@@ -89,7 +94,7 @@ If you want to set DeliverNext as the default theme, you can do so by following 
 
 Once this is done, you should be able to see the new theme on the frontend. Keep in mind any customizations made to the previous theme will not be reflected as all of the theme and templating information is now being pulled from the **delivernext** folder.
 
-# Default Options
+## Default Options
 
 DeliverNext comes with a variety of configuration options that can be set site-wide. These options are organized into sections for easier management:
 
@@ -146,18 +151,25 @@ Upload a `.png` or `.ico` file through the theme options or place it in `user/th
 **Custom CSS/JS**  
 Create `custom.css` or `custom.js` files in `user/themes/delivernext/css` or `.../js` respectively. They will load automatically when enabled in theme options.
 
-# Demo page
+## Demo page
 
 [https://delivernext.pmdesign.dev](https://delivernext.pmdesign.dev)
 
-# Documentation 
+## Documentation 
 
 You can read extra documentation of DeliverNext Theme at [https://pmoreno-rodriguez.github.io/#/./gravthemes/delivernext/index](https://pmoreno-rodriguez.github.io/#/./gravthemes/delivernext/index). This is [Spanish document site for DeliverNext Theme](https://pmdesign.dev/temas/delivernext)
 
-# To do
+## To do
 
 - [ ] Improve css classes for image type logo
-- [ ] Create an Image Gallery template with Glightbox or similar library
 - [ ] Add featured articles module to the sidebar
 - [ ] Add article categories module to the sidebar
 - [ ] Update to latest FontAwesome icons
+
+## ☕ Support This Project
+If you find this project useful and would like to support its development,
+you can buy me a coffee on Ko-fi:
+
+👉 **[Support me on Ko-fi](https://ko-fi.com/pmoreno)**
+
+Thank you for supporting open-source software! 🙌
