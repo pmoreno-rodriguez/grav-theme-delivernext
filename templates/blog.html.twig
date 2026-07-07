@@ -4,9 +4,11 @@
 {% set base_url = page.url %}
 {% set feed_url = base_url %}
 {# Set sidebar option for page #}
-{% set show_sidebar = header_var('show_sidebar', [page, blog])|defined(true)  %}
+{% set show_sidebar = header_var('show_sidebar', [page, blog]) %}
+{% set show_sidebar = show_sidebar is null ? true : show_sidebar %}
 {# Set breadcrumbs option for page #}
-{% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog])|defined(true) %}
+{% set show_breadcrumbs = header_var('show_breadcrumbs', [page, blog]) %}
+{% set show_breadcrumbs = show_breadcrumbs is null ? true : show_breadcrumbs %}
 
 {% if base_url == '/' %}
 {% set base_url = '' %}
@@ -39,20 +41,21 @@
 </div>
 	<div class="content-wrapper">
 	{% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
-		{% include 'partials/breadcrumbs.html.twig' %}
+		{% include 'partials/breadcrumbs.html.twig' ignore missing %}
 	{% endif %}
 	{{ page.content|raw }}
 	</div>
 	<div class="content-wrapper blog-content-list g-grid">
 		<div id="listing" class="g-block size-2-3">
 			{% for child in collection %}
-				{% set image = child.media[header.featured_image] ?: child.media.images|first %}
-				{% set showImage = child.header.show_featured_image|defined(false) %}
+				{% set child_featured_key = child.header.featured_image ?? child.header.featuredImage ?? null %}
+				{% set image = (child_featured_key and child.media[child_featured_key]) ? child.media[child_featured_key] : child.media.images|first %}
+				{% set showImage = child.header.show_featured_image ?? false %}
 				{% include 'partials/blog_item.html.twig' with  { page: child, showImage, image, 'page_title': child.title, big_header, 'truncate':true } %}
 			{% endfor %}
 
 			{% if config.plugins.pagination.enabled and collection.params.pagination %}
-				{% include 'partials/pagination.html.twig' with {'pagination':collection.params.pagination} %}
+				{% include 'partials/pagination.html.twig' ignore missing with {'base_url': page.url, 'pagination': collection.params.pagination} %}
 			{% endif %}
 		</div>
 		{% if show_sidebar %}
