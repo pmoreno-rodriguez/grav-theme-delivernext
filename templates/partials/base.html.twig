@@ -13,17 +13,22 @@
 {# SET THEME OPTIONS #}
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
 {% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
-{% set logo_enabled = theme_var('theme_logo_enabled')|defined(false) %}
+{% set logo_enabled = theme_var('theme_logo_enabled') %}
+{% set logo_enabled = logo_enabled is null ? false : logo_enabled %}
 
 {# Canonical URL #}
 {% set canonical_url = page.url(true, true) %}
 
 {# Tile settings #}
-{% set show_title = header_var('show_title')|defined(true) %}
+{% set show_title = header_var('show_title') %}
+{% set show_title = show_title is null ? true : show_title %}
 {% set page_title = page.title %}
-{% set title_text_color = header_var('title_text_color')|defined('#ffffff') %}
-{% set title_bg_color = header_var('title_bg_color')|defined('#b4b093') %}
-{% set title_choice = header_var('title_bg_choice')|defined('color') %}
+{% set title_text_color = header_var('title_text_color') %}
+{% set title_text_color = title_text_color is null ? '#ffffff' : title_text_color %}
+{% set title_bg_color = header_var('title_bg_color') %}
+{% set title_bg_color = title_bg_color is null ? '#b4b093' : title_bg_color %}
+{% set title_choice = header_var('title_bg_choice') %}
+{% set title_choice = title_choice is null ? 'color' : title_choice %}
 {% set site_title = site.title|e('html') %}
 {% set meta_title = page_title is defined ? page_title|e ~ ' | ' ~ site_title : site_title %}
 
@@ -37,18 +42,23 @@
 {% endif %}
 
 {# Featured Image #}
-{% set show_featured_image = header_var('show_featured_image')|defined(false) %}
-{% set featured_image = page.media[header.featured_image] ?: page.media.images|first %}
-{% set big_header = header_var('big_header')|defined(true) %}
+{% set show_featured_image = header_var('show_featured_image') %}
+{% set show_featured_image = show_featured_image is null ? false : show_featured_image %}
+{% set featured_key = header.featured_image ?? header.featuredImage ?? null %}
+{% set featured_image = (featured_key and page.media[featured_key]) ? page.media[featured_key] : page.media.images|first %}
+{% set big_header = header_var('big_header') %}
+{% set big_header = big_header is null ? true : big_header %}
 
 {# Social Media #}
-{% set social = theme_var('social_enabled')|defined(false) %}
+{% set social = theme_var('social_enabled') %}
+{% set social = social is null ? false : social %}
 
 {# SET DEFAULT GRAV LANGUAGE #}
-{% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
+{% set lang = grav.language.getActive ?? grav.config.site.default_lang %}
 
 {# SET ONEPAGE_MENU #}
-{% set show_onpage_menu = header_var('onpage_menu')|defined(false) %}
+{% set show_onpage_menu = header_var('onpage_menu') %}
+{% set show_onpage_menu = show_onpage_menu is null ? false : show_onpage_menu %}
 
 <!DOCTYPE html>
 <html lang="{{ lang }}">

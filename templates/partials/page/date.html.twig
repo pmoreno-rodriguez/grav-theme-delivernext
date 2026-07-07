@@ -6,7 +6,7 @@
 {# SET DEFAULT GRAV LANGUAGE #}
 {% apply spaceless %}
 
-{% set lang = grav.language.getActive ?: grav.config.site.default_lang %}
+{% set lang = grav.language.getActive ?? grav.config.site.default_lang %}
 
 {% set default_format = system.pages.dateformat.default %}
 {% set short_format = system.pages.dateformat.short %}
