@@ -17,7 +17,6 @@
     * **Social media icon field refactor**:
     - Changed social media icon field from `iconpicker` to `text` type with flexible input formats
     - Added icon format normalization in template: accepts "facebook", "fa-facebook", or "fa fa-facebook" formats
-    - Added field descriptions in all supported languages documenting the usage
     * **PHP 8.3 compatibility**:
     - Added explicit return type hints (`:void`) to event handler methods
     - Removed unused imports and legacy code
