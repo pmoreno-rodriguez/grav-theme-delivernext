@@ -17,10 +17,10 @@ form:
           highlight: 0
           default: 0
           options:
-              1: PLUGIN_ADMIN.ENABLED
-              0: PLUGIN_ADMIN.DISABLED
+            1: PLUGIN_ADMIN.ENABLED
+            0: PLUGIN_ADMIN.DISABLED
           validate:
-              type: bool
+            type: bool
         social:
           label: DELIVERNEXT.ADMIN.THEME.MEDIA.ICONS.LABEL
           type: list
@@ -36,21 +36,22 @@ form:
               label: DELIVERNEXT.ADMIN.THEME.MEDIA.ICONS.ITEMS.NAME
               labelclasses: bold-light
             .url:
-                type: text
-                size: medium
-                label: DELIVERNEXT.ADMIN.THEME.MEDIA.ICONS.ITEMS.URL
-                labelclasses: bold-light
+              type: text
+              size: medium
+              label: DELIVERNEXT.ADMIN.THEME.MEDIA.ICONS.ITEMS.URL
+              labelclasses: bold-light
             .target:
-                type: select
-                label: DELIVERNEXT.ADMIN.THEME.MEDIA.ICONS.ITEMS.TARGET.LABEL
-                labelclasses: bold-light
-                default: _self
-                size: medium
-                options:
-                  _self: DELIVERNEXT.ADMIN.THEME.MEDIA.ICONS.ITEMS.TARGET.SELF
-                  _blank: DELIVERNEXT.ADMIN.THEME.MEDIA.ICONS.ITEMS.TARGET.BLANK
+              type: select
+              label: DELIVERNEXT.ADMIN.THEME.MEDIA.ICONS.ITEMS.TARGET.LABEL
+              labelclasses: bold-light
+              default: _self
+              size: medium
+              options:
+                _self: DELIVERNEXT.ADMIN.THEME.MEDIA.ICONS.ITEMS.TARGET.SELF
+                _blank: DELIVERNEXT.ADMIN.THEME.MEDIA.ICONS.ITEMS.TARGET.BLANK
             .icon:
-                type: iconpicker
-                size: medium
-                label: DELIVERNEXT.ADMIN.THEME.MEDIA.ICONS.ITEMS.ICON
-                labelclasses: bold-light
+              type: text
+              size: medium
+              label: DELIVERNEXT.ADMIN.THEME.MEDIA.ICONS.ITEMS.ICON
+              description: DELIVERNEXT.ADMIN.THEME.MEDIA.ICONS.ITEMS.ICON_HELP
+              labelclasses: bold-light

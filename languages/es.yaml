@@ -1,0 +1,127 @@
+DELIVERNEXT:
+  ADMIN:
+    THEME:
+      SETTINGS: 
+        TAB: Configuración del Tema
+        THEME_CONFIG: Opciones del Tema
+        DROPDOWN_MENU: Menú desplegable en la barra de navegación
+        PRODUCTION_MODE: Modo de producción
+        PRODUCTION_MODE_HELP: Cuando está habilitado, DELIVERNEXT se renderizará con CSS minificado
+        STICKY_MENU: Menú fijo
+        BACK_TO_TOP_BUTTON: Botón de <strong>Volver arriba</strong>
+        BACK_TO_TOP_BUTTON_HELP: Habilita el botón `Volver arriba` al desplazar la página.
+        CUSTOM_CSS: Cargar CSS personalizado
+        CUSTOM_CSS_HELP: Carga estilos CSS personalizados desde theme://assets/css/custom.css
+        CUSTOM_JS: Cargar JS personalizado
+        CUSTOM_JS_HELP: Carga JS personalizado desde theme://assets/css/custom.js
+        FAVICON: Elige tu propio favicon
+        FAVICON_DESCRIPTION: Se usará en lugar del favicon predeterminado `theme://images/favicon.png`
+        LOGO:
+          TITLE: Opciones del Logo
+          ENABLED: Logo habilitado
+          HEIGHT: Altura del Logo
+          DESKTOP: Logo
+          DESCRIPTION: Se usará en lugar del logo predeterminado `theme://images/logo.png`
+          MOBILE: Logo para móviles
+          TYPE_LOGO_HEADER: 'Mostrar logo/texto en el encabezado'
+          TYPE_LOGO_HEADER_HELP: Elige cómo mostrar el logo en el encabezado
+          TYPE_LOGO_HEADER_IMAGE: Imagen
+          TYPE_LOGO_HEADER_TEXT: Texto
+          TYPE_LOGO_HEADER_BOTH: Ambos
+      HEADER:
+        TAB: Encabezado
+        CUSTOM_MENU:
+          SECTION_TITLE: 'Elementos de Menú Personalizados'
+          ENABLE: 'Habilitar Elementos de Menú Personalizados'
+          ENABLE_HELP: 'Determina si se muestran las entradas de menú personalizadas definidas en la barra de menú.'
+          ITEMS:
+            LABEL: Elementos del Menú
+            TEXT: 'Texto'
+            TEXT_DESCRIPTION: 'Etiqueta de texto para el elemento del menú.'
+            ICON: 'Icono'
+            ICON_DESCRIPTION: 'Icono de Font Awesome para el elemento del menú.'
+            URL: 'URL'
+            URL_DESCRIPTION: 'URL para el elemento del menú.'
+            TARGET:
+              LABEL: Destino
+              SELF: 'Abrir en el mismo marco donde se hizo clic'
+              BLANK: 'Abrir en una nueva ventana'
+      FOOTER:
+        TAB: Pie de página
+        ABOUT:
+          TITLE: Información sobre
+          DESCRIPTION: Descripción sobre
+        QUICK_LINKS:
+          SECTION_TITLE: Enlaces rápidos
+          LABEL: Título de la sección de enlaces
+          ITEMS:
+            LABEL: Enlaces rápidos
+            TEXT: Texto del enlace rápido
+            URL: URL del enlace rápido
+            TARGET:
+              LABEL: Destino
+              SELF: 'Abrir en el mismo marco donde se hizo clic'
+              BLANK: 'Abrir en una nueva ventana'
+        OTHER_MENU:
+          SECTION_TITLE: Otro menú
+          COPYRIGHT_TEXT: Texto de copyright
+          ITEMS:
+            LABEL: Elementos del menú
+            TEXT: Texto del elemento del menú
+            URL: URL del elemento del menú
+            TARGET:
+              LABEL: Destino
+              SELF: 'Abrir en el mismo marco donde se hizo clic'
+              BLANK: 'Abrir en una nueva ventana'
+        CONTACT:
+          SECTION_TITLE: Información de contacto
+          LABEL: Título de la sección de contacto
+          ADDRESS:
+            LABEL: Líneas para la dirección
+            LINE: Línea para la dirección
+          GPS: 
+            LABEL: Ubicación GPS
+            SUBLABEL: '(en formato de Google Maps, ej: 40.65258514990599, -73.78125222264696)'
+
+      MEDIA:
+        TAB: Redes Sociales
+        SECTION_TITLE: Iconos de Redes Sociales
+        SECTION_TEXT: Incluye las URL completas de tus perfiles en redes sociales. Un icono o enlace aparecerá en la parte superior de la página y en el pie de página para cada plataforma respectiva.
+        ENABLED: Habilitar Iconos de Redes Sociales
+        ICONS: 
+          LABEL: Iconos de Redes Sociales
+          ITEMS:
+            NAME: Nombre de la Red Social
+            URL: Enlace URL a la Red Social
+            TARGET:
+              LABEL: Destino
+              SELF: 'Abrir en el mismo marco donde se hizo clic'
+              BLANK: 'Abrir en una nueva ventana'
+            ICON: Icono para la Red Social
+            ICON_HELP: Introduce el nombre del icono de Font Awesome. Soporta ambos formatos - "fa-facebook" o simplemente "facebook"
+      DEFAULT:
+        TITLE_SECTION: Opciones de título
+        SHOW_TITLE: Mostrar Título
+        SHOW_TITLE_HELP: Mostrar u ocultar el título de la página
+        TITLE_BG_CHOICE:
+          LABEL: Elección de fondo del título
+          HELP: Selecciona la opción para mostrar el formato de fondo del título
+          COLOR: Color de fondo
+          IMAGE: Imagen de fondo
+        CONTENT_SECTION: Contenido
+        FEATURED_IMAGE_LABEL: Imagen destacada
+        FEATURED_IMAGE_HELP: Selecciona un archivo para usarlo como imagen destacada en la parte superior de la página
+        IMAGE_OPTIONS: Opciones de imagen
+        BIG_HEADER: Imagen grande en el blog
+        BLOG_SIDEBAR: Barra lateral del blog
+        DEFAULT_PAGE_COLUMNS: Columnas de página predeterminadas
+        HERO_SCROLL_BUTTON: Botón de desplazamiento del héroe
+        HERO_SCROLL_BUTTON_HELP: Mostrar un botón de desplazamiento debajo del texto del héroe
+        HERO_SCROLL_BUTTON_TEXT: Texto del botón de desplazamiento
+      PAGES:
+        MODULAR:
+          SECTION_TITLE: Bloque de página modular
+          BLOCK_SIZE: Tamaño del bloque
+          BG_COLOR: Color de fondo
+          BG_COLOR_HELP: Color de fondo para el bloque modular
+      IN: en

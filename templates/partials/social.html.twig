@@ -1,17 +1,36 @@
 <ul class="social-icons">
     {% for item in theme_config.social %}
-        {% if item.icon != "mastodon" %}
-            <li>
-                <a href="{{ item.url }}" title="{{ item.name }}" target="{{ item.target }}">
-                    <i class="{{ item.icon }}"></i>
-                </a>
-            </li>
-        {% else %}
-            <li>
-                <a href="{{ item.url }}" rel="me" title="{{ item.name }}" target="{{ item.target }}">
-                    <i class="{{ item.icon }}"></i>
-                </a>
-            </li>
+        {% set icon_class = item.icon|trim %}
+        
+        {# Normalize icon class - accept multiple formats:
+           - "facebook" → "fa fa-facebook"
+           - "fa-facebook" → "fa fa-facebook"
+           - "fa fa-facebook" → "fa fa-facebook"
+        #}
+        {% if icon_class %}
+            {% if icon_class starts with 'fa fa-' %}
+                {# Already in correct format #}
+            {% elseif icon_class starts with 'fa-' %}
+                {# Convert "fa-facebook" to "fa fa-facebook" #}
+                {% set icon_class = 'fa ' ~ icon_class %}
+            {% else %}
+                {# Convert "facebook" to "fa fa-facebook" #}
+                {% set icon_class = 'fa fa-' ~ icon_class %}
+            {% endif %}
+            
+            {% if icon_class != 'fa fa-mastodon' %}
+                <li>
+                    <a href="{{ item.url }}" title="{{ item.name }}" target="{{ item.target }}">
+                        <i class="{{ icon_class }}"></i>
+                    </a>
+                </li>
+            {% else %}
+                <li>
+                    <a href="{{ item.url }}" rel="me" title="{{ item.name }}" target="{{ item.target }}">
+                        <i class="{{ icon_class }}"></i>
+                    </a>
+                </li>
+            {% endif %}
         {% endif %}
     {% endfor %}
-</ul>  
+</ul>

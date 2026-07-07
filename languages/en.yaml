@@ -1,0 +1,127 @@
+DELIVERNEXT:
+  ADMIN:
+    THEME:
+      SETTINGS: 
+        TAB: Theme Settings
+        THEME_CONFIG: Theme Options
+        DROPDOWN_MENU: Dropdown in navbar
+        PRODUCTION_MODE: Production mode
+        PRODUCTION_MODE_HELP: When enabled, DELIVERNEXT will render with minified CSS
+        STICKY_MENU: Sticky Menu
+        BACK_TO_TOP_BUTTON: Back to <strong>Top</strong> button
+        BACK_TO_TOP_BUTTON_HELP: Enables the `Back to top` button on page scroll
+        CUSTOM_CSS: Load Custom CSS
+        CUSTOM_CSS_HELP: Loads custom CSS styles from theme://assets/css/custom.css
+        CUSTOM_JS: Load Custom JS
+        CUSTOM_JS_HELP: Loads custom JS from theme://assets/css/custom.js
+        FAVICON: Choose your own favicon
+        FAVICON_DESCRIPTION: Will be used instead of the default favicon `theme://images/favicon.png`
+        LOGO:
+          TITLE: Logo Options
+          ENABLED: Logo enabled
+          HEIGHT: Logo Height
+          DESKTOP: Logo
+          DESCRIPTION: Will be used instead of the default logo `theme://images/logo.png`
+          MOBILE: Mobile Logo
+          TYPE_LOGO_HEADER: 'Show logo/text in header'
+          TYPE_LOGO_HEADER_HELP: Choose how to show the logo in the header
+          TYPE_LOGO_HEADER_IMAGE: Image
+          TYPE_LOGO_HEADER_TEXT: Text
+          TYPE_LOGO_HEADER_BOTH: Both
+      HEADER:
+        TAB: Header
+        CUSTOM_MENU:
+          SECTION_TITLE: 'Custom Menu Elements'
+          ENABLE: 'Enable Custom Menu Elements'
+          ENABLE_HELP: 'Determines if custom menu entries defined in the menu bar are shown.'
+          ITEMS:
+            LABEL: Menu Elements
+            TEXT: 'Text'
+            TEXT_DESCRIPTION: 'Text label for menu element.'
+            ICON: 'Icon'
+            ICON_DESCRIPTION: 'Font Awesome icon for the menu element.'
+            URL: 'URL'
+            URL_DESCRIPTION: 'URL for the menu element.'
+            TARGET:
+              LABEL: Target
+              SELF: 'Open in the same frame as clicked'
+              BLANK: 'Open in a new window'
+      FOOTER:
+        TAB: Footer
+        ABOUT:
+          TITLE: About information
+          DESCRIPTION: About description
+        QUICK_LINKS:
+          SECTION_TITLE: Quick links
+          LABEL: Quick links section title
+          ITEMS:
+            LABEL: Quick Links
+            TEXT: Quick link text
+            URL: Quick link URL
+            TARGET:
+              LABEL: Target
+              SELF: 'Open in the same frame as clicked'
+              BLANK: 'Open in a new window'
+        OTHER_MENU:
+          SECTION_TITLE: Other menu
+          COPYRIGHT_TEXT: Copyright text
+          ITEMS:
+            LABEL: Menu elements
+            TEXT: Menu element text
+            URL: Menu element URL
+            TARGET:
+              LABEL: Target
+              SELF: 'Open in the same frame as clicked'
+              BLANK: 'Open in a new window'
+        CONTACT:
+          SECTION_TITLE: Contact information
+          LABEL: Contact section title
+          ADDRESS:
+            LABEL: Address lines
+            LINE: Address line
+          GPS: 
+            LABEL: GPS Location
+            SUBLABEL: '(in Google Maps format, eg: 40.65258514990599, -73.78125222264696)'
+
+      MEDIA:
+        TAB: Social Media
+        SECTION_TITLE: Social Media Icons
+        SECTION_TEXT: Include the full URLs of your various social media profiles. An icon or link will appear at the top of the page and in the footer for each respective platform.
+        ENABLED: Enable Social Media Icons
+        ICONS: 
+          LABEL: Social Media Icons
+          ITEMS:
+            NAME: Social Media Name
+            URL: URL Link to Social Media
+            TARGET:
+              LABEL: Target
+              SELF: 'Open in the same frame as clicked'
+              BLANK: 'Open in a new window'
+            ICON: Icon for Social Media
+            ICON_HELP: Enter Font Awesome icon name. Supports both formats - "fa-facebook" or just "facebook"
+      DEFAULT:
+        TITLE_SECTION: Title options
+        SHOW_TITLE: Show Title
+        SHOW_TITLE_HELP: Show or hide the page title
+        TITLE_BG_CHOICE:
+          LABEL: Title Background Choice
+          HELP: Select the option to display the title background format
+          COLOR: Background Color
+          IMAGE: Background Image
+        CONTENT_SECTION: Content
+        FEATURED_IMAGE_LABEL: Featured Image
+        FEATURED_IMAGE_HELP: Select a file for use as the page's top featured image
+        IMAGE_OPTIONS: Image options
+        BIG_HEADER: Big Image in Blog
+        BLOG_SIDEBAR: Blog Sidebar
+        DEFAULT_PAGE_COLUMNS: Default page columns
+        HERO_SCROLL_BUTTON: Hero Scroll Button
+        HERO_SCROLL_BUTTON_HELP: Show a scroll button below the hero text
+        HERO_SCROLL_BUTTON_TEXT: Scroll Button Text
+      PAGES:
+        MODULAR:
+          SECTION_TITLE: Modular Page Block
+          BLOCK_SIZE: Block Size
+          BG_COLOR: Background Color
+          BG_COLOR_HELP: Background color for the modular block
+      IN: in
