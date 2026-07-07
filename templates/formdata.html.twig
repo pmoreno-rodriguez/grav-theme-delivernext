@@ -12,7 +12,7 @@
     {% include 'partials/form-messages.html.twig' %}
     <div>
         {{ 'PLUGIN_FORM.DATA_SUMMARY'|t }}
-        {% include "forms/data.html.twig" %}
+         {% include "forms/data.html.twig" ignore missing %}
     </div>
     {% else %}
         <div class="alert alert-warning" role="alert"><p>{{ 'PLUGIN_FORM.NO_FORM_DATA'|t }}</p></div>
