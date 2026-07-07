@@ -1,7 +1,7 @@
 DELIVERNEXT:
   ADMIN:
     THEME:
-      SETTINGS: 
+      SETTINGS:
         TAB: Configuración del Tema
         THEME_CONFIG: Opciones del Tema
         DROPDOWN_MENU: Menú desplegable en la barra de navegación
@@ -23,7 +23,7 @@ DELIVERNEXT:
           DESKTOP: Logo
           DESCRIPTION: Se usará en lugar del logo predeterminado `theme://images/logo.png`
           MOBILE: Logo para móviles
-          TYPE_LOGO_HEADER: 'Mostrar logo/texto en el encabezado'
+          TYPE_LOGO_HEADER: "Mostrar logo/texto en el encabezado"
           TYPE_LOGO_HEADER_HELP: Elige cómo mostrar el logo en el encabezado
           TYPE_LOGO_HEADER_IMAGE: Imagen
           TYPE_LOGO_HEADER_TEXT: Texto
@@ -31,21 +31,21 @@ DELIVERNEXT:
       HEADER:
         TAB: Encabezado
         CUSTOM_MENU:
-          SECTION_TITLE: 'Elementos de Menú Personalizados'
-          ENABLE: 'Habilitar Elementos de Menú Personalizados'
-          ENABLE_HELP: 'Determina si se muestran las entradas de menú personalizadas definidas en la barra de menú.'
+          SECTION_TITLE: "Elementos de Menú Personalizados"
+          ENABLE: "Habilitar Elementos de Menú Personalizados"
+          ENABLE_HELP: "Determina si se muestran las entradas de menú personalizadas definidas en la barra de menú."
           ITEMS:
             LABEL: Elementos del Menú
-            TEXT: 'Texto'
-            TEXT_DESCRIPTION: 'Etiqueta de texto para el elemento del menú.'
-            ICON: 'Icono'
-            ICON_DESCRIPTION: 'Icono de Font Awesome para el elemento del menú.'
-            URL: 'URL'
-            URL_DESCRIPTION: 'URL para el elemento del menú.'
+            TEXT: "Texto"
+            TEXT_DESCRIPTION: "Etiqueta de texto para el elemento del menú."
+            ICON: "Icono"
+            ICON_DESCRIPTION: "Icono de Font Awesome para el elemento del menú."
+            URL: "URL"
+            URL_DESCRIPTION: "URL para el elemento del menú."
             TARGET:
               LABEL: Destino
-              SELF: 'Abrir en el mismo marco donde se hizo clic'
-              BLANK: 'Abrir en una nueva ventana'
+              SELF: "Abrir en el mismo marco donde se hizo clic"
+              BLANK: "Abrir en una nueva ventana"
       FOOTER:
         TAB: Pie de página
         ABOUT:
@@ -60,8 +60,8 @@ DELIVERNEXT:
             URL: URL del enlace rápido
             TARGET:
               LABEL: Destino
-              SELF: 'Abrir en el mismo marco donde se hizo clic'
-              BLANK: 'Abrir en una nueva ventana'
+              SELF: "Abrir en el mismo marco donde se hizo clic"
+              BLANK: "Abrir en una nueva ventana"
         OTHER_MENU:
           SECTION_TITLE: Otro menú
           COPYRIGHT_TEXT: Texto de copyright
@@ -71,57 +71,388 @@ DELIVERNEXT:
             URL: URL del elemento del menú
             TARGET:
               LABEL: Destino
-              SELF: 'Abrir en el mismo marco donde se hizo clic'
-              BLANK: 'Abrir en una nueva ventana'
+              SELF: "Abrir en el mismo marco donde se hizo clic"
+              BLANK: "Abrir en una nueva ventana"
         CONTACT:
           SECTION_TITLE: Información de contacto
           LABEL: Título de la sección de contacto
           ADDRESS:
             LABEL: Líneas para la dirección
             LINE: Línea para la dirección
-          GPS: 
+          GPS:
             LABEL: Ubicación GPS
-            SUBLABEL: '(en formato de Google Maps, ej: 40.65258514990599, -73.78125222264696)'
+            SUBLABEL: "(en formato de Google Maps, ej: 40.65258514990599, -73.78125222264696)"
 
       MEDIA:
         TAB: Redes Sociales
         SECTION_TITLE: Iconos de Redes Sociales
         SECTION_TEXT: Incluye las URL completas de tus perfiles en redes sociales. Un icono o enlace aparecerá en la parte superior de la página y en el pie de página para cada plataforma respectiva.
         ENABLED: Habilitar Iconos de Redes Sociales
-        ICONS: 
+        ICONS:
           LABEL: Iconos de Redes Sociales
           ITEMS:
             NAME: Nombre de la Red Social
             URL: Enlace URL a la Red Social
             TARGET:
               LABEL: Destino
-              SELF: 'Abrir en el mismo marco donde se hizo clic'
-              BLANK: 'Abrir en una nueva ventana'
+              SELF: "Abrir en el mismo marco donde se hizo clic"
+              BLANK: "Abrir en una nueva ventana"
             ICON: Icono para la Red Social
-            ICON_HELP: Introduce el nombre del icono de Font Awesome. Soporta ambos formatos - "fa-facebook" o simplemente "facebook"
-      DEFAULT:
-        TITLE_SECTION: Opciones de título
-        SHOW_TITLE: Mostrar Título
-        SHOW_TITLE_HELP: Mostrar u ocultar el título de la página
-        TITLE_BG_CHOICE:
-          LABEL: Elección de fondo del título
-          HELP: Selecciona la opción para mostrar el formato de fondo del título
-          COLOR: Color de fondo
-          IMAGE: Imagen de fondo
-        CONTENT_SECTION: Contenido
-        FEATURED_IMAGE_LABEL: Imagen destacada
-        FEATURED_IMAGE_HELP: Selecciona un archivo para usarlo como imagen destacada en la parte superior de la página
-        IMAGE_OPTIONS: Opciones de imagen
-        BIG_HEADER: Imagen grande en el blog
-        BLOG_SIDEBAR: Barra lateral del blog
-        DEFAULT_PAGE_COLUMNS: Columnas de página predeterminadas
-        HERO_SCROLL_BUTTON: Botón de desplazamiento del héroe
-        HERO_SCROLL_BUTTON_HELP: Mostrar un botón de desplazamiento debajo del texto del héroe
-        HERO_SCROLL_BUTTON_TEXT: Texto del botón de desplazamiento
-      PAGES:
-        MODULAR:
-          SECTION_TITLE: Bloque de página modular
-          BLOCK_SIZE: Tamaño del bloque
-          BG_COLOR: Color de fondo
-          BG_COLOR_HELP: Color de fondo para el bloque modular
-      IN: en
+    DEFAULT:
+      TITLE_SECTION: Opciones de título
+      SHOW_TITLE: Mostrar Título
+      SHOW_TITLE_HELP: Mostrar u ocultar el título de la página
+      TITLE_BG_CHOICE:
+        LABEL: Elección de fondo del título
+        HELP: Selecciona la opción para mostrar el formato de fondo del título
+        COLOR: Color de fondo
+        IMAGE: Imagen de fondo
+      CONTENT_SECTION: Contenido
+      FEATURED_IMAGE_LABEL: Imagen destacada
+      FEATURED_IMAGE_HELP: Selecciona un archivo para usarlo como imagen destacada en la parte superior de la página
+      IMAGE_OPTIONS: Opciones de imagen
+      BIG_HEADER: Imagen grande en el blog
+      BIG_HEADER_HELP: Mostrar la imagen destacada en 900 x 600px
+      FEATURED_IMAGE:
+        LABEL: Imagen destacada
+        HELP: Selecciona una imagen destacada para mostrar en la parte superior de la página
+        WIDTH: Ancho
+        HEIGHT: Altura
+      SHOW_FEATURED_IMAGE: Mostrar Imagen Destacada
+      SHOW_FEATURED_IMAGE_HELP: Mostrar la imagen destacada si está definida o la primera imagen de la página de medios.
+      BODY_CLASSSES_CONTENT: |
+        Clases CSS disponibles en el tema DeliverNext (separadas por espacios):<br />
+        > Para plantillas de página **Predeterminadas** (separadas por espacios): **`header-lite` `fullwidth`**<br />
+        > Para plantillas de página **Item** (separadas por espacios): **`header-lite` `fullwidth` `blogstyling`**<br />
+        > Para plantillas de página **Modular alt** (separadas por espacios): **`modular` `header-lite` `fullwidth`**<br />
+        > Además, en páginas de tipo modular alt, puedes agregar **`services`** o **`about`** si tu página es de alguno de estos tipos.
+    MODULAR:
+      COMMON:
+        ORDER_HELP: '"desc" o "asc" son valores válidos'
+        SHOW_ONPAGE_MENU: Mostrar navegación en sitios de una página
+        SHOW_ONPAGE_MENU_HELP: En sitios de una sola página, añade desplazamiento suave al hacer clic en la navegación y selecciona automáticamente los elementos de navegación correctos a medida que te desplazas por las diferentes secciones.
+        BUTTONS_SECTION:
+          TITLE: Botones
+          LABEL: Lista de Botones
+          ITEMS:
+            TEXT: Texto del botón
+            URL: URL del botón
+            STYLES:
+              LABEL: Estilo del Botón
+              NONE: Ninguno
+              PRIMARY: Primario
+              SECONDARY: Secundario
+              WARNING: Advertencia
+              INFO: Información
+              OUTLINE: Contorno Primario
+              OUTLINE_SECONDARY: Contorno Secundario
+              OUTLINE_WARNING: Contorno de Advertencia
+              OUTLINE_INFO: Contorno de Información
+        SERVICES_SECTION:
+          TITLE: Servicios
+          LABEL: Lista de Servicios
+          ITEMS:
+            ICON: Icono
+            TITLE: Título
+            DESC: Descripción
+      TEAM_SECTION:
+        LABEL: Miembros
+        ITEMS:
+          NAME: Nombre del Miembro
+          IMAGE: Imagen de Perfil
+          WEBSITE: Sitio web del Miembro
+          INFO: Descripción del Miembro (en formato Markdown)
+          SOCIAL_MEDIA:
+            LABEL: Redes sociales
+            HELP: La plantilla permite un máximo de 6 iconos para cada miembro.
+            NAME: Nombre de la red social
+            NAME_HELP: Solo tienes que escribir el nombre de la red social aquí (ej, Facebook, Twitter, etc)
+            URL: URL de la red social
+      FEATURES_SECTION:
+        TITLE: Características
+        LABEL: Lista de Características
+        ITEMS:
+          ICON: Icono
+          ICON_DESCRIPTION: 'Iconos de <a href="https://fontawesome.com/v4/icons/" target="_blank">Fontawesome V4</a>. Solo tienes que escribir el nombre del icono.<br /><span>Ejemplo, <strong>comment-o</strong></span>'
+          HEADER: Encabezado
+          TEXT: Descripción
+          LINK_TEXT: Texto del enlace
+          LINK_URL: URL del enlace
+      SHOWCASE:
+        TAB: Presentación
+        SHOW_FULLSCREEN: Modo pantalla completa
+        SHOW_FULLSCREEN_HELP: Mostrar la presentación en modo pantalla completa
+        SLIDES:
+          LABEL: Diapositivas
+          DESCRIPTION: Muestra es una página modular que usa imágenes cargadas en el cuadro de Medios de la página
+          IMAGE: Imagen
+          IMAGE_SELECT: Selecciona una imagen para la muestra
+          BLEND: Mezcla
+          BACKCOLOR: Color de fondo
+          HEADING: Título
+          SUBHEADING: Subtítulo
+          BUTTON_TEXT: Texto del botón
+          BUTTON_URL: URL del botón
+        SLIDES_SETTINGS:
+          SECTION_TITLE: Configuración de Diapositivas
+          ARROWS: Flechas
+          ARROWS_HELP: Mostrar flechas para navegar entre diapositivas
+          AUTOSLIDE: Auto-deslizamiento
+          AUTOSLIDE_HELP: Cambiar automáticamente las diapositivas después de un intervalo de tiempo
+          AUTOSLIDE_HOVER: Detener auto-deslizamiento al pasar el ratón
+          AUTOSLIDE_HOVER_HELP: Pausar el auto-deslizamiento al pasar el ratón sobre una diapositiva
+          LOOP: Bucle
+          LOOP_HELP: Repetir diapositivas en un bucle continuo
+          TOUCH: Toque
+          TOUCH_HELP: Habilitar gestos táctiles para navegar entre diapositivas
+          SWIPE: Deslizar
+          SWIPE_HELP: Habilitar gestos de deslizamiento para navegar entre diapositivas
+          INTERVAL: Intervalo (en milisegundos)
+          INTERVAL_HELP: Establece el tiempo (en milisegundos) entre diapositivas durante el auto-deslizamiento
+          ITEMS: Elementos por diapositiva
+          ITEMS_HELP: Especifica el número de elementos por diapositiva
+          TRANSITIONS:
+            LABEL: Selecciona el efecto de transición
+            HELP: Elige el efecto de transición entre diapositivas
+            SLIDE: Deslizar
+            FADE: Fundido
+            ZOOM: Zoom
+      PORTFOLIO:
+        LABEL: Portafolio
+        DESCRIPTION: Portafolio es una página modular que usa imágenes cargadas en el cuadro de Medios de la página
+        ITEMS:
+          IMAGE_LABEL: Imagen
+          IMAGE_DESCRIPTION: Selecciona una imagen de la lista
+          TITLE_LABEL: Título de la imagen
+          DESC_LABEL: Descripción de la imagen
+          MODALID_LABEL: ID del Modal
+          MODALID_DESCRIPTION: Identificador único para el modal (ej., 13)
+          CLIENT_LABEL: Cliente
+          CLIENT_DESCRIPTION: El cliente del proyecto
+          URL_LABEL: URL
+          URL_DESCRIPTION: La URL del proyecto (opcional)
+          DATE_LABEL: Fecha
+          DATE_DESCRIPTION: Fecha de finalización
+          CATEGORY_LABEL: Categoría
+          CATEGORY_DESCRIPTION: La categoría del proyecto (ej., Desarrollo Web)
+      PRICING:
+        LABEL: Precios
+        DESCRIPTION: Precios es una sección modular que muestra planes con características y precios
+        ITEMS:
+          NAME_LABEL: Nombre del Plan
+          PRICE_LABEL: Precio
+          OPTIONS_LABEL: Características
+          OPTIONS:
+            LINE_LABEL: Característica
+          BUTTON_TEXT_LABEL: Texto del botón
+          BUTTON_URL_LABEL: URL del botón
+      GALLERY:
+        TAB: Galería
+        TITLE: Galería de imágenes
+        LAYOUT:
+          LABEL: Diseño
+          TWOCOLS: "Medio   = 2 / 1 columnas"
+          THREECOLS: "Estándar  = 3 / 2 / 1 columnas"
+          FOURCOLS: "Compacto = 4 / 3 / 2 columnas"
+        THUMB_WIDTH: Ancho de Minitaura
+        THUMB_WIDTH_HELP: Fije el ancho para las miniaturas
+        THUMB_HEIGHT: Alto de Miniatura
+        THUMB_HEIGHT_HELP: Fije el alto para las miniaturas
+        IMAGES:
+          LABEL: Imágenes
+          IMAGE: Imagen
+          IMAGE_TITLE: Título
+          IMAGE_DESCRIPTION: Descripción
+          DESCPOSITION:
+            LABEL: Posición de Descripción
+            HELP: Posición global para la descripción de las diapositivas, puede definir una posición específica en cada diapositiva (inferior, superior, izquierda, derecha).
+            BOTTOM: Abajo
+            TOP: Arriba
+            LEFT: Izquierda
+            RIGHT: Derecha
+          IMAGE_THUMB: Miniatura
+        VIDEO_TITLE: Galería de Videos
+        VIDEO_WIDTH: Ancho del Video
+        VIDEO_WIDTH_HELP: "Ancho predeterminado para los videos. Los videos son responsivos, por lo que no se requiere altura. El ancho puede estar en px, %, o incluso vw, por ejemplo, 500px, 90% o 100vw para videos de ancho completo."
+        VIDEO_AUTOFOCUS: Autofocus
+        VIDEO_AUTOFOCUS_HELP: Si está activado, el video se enfocará al reproducirse para permitir atajos de teclado del reproductor. Esto desactivará las flechas de anterior y siguiente para cambiar de diapositiva, así que úsalo solo si sabes lo que estás haciendo.
+        VIDEO_AUTOPLAY: Reproducción automática
+        VIDEO_AUTOPLAY_HELP: Reproducir los videos automáticamente al abrir
+        VIDEOS:
+          LABEL: "Videos"
+          SOURCE: "Fuente del video"
+          SOURCE_DESCRIPTION: "Selecciona el tipo de fuente del video"
+          SOURCE_OPTIONS:
+            REMOTE: "Video remoto"
+            LOCAL: "Video local"
+          REMOTE_VIDEO: "URL de video remoto"
+          REMOTE_VIDEO_DESCRIPTION: "URL de YouTube, Vimeo u otro servicio externo"
+          REMOTE_THUMBNAIL: "Miniatura remota"
+          REMOTE_THUMBNAIL_DESCRIPTION: "URL de imagen miniatura para la galería"
+          LOCAL_VIDEO: "Video local"
+          LOCAL_THUMBNAIL: "Miniatura local"
+          LOCAL_THUMBNAIL_DESCRIPTION: "Imagen miniatura para la galería"
+          TITLE: "Título del video"
+          DESCRIPTION: "Descripción del video"
+        OPTIONS:
+          TAB: Opciones Galería
+          EFFECTS_TITLE: Apariencia y efectos
+          ACTIONS_TITLE: Acciones
+          STYLING_TITLE: Estilos
+          BEHAVIOR_TITLE: Comportamiento
+          OVERLAY_HOVER_EFFECT:
+            LABEL: Efecto de superposición al pasar el ratón
+            HELP: Establece el efecto de superposición cuando el ratón está sobre una imagen
+            FADEIN_BOTTOM: Fundido inferior
+            FADEIN_TOP: Fundido superior
+            FADEIN_LEFT: Fundido desde la izquierda
+            FADEIN_RIGHT: Fundido desde la derecha
+            FADEIN_TOP_RIGHT: Fundido superior derecha
+            FADEIN_TOP_LEFT: Fundido superior izquierda
+            FADEIN_BOTTOM_RIGHT: Fundido inferior derecha
+            FADEIN_BOTTOM_LEFT: Fundido inferior izquierda
+          OPEN_EFFECT:
+            LABEL: Efecto de apertura
+            ZOOM: Zoom
+            FADE: Desvanecer
+            NONE: Ninguno
+          CLOSE_EFFECT:
+            LABEL: Efecto de cierre
+            ZOOM: Zoom
+            FADE: Desvanecimiento
+            NONE: Ninguno
+          SLIDE_EFFECT:
+            LABEL: Efecto de diapositiva
+            SLIDE: Deslizar
+            ZOOM: Zoom
+            FADE: Desvanecer
+            NONE: Ninguno
+          MORE_TEXT: Leer más
+          MORE_TEXT_HELP: "Personaliza el texto 'Ver más' para descripciones truncadas (dispositivos móviles)"
+          MORE_TEXT_DEFAULT: Leer más
+          MORE_LENGTH: Número de caracteres `Ver más`
+          MORE_LENGTH_HELP: Número de caracteres a mostrar en la descripción antes de agregar el enlace `Ver más` (solo para móviles), si es 0 mostrará la descripción completa.
+          CLOSE_BUTTON: Botón Cerrar
+          CLOSE_BUTTON_HELP: Mostrar u ocultar el botón de cerrar
+          TOUCH_NAVIGATION: Navegación táctil
+          TOUCH_NAVIGATION_HELP: Activa o desactiva la navegación táctil (deslizar)
+          TOUCH_AXIS: Seguir eje
+          TOUCH_AXIS_HELP: La imagen sigue el eje cuando se arrastra en el móvil.
+          KEYBOARD: Navegación con teclado
+          KEYBOARD_HELP: Activa o desactiva la navegación por teclado
+          CLOSE_OUTSIDE: Cerrar al pulsar fuera
+          CLOSE_OUTSIDE_HELP: Cierra el cuadro de luz al hacer clic fuera de la diapositiva activa.
+          MORE_STARTAT: "Comenzar en:"
+          MORE_STARTAT_HELP: Iniciar lightbox en el índice definido (0 es la primera diapositiva). Si no se define, se muestra la imagen en la que se hizo clic
+          WIDTH: Ancho
+          WIDTH_HELP: "Ancho predeterminado para elementos en línea e iframes, puede definir un tamaño específico en cada diapositiva. Puede usar cualquier unidad, por ejemplo, 90% o 100vw para ancho completo"
+          HEIGHT: Alto
+          HEIGHT_HELP: "Altura predeterminada para elementos en línea e iframes, puede definir un tamaño específico en cada diapositiva. Puede usar cualquier unidad, por ejemplo, 90% o 100vh Para elementos en línea, puede establecer la altura en automático"
+          LOOP: Bucle
+          LOOP_HELP: Reproduce las diapositivas en bucle al llegar al final
+          ZOOMABLE: Ampliable
+          ZOOMABLE_HELP: Habilite o deshabilite las imágenes con zoom, también puede usar `data-zoomable="false"` en nodos individuales.
+          DRAGGABLE: Arrastrable
+          DRAGGABLE_HELP: Habilite o deshabilite el arrastre del mouse para ir a la diapositiva anterior y siguiente (solo imágenes y contenido en línea), también puede usar `data-draggable="false"` en nodos individuales.
+          DRAGGABLE_X: Tolerancia de arrastre X
+          DRAGGABLE_X_HELP: Usado con arrastrable. Número de píxeles que el usuario tiene que arrastrar para ir a la diapositiva anterior o siguiente.
+          DRAGGABLE_Y: Tolerancia de arrastre Y
+          DRAGGABLE_Y_HELP: Usado con arrastrable. Número de píxeles que el usuario tiene que arrastrar hacia arriba o hacia abajo para cerrar el cuadro de luz (establezca 0 para deshabilitar el arrastre vertical).
+          DRAG_AUTO_SNAP: Arrastre automático
+          DRAG_AUTO_SNAP_HELP: Si es verdadero, la diapositiva cambiará automáticamente a anterior/siguiente o se cerrará si se alcanza dragToleranceX o dragToleranceY; de lo contrario, esperará hasta que se suelte el mouse.
+          PRELOAD: Precarga
+          PRELOAD_HELP: Activa o desactiva la precarga.
+    BLOG:
+      TAB: Configuración del Blog
+      CONFIGURATION:
+        LABEL: Configuración
+        BLOG_ROUTE: Ruta del Blog
+        BLOG_ROUTE_HELP: La ruta a la página principal del blog que contiene la configuración "Mostrar ..."
+        SHOW_BREADCRUMBS: Mostrar Migas de Pan
+        SIDEBAR_SETTINGS: Configuración de la barra lateral
+        SHOW_SIDEBAR: Mostrar Barra Lateral
+        SIDEBAR_CONTENT: "Contenido del Sidebar"
+        SIDEBAR_DEFAULT_TEXT: "#### Widget de Texto\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
+        SHOW_FEATURED_POSTS: Mostrar Publicaciones Destacadas
+        SHOW_CATEGORIES: Mostrar Categorías
+      CONTENT:
+        LABEL: Definición de Contenido
+        ITEMS:
+          LABEL: Elementos
+          LIMIT: Número máximo de elementos
+          ORDER:
+            BY: Ordenar por
+            BY_DATE: Fecha
+            BY_TITLE: Título
+            BY_FOLDER: Carpeta
+            BY_DEFAULT: Predeterminado
+            DIR: Dirección
+            DIR_ASC: Ascendente
+            DIR_DESC: Descendente
+          PAGINATION: Paginación
+          URL_TAXONOMY_FILTERS: Filtros de Taxonomía en URL
+    ITEM:
+      TAB: Elemento del Blog
+      AUTHOR_OPTIONS:
+        LABEL: Opciones del Autor
+        NAME: Nombre del autor
+        AVATAR: Imagen de Avatar
+        BIOGRAPHY: Biografía del autor
+        TWITTER: URL de Twitter del autor
+      CONFIGURATION:
+        STICKY: Publicación fija
+        STICKY_HELP: Marca esta publicación para mostrarla como fija
+      CONTENT:
+        SUMMARY:
+          LABEL: Resumen del Elemento
+          SHOW: Mostrar resumen en la página
+          SHOW_HELP: Mostrar el resumen en la página, debajo del subtítulo. Esto es independiente del resumen en la lista del blog.
+          ENABLED: Resumen habilitado
+          FORMAT:
+            LABEL: Formato del Resumen
+            SHORT: Usar la primera ocurrencia del delimitador o tamaño
+            LONG: El delimitador del resumen será ignorado
+          SIZE: Tamaño
+          DELIMITER: Delimitador del Resumen
+    COMMON:
+      TEXT_COLOR: Color del Texto
+      TEXT_COLOR_HELP: Color del texto para el Título
+      TITLE_BG_COLOR: Color de fondo del Título
+      MODULE_CLASSES: Clases CSS para el Módulo
+      MODULE_CLASSES_HELP: Clases CSS adicionales para el Módulo
+  BLOG:
+    LISTING_TITLE_CATEGORY: "Publicaciones en la categoría: "
+    LISTING_TITLE_TAG: "Publicaciones con la etiqueta: "
+    LISTING_TITLE_AUTHOR: "Publicaciones escritas por: "
+    LISTING_TITLE_MONTH: "Publicaciones del mes: "
+    PAGINATION:
+      PREV: Entrada Anterior
+      NEXT: Siguiente Entrada
+    CONTINUE_READING: Continuar leyendo...
+  ARCHIVES:
+    BY_TAG: Por Etiqueta
+    BY_MONTH: Por Mes
+  SIDEBAR:
+    LANGSWITCHER: Elegir idioma
+    SEARCH: Buscar
+    FEATURED_POSTS: Entradas destacadas
+    FEATURED_MORE: Más entradas destacadas
+    NO_FEATURED: No hay entradas destacadas
+    LOGIN_SECTION: Acceder
+    LOGGUED_AS: "Autenticado como: "
+    RELATEDPAGES_SECTION: Páginas relacionadas
+    ARCHIVES_SECTION: Archivo
+    RANDOM_ARTICLE:
+      LABEL: Artículo Aleatorio
+      BUTTON: Voy a tener suerte!
+    SYNDICATE:
+      LABEL: Distribuir
+    TAXONOMYLIST:
+      LABEL: Etiquetas populares
+  SHOWCASE:
+    ARROW_PREV: Anterior
+    ARROW_NEXT: Siguiente
+  MISC:
+    BACK_TO_TOP: Volver arriba
+    GPS_LOCATION: Dirección GPS
+    IN: en
