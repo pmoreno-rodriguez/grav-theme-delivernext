@@ -1,8 +1,31 @@
+
+# v2.0.0
+## 07/07/2026
+
+1. [](#new)
+    * Dual compatibility: Full support for Grav 1.7 and Grav 2.0
+
+2. [](#improved)
+    * **Twig 3 modernization**:
+    - Replaced deprecated `|defined` filter with Twig 3-compatible null-safe patterns
+    - Updated Elvis operator `?:` to null-coalesce operator `??` for consistency
+    - Normalized featured image handling: supports both `featured_image` and `featuredImage` header keys
+    - Added `ignore missing` to template includes for enhanced robustness
+    * **Blueprint modernization**:
+    - Updated all page blueprints: changed `'@extends'` to `extends@` syntax (Grav 2.x native)
+    - Normalized blueprint structure for consistency (formdata.yaml and 8 modular templates)
+    * **PHP 8.3 compatibility**:
+    - Added explicit return type hints (`:void`) to event handler methods
+    - Removed unused imports and legacy code
+    * **Admin simplification**:
+    - Removed `/admin/themes/grav/` customizations (no longer needed in Grav 2.x)
+    - Theme now uses core Admin defaults for both Grav 1.7 and Grav 2.x
+
 # v1.4.3
 ## 11/11/2025
 
 1. [](#improved)
-   * Set the dependency for the Grav version to 1.7.49.5
+    * Set the dependency for the Grav version to 1.7.49.5
 
 # v1.4.2
 ## 09/28/2025
@@ -92,4 +115,3 @@
 
 1. [](#new)
     * ChangeLog started...
-
