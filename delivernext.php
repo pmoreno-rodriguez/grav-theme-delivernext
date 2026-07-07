@@ -2,37 +2,17 @@
 namespace Grav\Theme;
 
 use Grav\Common\Theme;
-use RocketTheme\Toolbox\Event\Event;
 
 class DeliverNext extends Theme
 {
     public static function getSubscribedEvents(): array
     {
         return [
-            'onAdminTwigTemplatePaths' => ['onAdminTwigTemplatePaths', 0],
-            'onThemeInitialized'    => ['onThemeInitialized', 0],
             'onTwigSiteVariables' => ['onTwigSiteVariables', 0]
         ];
     }
 
-    public function onThemeInitialized() {
-        if ($this->isAdmin()) {
-            $this->enable([
-                'onAdminTwigTemplatePaths'  => ['onAdminTwigTemplatePaths', 0],
-            ]);
-        }
-    }
-
-    public function onAdminTwigTemplatePaths(Event $event): void {
-
-        $paths = $event['paths'];
-        $paths[] = __DIR__ . '/admin/themes/grav/templates';
-        $event['paths'] = $paths;
-
-        $this->grav['assets']->addCss('theme://admin/themes/grav/assets/css/admin-custom.css');
-    }
-    
-    public function onTwigSiteVariables()
+    public function onTwigSiteVariables(): void
     {
         $themeConfig = $this->config->get('themes.delivernext');
 
