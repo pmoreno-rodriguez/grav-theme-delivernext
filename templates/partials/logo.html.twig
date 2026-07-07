@@ -1,5 +1,8 @@
-{% set logo = theme_var('theme_logo_mobile') ?: theme_var('theme_logo') %}
-{% set logoImageHeader = theme_var('type_logo_header')|defined('text') %}
+{% set logo_mobile = theme_var('theme_logo_mobile') %}
+{% set logo_theme = theme_var('theme_logo') %}
+{% set logo = logo_mobile is not null ? logo_mobile : logo_theme %}
+{% set logoImageHeader = theme_var('type_logo_header') %}
+{% set logoImageHeader = logoImageHeader is null ? 'text' : logoImageHeader %}
 {% set logo_file = (logo|first).name %}
 
 <div class="logo">

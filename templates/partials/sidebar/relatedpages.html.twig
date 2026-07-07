@@ -2,7 +2,7 @@
     {% for related_path, score in related_pages %}
         {% set related = grav['pages'].get(related_path) %}
         {% if related %}
-            {% set related_image = related.media.images[related.header.featured_image] ?: related.media.images|first %}
+            {% set related_image = related.media.images[related.header.featured_image] ?? related.media.images|first %}
             {% if related.taxonomy.category is not null %}
                 <div class="related-item">
                     {% if related_image is not empty %}
