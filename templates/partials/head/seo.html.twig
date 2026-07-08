@@ -29,7 +29,8 @@
 
 {# Featured image #}
 {% set featured_key = page.header.featured_image ?? page.header.featuredImage ?? null %}
-{% set featured_image = (featured_key and page.media[featured_key]) ? page.media[featured_key] : page.media.all|filter((v, k) => k != page.header.author.avatarImage and (v.type == 'image' or v.type == 'vector'))|first %}
+{% set author_avatar = page.header.author.avatarImage ?? null %}
+{% set featured_image = (featured_key and page.media[featured_key]) ? page.media[featured_key] : page.media.all|filter((v, k) => k != author_avatar and (v.type == 'image' or v.type == 'vector'))|first %}
 {% if featured_image %}
 <meta property="og:image" content="{{ featured_image.url|e }}">
 <meta property="twitter:image" content="{{ featured_image.url|e }}">
@@ -60,9 +61,9 @@
         "wordCount": "' ~ page.content|wordcount ~ '",
         "author": {
             "@type": "Person",
-            "name": "' ~ author|raw ~ '",
-            "description": "' ~ author_bio|raw ~ '",
-            "url": "' ~ author_twitter ~ '"
+            "name": "' ~ (author ?? (config.site.author.name ?? config.site.author ?? ''))|raw ~ '",
+            "description": "' ~ (author_bio ?? '')|raw ~ '",
+            "url": "' ~ (author_twitter ?? '')|raw ~ '"
         },
         "description": "' ~ meta_description ~ '"
       }', {group:'bottom', type: 'application/ld+json'}) %}

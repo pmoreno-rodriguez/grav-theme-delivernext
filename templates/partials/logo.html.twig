@@ -3,14 +3,15 @@
 {% set logo = logo_mobile is not null ? logo_mobile : logo_theme %}
 {% set logoImageHeader = theme_var('type_logo_header') %}
 {% set logoImageHeader = logoImageHeader is null ? 'text' : logoImageHeader %}
-{% set logo_file = (logo|first).name %}
+{% set first_logo = logo|first %}
+{% set logo_file = (first_logo and first_logo.name) ? first_logo.name : null %}
 
 <div class="logo">
     <a href="{{ home_url }}">
     {% if logoImageHeader == 'image' %}
-        {% if logo %}<img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title|raw }}" />{% endif %}
+        {% if logo_file %}<img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title|raw }}" />{% endif %}
     {% elseif logoImageHeader == 'both' %}
-    {% if logo %}<img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title|raw }}" />{% endif %}
+    {% if logo_file %}<img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title|raw }}" />{% endif %}
         <h3>{{ site.title }}</h3>
     {% else %}
         <h3>{{ site.title }}</h3>

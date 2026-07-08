@@ -1,3 +1,6 @@
+{# Date Published #}
+{% set datePublished = include('partials/page/date.html.twig') %}
+
 <div class="list-item">
 
     <div class="list-blog-header">
@@ -22,7 +25,7 @@
 
         <span class="list-blog-date">
             <i class="fa fa-calendar"></i>
-            {{ page.date|date("d") }}, {{ page.date|date("M") }}
+            {{ datePublished }}
         </span>
         {% if page.header.author %}
         <span class="list-blog-author">
