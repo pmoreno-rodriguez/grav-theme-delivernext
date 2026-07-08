@@ -15,9 +15,9 @@
                 <li>
                     <a target="_blank" 
                     href="{{ item.url }}" 
-                    alt="{{ item.name|raw }}" 
-                    title="{{ item.name|capitalize|raw }}">
-                    <i class="fa fa-{{ item.name|lower|raw }}"></i>
+                    alt="{{ item.name|e('html_attr') }}" 
+                    title="{{ item.name|capitalize|e('html_attr') }}">
+                    <i class="fa fa-{{ item.name|lower|e('html_attr') }}"></i>
                     </a>
                 </li>
                 {% endfor %}
