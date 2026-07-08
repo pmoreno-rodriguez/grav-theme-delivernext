@@ -4,10 +4,10 @@
 
     Fork from Deliver Grav theme by Pedro Moreno <https://github.com/pmoreno-rodriguez>
     https://github.com/pmoreno-rodriguez/grav-theme-delivernext
-    
+
     {% if version %}
         Grav theme version: v{{ version }}
-    {% endif %} 
+    {% endif %}
 -->
 
 {# SET THEME OPTIONS #}
@@ -34,7 +34,7 @@
 
 {# Description #}
 {% if not page.home() %}
-    {% set meta_description = page.summary|trim|striptags|raw|e('html_attr') %}
+    {% set meta_description = page.summary|trim|striptags|e %}
 {% elseif site.metadata.description %}
     {% set meta_description = site.metadata.description %}
 {% else %}
@@ -62,7 +62,7 @@
 
 <!DOCTYPE html>
 <html lang="{{ lang }}">
-   
+
 {% block head %}
     {% include 'partials/head.html.twig' %}
 {% endblock %}
