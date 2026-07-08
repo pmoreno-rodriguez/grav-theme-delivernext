@@ -43,29 +43,33 @@
 
 {# Basic Schema.org json #}
 {% block javascripts %}
+  {% set author_name = author ?? (config.site.author.name ?? config.site.author ?? '') %}
+  {% set author_bio = author_bio ?? '' %}
+  {% set author_url = author_twitter ?? '' %}
+  
   {% do assets.addInlineJs('
       {
         "@context": "https://schema.org",
         "@type": "BlogPosting",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "' ~ canonical_url ~ '"
+            "@id": ' ~ (canonical_url|json_encode) ~ '
         },
-        "headline": "' ~ page_title|e ~ '",
+        "headline": ' ~ (page_title|json_encode) ~ ',
         "image": {
             "@type": "ImageObject",
-          "url": "' ~ (featured_image ? featured_image.url : '') ~ '"
+          "url": ' ~ ((featured_image ? featured_image.url : '')|json_encode) ~ '
         },
-        "datePublished": "' ~ datePublished ~ '",
-        "inLanguage": "' ~ lang ~ '",
-        "wordCount": "' ~ page.content|wordcount ~ '",
+        "datePublished": ' ~ (datePublished|json_encode) ~ ',
+        "inLanguage": ' ~ (lang|json_encode) ~ ',
+        "wordCount": ' ~ (page.content|wordcount|json_encode) ~ ',
         "author": {
             "@type": "Person",
-            "name": "' ~ (author ?? (config.site.author.name ?? config.site.author ?? ''))|raw ~ '",
-            "description": "' ~ (author_bio ?? '')|raw ~ '",
-            "url": "' ~ (author_twitter ?? '')|raw ~ '"
+            "name": ' ~ (author_name|json_encode) ~ ',
+            "description": ' ~ (author_bio|json_encode) ~ ',
+            "url": ' ~ (author_url|json_encode) ~ '
         },
-        "description": "' ~ meta_description ~ '"
+        "description": ' ~ (meta_description|json_encode) ~ '
       }', {group:'bottom', type: 'application/ld+json'}) %}
   {% endblock %}
 
