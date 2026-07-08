@@ -9,9 +9,9 @@
 <div class="logo">
     <a href="{{ home_url }}">
     {% if logoImageHeader == 'image' %}
-        {% if logo_file %}<img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title|raw }}" />{% endif %}
+        {% if logo_file %}<img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title|e('html_attr') }}" />{% endif %}
     {% elseif logoImageHeader == 'both' %}
-    {% if logo_file %}<img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title|raw }}" />{% endif %}
+    {% if logo_file %}<img src="{{ url('theme://images/logo/' ~ logo_file) }}" alt="{{ site.title|e('html_attr') }}" />{% endif %}
         <h3>{{ site.title }}</h3>
     {% else %}
         <h3>{{ site.title }}</h3>
