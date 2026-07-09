@@ -29,10 +29,10 @@ form:
                         0: PLUGIN_ADMIN.DISABLED
                       validate:
                         type: bool
-                  production-mode:
+                  use-minified-css:
                       type: toggle
-                      label: DELIVERNEXT.ADMIN.THEME.SETTINGS.PRODUCTION_MODE
-                      help: DELIVERNEXT.ADMIN.THEME.SETTINGS.PRODUCTION_MODE_HELP
+                      label: DELIVERNEXT.ADMIN.THEME.SETTINGS.USE_MINIFIED_CSS
+                      help: DELIVERNEXT.ADMIN.THEME.SETTINGS.USE_MINIFIED_CSS_HELP
                       labelclasses: bold
                       highlight: 0
                       default: 0

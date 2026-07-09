@@ -15,7 +15,7 @@ DeliverNext theme is a port of the [Grav Deliver](https://github.com/getgrav/gra
 * About layout with social icons module and custom styling
 * Services layout with FontAwesome 4.7 icons and pricing tables
 * Archive layout with blog posts archives list
-* Full featured blog with support for custom authors and post dates via `translate-date` and `twig-extensions` plugins
+* Full featured blog with support for custom authors
 * Contact us layout with Simple Form plugin support
 * SEO optimization options (meta tags, open graph data)
 * Multi-language support (English and Spanish translations included)
@@ -102,7 +102,7 @@ DeliverNext comes with a variety of configuration options that can be set site-w
 enabled:                      # Enable or disable the theme.
 dropdown.enabled:             # Enable or disable the dropdown menu.
 sticky_menu.enabled:          # Enable or disable the sticky menu.
-production-mode:              # Enable production mode to use minified CSS.
+use-minified-css:             # Enable minified CSS assets.
 custom_css:                   # Enable/disable custom CSS (automatically loads `custom.css` if present).
 custom_js:                    # Enable/disable custom JavaScript (automatically loads `custom.js` if present).
 social_enabled:               # Enable or disable social media icons.
@@ -129,6 +129,13 @@ seo_options:                  # SEO settings (meta descriptions, open graph data
 alert_boxes:                  # Configure colored alert box styles.
 button_types:                 # Define custom button types and colors.
 ```
+
+### Deprecated options
+
+- `production-mode` is deprecated in favor of `use-minified-css`.
+- Backward compatibility is maintained: existing `production-mode` values are still respected.
+- Please migrate your theme config to `use-minified-css`.
+
 To make modifications, you can copy the `user/themes/delivernext/delivernext.yaml` file to `user/config/themes/` folder and modify, or you can use the admin plugin.
 
 > NOTE: Do not modify the `user/themes/delivernext/delivernext.yaml` file directly or your changes will be lost with any updates.

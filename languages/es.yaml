@@ -7,6 +7,8 @@ DELIVERNEXT:
         DROPDOWN_MENU: Menú desplegable en la barra de navegación
         PRODUCTION_MODE: Modo de producción
         PRODUCTION_MODE_HELP: Cuando está habilitado, DELIVERNEXT se renderizará con CSS minificado
+        USE_MINIFIED_CSS: Usar CSS minificado
+        USE_MINIFIED_CSS_HELP: Cuando está habilitado, los archivos CSS se entregarán minificados. Esta configuración tiene prioridad sobre la opción de Modo de Producción.
         STICKY_MENU: Menú fijo
         BACK_TO_TOP_BUTTON: Botón de <strong>Volver arriba</strong>
         BACK_TO_TOP_BUTTON_HELP: Habilita el botón `Volver arriba` al desplazar la página.

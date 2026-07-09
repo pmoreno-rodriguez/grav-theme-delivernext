@@ -12,7 +12,10 @@
 
 {# SET THEME OPTIONS #}
 {% set theme_config = attribute(config.themes, config.system.pages.theme) %}
-{% set compress = theme_var('production-mode') ? '.min.css' : '.css' %}
+{% set use_minified_css = attribute(theme_config, 'use-minified-css') is not null
+    ? attribute(theme_config, 'use-minified-css')
+    : (attribute(theme_config, 'production-mode') ?? false) %}
+{% set compress = use_minified_css ? '.min.css' : '.css' %}
 {% set logo_enabled = theme_var('theme_logo_enabled') %}
 {% set logo_enabled = logo_enabled is null ? false : logo_enabled %}
 

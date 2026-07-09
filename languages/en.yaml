@@ -7,6 +7,8 @@ DELIVERNEXT:
         DROPDOWN_MENU: Dropdown in navbar
         PRODUCTION_MODE: Production mode
         PRODUCTION_MODE_HELP: When enabled, DELIVERNEXT will render with minified CSS
+        USE_MINIFIED_CSS: Use minified CSS
+        USE_MINIFIED_CSS_HELP: When enabled, CSS files will be served minified. This setting takes precedence over the Production Mode option.
         STICKY_MENU: Sticky Menu
         BACK_TO_TOP_BUTTON: "<strong>Back to Top</strong> button"
         BACK_TO_TOP_BUTTON_HELP: Enable `Back to Top` button when scroll page.
