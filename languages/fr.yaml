@@ -100,6 +100,7 @@ DELIVERNEXT:
               SELF: "Ouvrir dans le même cadre"
               BLANK: "Ouvrir dans une nouvelle fenêtre"
             ICON: Icône pour le réseau social
+            ICON_HELP: 'Nom de l`icône Font Awesome pour les réseaux sociaux. Entrez uniquement le nom de l`icône (ex: "facebook", "twitter", "linkedin")'
     DEFAULT:
       TITLE_SECTION: Options du titre
       SHOW_TITLE: Afficher le titre

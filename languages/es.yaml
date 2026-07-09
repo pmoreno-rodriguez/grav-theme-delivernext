@@ -100,6 +100,7 @@ DELIVERNEXT:
               SELF: "Abrir en el mismo marco donde se hizo clic"
               BLANK: "Abrir en una nueva ventana"
             ICON: Icono para la Red Social
+            ICON_HELP: 'Nombre del icono de Font Awesome para redes sociales. Ingresa solo el nombre del icono (ej: "facebook", "twitter", "linkedin")'
     DEFAULT:
       TITLE_SECTION: Opciones de título
       SHOW_TITLE: Mostrar Título

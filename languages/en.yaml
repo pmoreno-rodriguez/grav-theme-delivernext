@@ -100,6 +100,7 @@ DELIVERNEXT:
               SELF: "Open in the same frame as clicked"
               BLANK: "Open in a new window"
             ICON: Icon for Social Media
+            ICON_HELP: Font Awesome icon name for social media. Enter just the icon name (e.g., "facebook", "twitter", "linkedin")
     DEFAULT:
       TITLE_SECTION: Title options
       SHOW_TITLE: Show Title
@@ -250,7 +251,7 @@ DELIVERNEXT:
           BUTTON_URL_LABEL: Button URL
       GALLERY:
         TAB: Gallery
-        IMAGE_TITLE: Image Gallery
+        TITLE: Image Gallery
         LAYOUT:
           LABEL: Layout
           TWOCOLS: "Medium   = 2 / 1 columns"
