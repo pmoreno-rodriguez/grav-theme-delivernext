@@ -1,4 +1,20 @@
 
+# v2.1.0
+## 07/09/2026
+
+1. [](#new)
+    * Added French language. Thanks to ([@StudioDanton](https://github.com/StudioDanton/))
+2. [](#improved)
+    * Added improved handling of quicklink.url in the footer
+    * Fixed wrong variable and missing new target for gps location in footer. Thanks to ([@StudioDanton](https://github.com/StudioDanton/))
+    * Fixed custom css and js activation and remove them from admin mode. Thanks to ([@StudioDanton](https://github.com/StudioDanton/))
+    * Added new `use-minified-css` configuration option with explicit fallback to `production-mode`
+    * Fixed missing author field inside blog item admin page. Thanks to ([@StudioDanton](https://github.com/StudioDanton/))
+    * Fixed double-escaping in meta_description by removing contradictory
+    * Refactored JSON-LD schema generation to use json_encode() for proper
+3. [](#bugfix)
+    * Removed dependency on translate-date and twig-extensions plugins
+
 # v2.0.0
 ## 07/07/2026
 
