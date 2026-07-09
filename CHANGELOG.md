@@ -1,4 +1,12 @@
 
+# v2.1.1
+## 07/09/2026
+
+1. [](#new)
+    * Added `ICON_HELP` translation for social media icons field in all languages
+2. [](#bugfix)
+    * Changed `IMAGE_TITLE` to `TITLE` in GALLERY section of `en.yaml`
+    
 # v2.1.0
 ## 07/09/2026
 
