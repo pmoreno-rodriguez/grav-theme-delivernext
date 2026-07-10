@@ -1,5 +1,5 @@
 <div class="modular-row features {{ page.header.module_classes}}">
-    {{ content|raw }}
+    {{ page.content|raw }}
     {% for button in page.header.buttons %}
         <a {% if button.style != 'none' %}class="{{ button.style }}"{% endif %} href="{{ button.url }}">{{ button.text }}</a>
     {% endfor %}

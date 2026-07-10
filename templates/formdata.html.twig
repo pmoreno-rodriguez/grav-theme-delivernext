@@ -6,7 +6,7 @@
 
 {% block content %}
   <div class="modular-row bottom ">
-    {{ content|raw }}
+    {{ page.content|raw }}
 
     {% if form %}
     {% include 'partials/form-messages.html.twig' %}

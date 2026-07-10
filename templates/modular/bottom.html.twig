@@ -12,7 +12,7 @@
     </div>  
     {% endif %}
 
-    {{ content|raw }}
+    {{ page.content|raw }}
 
     {% for button in page.header.buttons %}
         <a class="{{ button.style }}" href="{{ button.url }}">{{ button.text }}</a>
