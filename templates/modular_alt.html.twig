@@ -3,6 +3,7 @@
 {% macro pageLinkName(text) %}{{ text|lower|replace({' ':'_'}) }}{% endmacro %}
 
 {% block content %}
+{% if show_title %}
 {% if title_choice == 'image' and show_featured_image %}
     <div class="flush-top blog-header blog-header-image" style="background: {{ title_bg_color }} url({{ featured_image.url }}) no-repeat right;">
 {% else %}
@@ -10,7 +11,10 @@
 {% endif %}
     <h1 style="color: {{ title_text_color }}">{{ page.title|raw }}</h1>
     </div>
+{% endif %}
+    <div class="content-wrapper">
     {{ page.content|raw }}
+    </div>
     {% for module in page.collection() %}
         <div id="{{ _self.pageLinkName(module.menu) }}"></div>
         {{ module.content|raw }}

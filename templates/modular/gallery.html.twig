@@ -27,11 +27,13 @@
 {% endblock %}
 <!-- Image Gallery -->
 	<div class="modular-row gallery {{ page.header.module_classes }}" itemscope itemtype="http://schema.org/ImageGallery">
-		{% if page.header.title %}
+		{% if page.header.title and show_title %}
 			<h2 class="gallery_title" itemprop="name">{{ page.header.title|raw }}</h2>
 		{% endif %}
-	
+
+		<div class="content-wrapper">
 		{{ page.content|raw }}
+		</div>
 		
 		<div class="g-grid">
 			{% if images_gallery %}
