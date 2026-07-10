@@ -2,6 +2,7 @@
 
 {% embed 'partials/base.html.twig' %}
 	{% block content %}
+    {% if show_title %}
     {% if title_choice == 'image' %}
         <div class="flush-top blog-header blog-header-image" style="background: {{ title_bg_color }} url({{ featured_image.url }}) no-repeat right;">
     {% else %}
@@ -9,6 +10,7 @@
     {% endif %}
         <h1 style="color: {{ title_text_color }}">{{ page.title|raw }}</h1>
         </div>
+    {% endif %}
 
 		<div class="content-wrapper archive-list g-grid ">
 			<div id="listing" class="g-block size-2-3">

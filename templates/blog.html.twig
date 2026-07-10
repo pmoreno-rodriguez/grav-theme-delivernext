@@ -31,6 +31,7 @@
 
 {% block content %}
 
+{% if show_title %}
 {% if title_choice == 'image' %}
 	<div class="flush-top blog-header blog-header-image" style="background: {{ title_bg_color }} url({{ featured_image.url }}) no-repeat right;">
 {% else %}
@@ -39,6 +40,7 @@
 	<h1 style="color: {{ title_text_color }}">{{ page.title|raw }}</h1>
 	{% if listing_title %}<p style="color: {{ title_text_color }}">{{ listing_title|raw }}</p>{% endif %}
 </div>
+{% endif %}
 	<div class="content-wrapper">
 	{% if show_breadcrumbs and config.plugins.breadcrumbs.enabled %}
 		{% include 'partials/breadcrumbs.html.twig' ignore missing %}
