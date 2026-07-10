@@ -1,3 +1,12 @@
+# v2.1.2
+## 07/10/2026
+
+1. [](#improved)
+    * Added `latin-ext` subset to Google Fonts imports to support special characters like ė, ų, Ä, Ö, Ü
+    * Added `content-wrapper` div to modular_alt, error, and gallery templates for proper content margins
+2. [](#bugfix)
+    * Fixed favicon type attribute not being rendered correctly by using proper object access to `favicon_data.type`
+    * Fixed `show_title` option not being respected in default, blog, archive, modular_alt, and item templates
 
 # v2.1.1
 ## 07/09/2026
