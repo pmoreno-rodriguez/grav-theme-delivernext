@@ -1,12 +1,9 @@
-{# Favicon = favicon_file_url #}
+{# FAVICON #}
 {% set favicon = theme_var('favicon') %}
-
-{# Default Favicon #}
-{% set default_favicon = 'favicon.png' %}
-
 {% if favicon %}
-    {% set favicon_file = (favicon|first).name %}
-    <link rel="icon" type="{{ favicon.type }}" href="{{ url('theme://images/' ~ favicon_file) }}" />
+    {% set favicon_data = favicon|first %}
+    <link rel="icon" href="{{ url('theme://images/' ~ favicon_data.name) }}" type="{{ favicon_data.type }}">
 {% else %}
+    {% set default_favicon = 'favicon.png' %}
     <link rel="icon" type="image/png" href="{{ url('theme://images/' ~ default_favicon) }}" />
 {% endif %}
