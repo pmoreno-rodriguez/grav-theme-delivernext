@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/css?family=Montserrat:400|Raleway:300,400,600|Inconsolata|Pacifico);
+@import url(//fonts.googleapis.com/css?family=Montserrat:400|Raleway:300,400,600|Inconsolata|Pacifico&subset=latin,latin-ext);
 #header #navbar .panel-activation, #header #navbar ul.navigation, #header .search-box, #header .logo ul.social-icons, #header .logo h3 {
   position: relative;
   top: 50%;
