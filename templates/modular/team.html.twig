@@ -9,7 +9,7 @@
             <h4>{{ member.name }}</h4>
             <span>{{ member.title }}</span>
             <hr>
-            <p>{{ member.info }}</p>
+            <p>{{ member.info|markdown }}</p>
             <ul class="social-icons">
                 {% for item in member.social_media %}
                 <li>
