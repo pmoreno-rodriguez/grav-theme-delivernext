@@ -1,3 +1,15 @@
+# v2.2.0
+## 07/17/2026
+
+1. [](#new)
+    * Added `item_external_url` and `item_external_text` fields to Item blueprint for external links (original articles, reposts, etc.)
+2. [](#improved)
+    * Removed incorrect `markdown: true` configuration from `header.module_classes` field in all modular blueprints - this field contains only CSS class names and does not require markdown processing
+    * Updated summary field help text in all languages to clearly document the new behavior
+3. [](#bugfix)
+    * Fixed Team template member description field not being processed as Markdown by adding `|markdown` filter
+    * Fixed Blog summary configuration to properly separate concerns between blog listing and individual article pages
+
 # v2.1.2
 ## 07/10/2026
 
