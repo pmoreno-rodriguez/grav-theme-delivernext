@@ -84,6 +84,5 @@ form:
                       unset@: true
                     header.module_classes:
                       type: text
-                      markdown: true
                       label: DELIVERNEXT.ADMIN.COMMON.MODULE_CLASSES
                       help: DELIVERNEXT.ADMIN.COMMON.MODULE_CLASSES_HELP
