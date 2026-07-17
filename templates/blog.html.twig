@@ -53,7 +53,17 @@
 				{% set child_featured_key = child.header.featured_image ?? child.header.featuredImage ?? null %}
 				{% set image = (child_featured_key and child.media[child_featured_key]) ? child.media[child_featured_key] : child.media.images|first %}
 				{% set showImage = child.header.show_featured_image ?? false %}
-				{% include 'partials/blog_item.html.twig' with  { page: child, showImage, image, 'page_title': child.title, big_header, 'truncate':true } %}
+				{% include 'partials/blog_item.html.twig' with {
+					page: child,
+					showImage,
+					image,
+					'page_title': child.title,
+					big_header,
+					'truncate': true,
+					'summary_enabled': child.header.summary.enabled ?? true,
+					'summary_size': child.header.summary.size ?? 550,
+					'summary_delimiter': child.header.summary.delimiter ?? '==='
+				} %}
 			{% endfor %}
 
 			{% if config.plugins.pagination.enabled and collection.params.pagination %}
@@ -67,4 +77,3 @@
 		{% endif %}
 	</div>
 	{% endblock %}
-

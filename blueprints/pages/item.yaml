@@ -63,5 +63,21 @@ form:
               label: DELIVERNEXT.ADMIN.ITEM.CONTENT.SUMMARY.DELIMITER
               classes: large
               placeholder: ===
+
+            _externalLinkConfig:
+              type: spacer
+              title: DELIVERNEXT.ADMIN.ITEM.EXTERNAL_LINK.LABEL
+            header.item_external_url:
+              type: text
+              toggleable: true
+              label: DELIVERNEXT.ADMIN.ITEM.EXTERNAL_LINK.URL
+              help: DELIVERNEXT.ADMIN.ITEM.EXTERNAL_LINK.URL_HELP
+              placeholder: 'https://example.com/article'
+            header.item_external_text:
+              type: text
+              toggleable: true
+              label: DELIVERNEXT.ADMIN.ITEM.EXTERNAL_LINK.TEXT
+              help: DELIVERNEXT.ADMIN.ITEM.EXTERNAL_LINK.TEXT_HELP
+              placeholder: External Link
           import@:
             type: partials/item-bits

@@ -408,15 +408,24 @@ DELIVERNEXT:
       CONTENT:
         SUMMARY:
           LABEL: Summary Item
-          SHOW: Show summary on page
-          SHOW_HELP: Show summary on the page, below the subtitle. This is separate from the summary in the blog list.
-          ENABLED: Enabled Summary
+          SHOW: Show summary on individual article page
+          SHOW_HELP: Show a summary preview before the full article content on the individual article page. Does NOT affect blog listing. Requires "Enabled Summary" to be active.
+          ENABLED: Enable summary in blog listings
+          ENABLED_HELP: Show truncated summary on blog listing pages. If disabled, only title and metadata are shown. Does NOT affect individual article pages.
           FORMAT:
             LABEL: Summary Format
-            SHORT: Use the first occurence of delimter or size
+            SHORT: Use the first occurrence of delimiter or size
             LONG: Summary delimiter will be ignored
-          SIZE: Size
+          SIZE: Summary truncate size
+          SIZE_HELP: Number of characters to truncate summary if no delimiter is found. Default 550. Ignored if delimiter (===) exists in content.
           DELIMITER: Summary Delimiter
+          DELIMITER_HELP: Text delimiter to mark where summary ends. Default is ===. If found in content, shows text before delimiter. If not found, truncates to Size value.
+      EXTERNAL_LINK:
+        LABEL: External Link (Original Article, Repost, etc.)
+        URL: External Link URL
+        URL_HELP: Link to external resource (original article if translation/excerpt, external post if repost, etc.). Leave empty to disable. (Replaces deprecated page.header.link)
+        TEXT: Link Text
+        TEXT_HELP: Display text for the link (e.g., "Original Article", "Read on Medium", "Source"). If empty, defaults to "External Link".
     COMMON:
       TEXT_COLOR: Text Color
       TEXT_COLOR_HELP: Text color for Title

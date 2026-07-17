@@ -503,14 +503,14 @@ b, strong, th {
   display: table;
   clear: both;
 }
+.footer .footer-module.large {
+  width: 40%;
+}
 .footer .footer-module {
   display: block;
   float: left;
   width: 30%;
   padding-right: 2rem;
-}
-.footer .footer-module.large {
-  width: 40%;
 }
 @media only all and (min-width: 30.063em) and (max-width: 47.938em) {
   .footer .footer-module {
@@ -540,12 +540,14 @@ b, strong, th {
 }
 .footer .logo {
   border-bottom: 0 none;
-  color: #fff;
 }
 .footer .logo::after {
   content: "";
   display: table;
   clear: both;
+}
+.footer .logo {
+  color: #fff;
 }
 .footer .logo h3 a {
   color: #fff;
@@ -571,14 +573,14 @@ b, strong, th {
   color: #fff;
   font-size: 0.7rem;
 }
-.footer .footer-modules {
-  display: block;
-  padding-bottom: 1.5rem;
-}
 .footer .footer-modules::after {
   content: "";
   display: table;
   clear: both;
+}
+.footer .footer-modules {
+  display: block;
+  padding-bottom: 1.5rem;
 }
 .footer .footer-copyright {
   width: 50%;
@@ -662,11 +664,6 @@ h1 {
   }
 }
 
-h2 {
-  font-weight: normal;
-  text-transform: uppercase;
-  font-size: 1.4rem;
-}
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
   h2 {
     font-size: -1rem;
@@ -676,6 +673,11 @@ h2 {
   h2 {
     font-size: -1.1rem;
   }
+}
+h2 {
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 1.4rem;
 }
 
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
@@ -719,10 +721,6 @@ h3 {
 h1 + h2 {
   margin: -2rem 0 2rem 0;
   font-size: 1.4rem;
-  line-height: 1;
-  text-align: center;
-  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: 300;
 }
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
   h1 + h2 {
@@ -734,14 +732,16 @@ h1 + h2 {
     font-size: 1rem;
   }
 }
+h1 + h2 {
+  line-height: 1;
+  text-align: center;
+  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
 
 h2 + h3 {
   margin: 0.5rem 0 2rem 0;
   font-size: 1.3rem;
-  line-height: 1;
-  text-align: center;
-  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-weight: normal;
 }
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
   h2 + h3 {
@@ -752,6 +752,12 @@ h2 + h3 {
   h2 + h3 {
     font-size: 1.1rem;
   }
+}
+h2 + h3 {
+  line-height: 1;
+  text-align: center;
+  font-family: "Helvetica Neue", "HelveticaNeue-Light", "Helvetica Neue Light", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: normal;
 }
 
 blockquote {
@@ -1142,9 +1148,6 @@ td {
   padding: 0;
   margin-left: 0;
 }
-#panel .navigation li {
-  border-bottom: 1px solid rgb(61.2, 61.2, 61.2);
-}
 #panel .navigation li a {
   color: #ddd;
   display: block;
@@ -1164,6 +1167,9 @@ td {
 }
 #panel .navigation li.active > a:hover {
   color: #9A9898;
+}
+#panel .navigation li {
+  border-bottom: 1px solid rgb(61.2, 61.2, 61.2);
 }
 #panel .navigation li:first-child {
   border-top: 1px solid rgb(61.2, 61.2, 61.2);
@@ -1350,7 +1356,7 @@ td {
   }
 }
 
-.blog-content-item .list-blog-padding > p:nth-child(2) {
+.blog-content-item .list-blog-padding > p:nth-child(1) {
   font-size: 1.2rem;
 }
 
@@ -1521,15 +1527,15 @@ div#breadcrumbs {
     padding-left: 0;
   }
 }
-#sidebar .sidebar-content {
-  margin-bottom: 3rem;
-}
 #sidebar .sidebar-content h4, #sidebar .sidebar-content .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot #sidebar .sidebar-content .button, #sidebar .sidebar-content .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list #sidebar .sidebar-content button, #sidebar .sidebar-content .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot #sidebar .sidebar-content button, #sidebar .sidebar-content .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact #sidebar .sidebar-content button, #sidebar .sidebar-content .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot #sidebar .sidebar-content button, #sidebar .sidebar-content .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item #sidebar .sidebar-content .name, #sidebar .sidebar-content .contact label, .contact #sidebar .sidebar-content label, #sidebar .sidebar-content .modular .bottom table th, .modular .bottom table #sidebar .sidebar-content th, #sidebar .sidebar-content .archive-list label, .archive-list #sidebar .sidebar-content label {
   margin-bottom: 1rem;
   text-align: left;
 }
 #sidebar .sidebar-content p, #sidebar .sidebar-content ul {
   margin-top: 1rem;
+}
+#sidebar .sidebar-content {
+  margin-bottom: 3rem;
 }
 
 ul.pagination {
@@ -1540,6 +1546,34 @@ ul.pagination {
 .prev-next {
   margin-top: 5rem;
   text-align: center;
+}
+
+.item-external-url {
+  margin-top: -1.5rem;
+  margin-bottom: 1.5rem;
+}
+.item-external-url a {
+  color: #4a6a8a;
+  text-decoration: none;
+  font-size: 0.95rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.item-external-url a i {
+  font-size: 0.9rem;
+}
+.item-external-url a:hover {
+  color: #F6635E;
+  text-decoration: underline;
+}
+
+.page-summary {
+  margin-top: 2rem;
+}
+.page-summary p {
+  margin: 0.7rem 0;
+  color: #656161;
 }
 
 .archive-list h4, .archive-list .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .archive-list .button, .callout .pricing-container .pricing-item .foot .archive-list button, .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .archive-list .name, .archive-list .modular .bottom table th, .modular .bottom table .archive-list th, .archive-list label {
@@ -1666,16 +1700,16 @@ ul.pagination {
 .modular.header-image #header #navbar a:hover {
   color: #FFFFFF;
 }
+.modular .slideme_container::after {
+  content: "";
+  display: table;
+  clear: both;
+}
 .modular .slideme_container {
   overflow: hidden;
   margin-top: -15rem;
   padding-top: 15rem;
   height: 34.7rem;
-}
-.modular .slideme_container::after {
-  content: "";
-  display: table;
-  clear: both;
 }
 .modular .showcase {
   position: relative;
@@ -1692,7 +1726,6 @@ ul.pagination {
   margin-top: 0;
   padding-left: 14rem;
   padding-right: 14rem;
-  text-transform: uppercase;
 }
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
   .modular .showcase h1 {
@@ -1711,6 +1744,9 @@ ul.pagination {
 }
 .modular .showcase h1 strong, .modular .showcase h1 th {
   color: #4a6a8a;
+}
+.modular .showcase h1 {
+  text-transform: uppercase;
 }
 .modular .showcase h2 {
   text-transform: none;
@@ -1945,12 +1981,14 @@ ul.pagination {
 
 .modular .bottom {
   text-align: center;
-  padding-bottom: 4rem;
 }
 .modular .bottom::after {
   content: "";
   display: table;
   clear: both;
+}
+.modular .bottom {
+  padding-bottom: 4rem;
 }
 .modular .bottom h2 {
   padding-top: 3rem;
@@ -1966,11 +2004,11 @@ ul.pagination {
     font-size: 1rem;
   }
 }
-.modular .bottom.borderbottom {
-  padding-bottom: 0;
-}
 .modular .bottom.borderbottom hr {
   padding-top: 3rem;
+}
+.modular .bottom.borderbottom {
+  padding-bottom: 0;
 }
 .modular .bottom table {
   border: 0 none;
@@ -2127,14 +2165,16 @@ ul.pagination {
 .callout .pricing-container {
   position: relative;
   z-index: 10;
-  margin-top: 2rem;
-  min-height: 31rem;
-  text-align: center;
 }
 .callout .pricing-container::after {
   content: "";
   display: table;
   clear: both;
+}
+.callout .pricing-container {
+  margin-top: 2rem;
+  min-height: 31rem;
+  text-align: center;
 }
 .callout .pricing-container .pricing-item {
   transform: translateZ(0);
@@ -2394,12 +2434,14 @@ ul.pagination {
   padding: 1em 0;
   float: left;
   width: 100%;
-  /* Content wrapper */
 }
 .gallery .gallery_item .title {
   color: #656161;
   text-align: center;
   margin-bottom: 10px;
+}
+.gallery .gallery_item {
+  /* Content wrapper */
 }
 .gallery .gallery_item .gallery_item_content {
   position: relative;
@@ -2441,7 +2483,6 @@ ul.pagination {
   opacity: 0;
   transform: translate(-50%, -50%);
   transition: all 0.4s ease-in-out;
-  /* Directional fade-in support */
 }
 .gallery .gallery_item .gallery_item_content .gallery_item_content_details .gallery_item_content_title {
   color: #fff;
@@ -2454,6 +2495,9 @@ ul.pagination {
 .gallery .gallery_item .gallery_item_content .gallery_item_content_details .gallery_item_content_text {
   color: #fff;
   font-size: 0.9em;
+}
+.gallery .gallery_item .gallery_item_content .gallery_item_content_details {
+  /* Directional fade-in support */
 }
 .gallery .gallery_item .gallery_item_content .gallery_item_content_details.fadeIn-bottom {
   transform: translate(-50%, 30%);
@@ -2484,9 +2528,6 @@ ul.pagination {
   text-align: initial;
 }
 
-.logo {
-  border-bottom: 1px solid rgb(234.25, 234.25, 234.25);
-}
 .logo h3 {
   font-size: 2.5rem;
   font-family: "Pacifico", "monospace";
@@ -2499,6 +2540,9 @@ ul.pagination {
 }
 .logo h4, .logo .archive-list label, .archive-list .logo label, .logo .modular .bottom table th, .modular .bottom table .logo th, .logo .contact label, .contact .logo label, .logo .callout .pricing-container .pricing-item .name, .callout .pricing-container .pricing-item .logo .name, .logo .callout .pricing-container .pricing-item .foot .button, .callout .pricing-container .pricing-item .foot .logo .button, .logo .callout .pricing-container .pricing-item .foot .archive-list button, .callout .pricing-container .pricing-item .foot .archive-list .logo button, .logo .archive-list .callout .pricing-container .pricing-item .foot button, .archive-list .callout .pricing-container .pricing-item .foot .logo button, .logo .callout .pricing-container .pricing-item .foot .contact button, .callout .pricing-container .pricing-item .foot .contact .logo button, .logo .contact .callout .pricing-container .pricing-item .foot button, .contact .callout .pricing-container .pricing-item .foot .logo button {
   text-align: left;
+}
+.logo {
+  border-bottom: 1px solid rgb(234.25, 234.25, 234.25);
 }
 .logo ul {
   margin: 0;

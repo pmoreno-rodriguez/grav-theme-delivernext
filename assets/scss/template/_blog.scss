@@ -86,7 +86,7 @@
 
 // Bigger first para
 .blog-content-item {
-    .list-blog-padding > p:nth-child(2) {
+    .list-blog-padding > p:nth-child(1) {
         font-size: $core-font-size + 0.2rem;
     }
 }
@@ -113,7 +113,7 @@
             }
         }
         &:last-child {
-            a:after {display: none;} 
+            a:after {display: none;}
         }
     }
     @include breakpoint(tablet-range) {
@@ -150,7 +150,7 @@
 .related-pages {
     margin: 1rem 0;
     font-family: inherit;
-    
+
     .related-item {
         display: flex;
         gap: 1rem;
@@ -161,40 +161,40 @@
         border-radius: 4px;
         transition: all 0.2s ease;
         border: 1px solid $border-color;
-        
+
         &:hover {
             background: $white;
             box-shadow: 0 2px 8px rgba($black, 0.08);
             border-color: darken($border-color, 5%);
         }
-        
+
         .related-image {
-            flex: 0 0 25%;  
+            flex: 0 0 25%;
             max-width: 25%;
-            
+
             a {
                 display: block;
                 overflow: hidden;
                 border-radius: 3px;
                 border: 1px solid $border-color;
-                
+
                 img {
                     width: 100%;
                     height: auto;
                     display: block;
                     transition: transform 0.3s ease;
                 }
-                
+
                 &:hover img {
                     transform: scale(1.05);
                 }
             }
         }
-        
+
         .related-content {
             flex: 0 0 75%;
             min-width: 0;
-            
+
             a {
                 display: block;
                 text-decoration: none;
@@ -202,42 +202,42 @@
                 font-weight: 500;
                 margin-bottom: 0.25rem;
                 line-height: 1.3;
-                
+
                 &:hover {
                     color: $secondary-link;
                     text-decoration: underline;
                 }
             }
-            
+
             &.full-width {
                 padding-left: 0;
             }
-            
+
             .published {
                 display: block;
                 color: $core-text;
                 font-size: 0.85rem;
                 line-height: 1.4;
             }
-            
+
             .catlist {
                 a {
                     display: inline;
                     color: $core-accent;
                     font-weight: normal;
                     font-size: 0.8rem;
-                    
+
                     &:hover {
                         color: $secondary-link;
                         text-decoration: underline;
                     }
                 }
-                
+
                 .sep {
                     color: $light-gray;
                 }
             }
-            
+
             .score {
                 display: inline-block;
                 margin-left: 0.5rem;
@@ -295,4 +295,37 @@ ul.pagination {
 .prev-next {
     margin-top: 5rem;
     text-align: center;
+}
+
+// Item External URL
+.item-external-url {
+    margin-top: -1.5rem;
+    margin-bottom: 1.5rem;
+
+    a {
+        color: $core-accent;
+        text-decoration: none;
+        font-size: 0.95rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        i {
+            font-size: 0.9rem;
+        }
+
+        &:hover {
+            color: $secondary-link;
+            text-decoration: underline;
+        }
+    }
+}
+
+// Page Summary (Preview before full content)
+.page-summary {
+    margin-top: 2rem;
+    p {
+        margin: 0.7rem 0;
+        color: $light-gray;
+    }
 }

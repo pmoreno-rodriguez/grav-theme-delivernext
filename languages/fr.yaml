@@ -408,15 +408,24 @@ DELIVERNEXT:
       CONTENT:
         SUMMARY:
           LABEL: Résumé de l’article
-          SHOW: Afficher le résumé sur la page
-          SHOW_HELP: Affiche le résumé sur la page, sous le sous-titre. Ceci est différent du résumé dans la liste du blog.
-          ENABLED: Activer le résumé
+          SHOW: Afficher le résumé sur la page de l'article
+          SHOW_HELP: Affiche un aperçu du résumé avant le contenu complet sur la page de l'article individuel. N'affecte pas la liste du blog. Nécessite que "Activer le résumé" soit actif.
+          ENABLED: Activer le résumé dans les listes de blog
+          ENABLED_HELP: Affiche le résumé tronqué sur les pages de liste du blog. S'il est désactivé, seuls le titre et les métadonnées s'affichent. N'affecte pas les pages d'articles individuels.
           FORMAT:
             LABEL: Format du résumé
             SHORT: Utiliser la première occurrence du délimiteur ou de la taille
             LONG: Le délimiteur ne sera pas pris en compte
-          SIZE: Longueur
+          SIZE: Longueur du résumé
+          SIZE_HELP: Nombre de caractères à tronquer le résumé s'il n'y a pas de délimiteur. Par défaut 550. Ignoré si le délimiteur (===) existe dans le contenu.
           DELIMITER: Délimiteur du résumé
+          DELIMITER_HELP: Délimiteur de texte pour marquer où le résumé se termine. Par défaut ===. S'il se trouve dans le contenu, affiche le texte avant le délimiteur. Sinon, tronque à la valeur de Longueur.
+      EXTERNAL_LINK:
+        LABEL: Lien externe (Article original, Republication, etc.)
+        URL: URL du lien externe
+        URL_HELP: Lien vers une ressource externe (article original si traduction/extrait, post externe si republication, etc.). Laissez vide pour désactiver. (Remplace page.header.link déprécié)
+        TEXT: Texte du lien
+        TEXT_HELP: Texte à afficher pour le lien (p. ex., "Article original", "Lire sur Medium", "Source"). Si vide, par défaut "Lien externe".
     COMMON:
       TEXT_COLOR: Couleur du texte
       TEXT_COLOR_HELP: Couleur du texte pour le titre

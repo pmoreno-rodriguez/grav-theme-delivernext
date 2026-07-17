@@ -12,15 +12,25 @@
             {% endif %}
         {% endif %}
 
-        {% if page.header.link %}
-            <h4>
-                {% if page.header.continue_link is not same as(false) %}
-                <a href="{{ page.url }}"><i class="fa fa-angle-double-right"></i></a>
-                {% endif %}
-                <a href="{{ page.header.link }}">{{ page.title }}</a>
-            </h4>
-        {% else %}
-            <h4><a href="{{ page.url }}">{{ page.title }}</a></h4>
+        <h4>
+            {% if truncate %}<a href="{{ page.url }}">{% endif %}
+                {{ page.title }}
+            {% if truncate %}</a>{% endif %}
+        </h4>
+
+        {% set item_external_url = page.header.item_external_url ?? page.header.link %}
+        {% set item_external_text = page.header.item_external_text %}
+
+        {% if not truncate and item_external_url %}
+        <div class="item-external-url">
+            <a href="{{ item_external_url }}"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="original-article-link">
+                <i class="fa fa-link"></i>
+                {{ item_external_text ?? 'External Link' }}
+            </a>
+        </div>
         {% endif %}
 
         <span class="list-blog-date">
@@ -46,20 +56,34 @@
 
     <div class="list-blog-padding">
 
-    {% if page.header.continue_link is same as(false) %}
-        {{ page.content|raw }}
-        {% if not truncate %}
-        {% set show_prev_next = true %}
+    {% if truncate and summary_enabled %}
+        {# Blog list: summary enabled - show truncated summary #}
+        {% if page.summary != page.content %}
+            {{ page.summary|raw }}
+        {% else %}
+            {# Use summary.size for truncate if no delimiter #}
+            {{ page.content|truncate(summary_size)|raw }}
         {% endif %}
-    {% elseif truncate and page.summary != page.content %}
-        {{ page.summary|raw }}
-        <p><a href="{{ page.url }}" class="button-outline">{{ 'DELIVERNEXT.BLOG.CONTINUE_READING'|t }}</a></p>
+        {% if page.header.continue_link ?? true %}<p><a href="{{ page.url }}" class="button-outline">{{ 'DELIVERNEXT.BLOG.CONTINUE_READING'|t }}</a></p>{% endif %}
     {% elseif truncate %}
-        {{ page.content|truncate(550)|raw }}
-        <p><a href="{{ page.url }}" class="button-outline">{{ 'DELIVERNEXT.BLOG.CONTINUE_READING'|t }}</a></p>
+        {# Blog list: summary disabled - show only metadata (title, date, author, tags) #}
+        {# Metadata is already displayed above, no extra content here #}
+        {% if page.header.continue_link ?? true %}<p><a href="{{ page.url }}" class="button-outline">{{ 'DELIVERNEXT.BLOG.CONTINUE_READING'|t }}</a></p>{% endif %}
     {% else %}
-        {{ page.content|raw }}
-        {% set show_prev_next = true %}
+       {# Individual article page #}
+       {% if show_summary and summary_enabled %}
+           {# Show extra summary before full content #}
+           <div class="page-summary">
+               {% if page.summary != page.content %}
+                   {{ page.summary|raw }}
+               {% else %}
+                   {{ page.content|truncate(summary_size)|raw }}
+               {% endif %}
+           </div>
+       {% endif %}
+       {# Show full content #}
+       {{ page.content|raw }}
+       {% set show_prev_next = true %}
     {% endif %}
 
     {% if show_prev_next %}
