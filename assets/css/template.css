@@ -2268,12 +2268,15 @@ ul.pagination {
   width: 100%;
   text-align: left;
   padding-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 .team .members .member {
-  float: left;
-  width: 22%;
-  margin: 0 1rem;
+  width: calc(25% - 1.5rem);
+  margin: 0 0.75rem;
   margin-bottom: 2rem;
+  box-sizing: border-box;
 }
 @media only all and (max-width: 47.938em) {
   .team .members .member {
@@ -2287,7 +2290,8 @@ ul.pagination {
 @media only all and (min-width: 48em) and (max-width: 59.938em) {
   .team .members .member {
     display: block;
-    width: 44%;
+    width: calc(50% - 1.5rem);
+    margin: 0 0.75rem;
     margin-bottom: 2rem;
   }
 }
