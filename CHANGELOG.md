@@ -1,3 +1,9 @@
+# v2.2.1
+## 07/18/2026
+
+1. [](#bugfix)
+    * Fixed Team module grid alignment. Ensured consistent column width calculation across all breakpoints using calc()
+
 # v2.2.0
 ## 07/17/2026
 
