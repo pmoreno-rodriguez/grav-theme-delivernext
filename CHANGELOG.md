@@ -1,3 +1,9 @@
+# v2.3.1
+## 07/21/2026
+
+1. [](#bugfix)
+    * Fixed Featured Posts widget to ensure Grav 1.7 compatibility by removing Twig 3-specific functions and null coalescing operators
+
 # v2.3.0
 ## 07/21/2026
 
