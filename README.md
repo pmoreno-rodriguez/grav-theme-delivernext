@@ -158,6 +158,36 @@ Upload a `.png` or `.ico` file through the theme options or place it in `user/th
 **Custom CSS/JS**  
 Create `custom.css` or `custom.js` files in `user/themes/delivernext/css` or `.../js` respectively. They will load automatically when enabled in theme options.
 
+## Featured Posts in Sidebar
+
+DeliverNext includes a featured posts widget that displays highlighted articles in the blog sidebar. This feature uses an internal flag system rather than categories, keeping your content organization clean.
+
+### How to Enable Featured Posts
+
+1. Go to **Admin Panel → Themes → DeliverNext → Blog tab**
+2. Enable "Show featured posts in sidebar"
+3. Set the "Number of featured posts" (1-5)
+
+### Marking Posts as Featured
+
+Add the `featured: true` flag to your blog post's YAML header:
+
+```yaml
+---
+title: My Amazing Post
+featured: true
+categories:
+    - blog
+    - tutorials
+---
+```
+
+**Key points:**
+- Any blog post with `featured: true` will appear in the Featured Posts sidebar widget
+- Featured posts are independent of categories—posts can be in any category or multiple categories
+- Featured posts are displayed in reverse chronological order (newest first)
+- The flag is purely internal and won't affect your content organization or taxonomy filtering
+
 ## Demo page
 
 [https://delivernext.pmdesign.dev](https://delivernext.pmdesign.dev)
@@ -169,7 +199,6 @@ You can read extra documentation of DeliverNext Theme at [https://pmoreno-rodrig
 ## To do
 
 - [ ] Improve css classes for image type logo
-- [ ] Add featured articles module to the sidebar
 - [ ] Add article categories module to the sidebar
 - [ ] Update to latest FontAwesome icons
 

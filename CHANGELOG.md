@@ -1,8 +1,17 @@
-# v2.2.1
-## 07/18/2026
+# v2.3.0
+## 07/21/2026
 
-1. [](#bugfix)
+1. [](#new)
+    * Added Featured Posts widget to blog sidebar - displays highlighted articles based on `featured: true` flag in post frontmatter
+    * Added `featured` toggle field to blog item blueprint for marking posts as featured
+    * Added dedicated Blog configuration tab in theme settings with sidebar customization options
+2. [](#improved)
+    * Enhanced Taxonomy List with optional `filterend` parameter to limit displayed tags/categories per page
+    * Optimized featured posts and related pages CSS using SCSS mixins to reduce code duplication
+    * Translation keys restructured for better organization under `DELIVERNEXT.ADMIN.THEME.BLOG` namespace
+3. [](#bugfix)
     * Fixed Team module grid alignment. Ensured consistent column width calculation across all breakpoints using calc()
+    * Fixed range field min/max validation in Grav 2.x by using field-level properties instead of validate section
 
 # v2.2.0
 ## 07/17/2026
