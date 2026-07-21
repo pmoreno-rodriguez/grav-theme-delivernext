@@ -1,21 +1,16 @@
 {# Featured posts configuration #}
-{% set featured_enabled = theme_var('featuredposts') ?? false %}
-{% set featuredposts_number = theme_var('featuredposts_number') ?? 3 %}
+{% set featured_enabled = theme_var('featuredposts') ? theme_var('featuredposts') : true %}
+{% set featuredposts_number = theme_var('featuredposts_number') ? theme_var('featuredposts_number') : 3 %}
 
 {% if featured_enabled and page.template == 'blog' %}
-	{# Get ALL children, not limited by content.limit #}
-	{% set all_posts = page.children %}
+{# Get ALL children, not limited by content.limit, ya ordenados por fecha descendente #}
+	{% set all_posts = page.children.order('date', 'desc') %}
 	{% set featured_posts = [] %}
-	
 	{% for post in all_posts %}
 		{% if post.header.featured %}
 			{% set featured_posts = featured_posts|merge([post]) %}
 		{% endif %}
 	{% endfor %}
-
-	{# Sort by date descending #}
-	{% set featured_posts = featured_posts|sort((a, b) => b.date <=> a.date) %}
-
 	{% if featured_posts|length > 0 %}
 	<div class="sidebar-content">
 		<h4>{{ 'DELIVERNEXT.SIDEBAR.FEATURED_POSTS'|t }}</h4>
