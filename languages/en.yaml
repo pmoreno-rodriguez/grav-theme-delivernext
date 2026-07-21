@@ -10,8 +10,8 @@ DELIVERNEXT:
         USE_MINIFIED_CSS: Use minified CSS
         USE_MINIFIED_CSS_HELP: When enabled, CSS files will be served minified. This setting takes precedence over the Production Mode option.
         STICKY_MENU: Sticky Menu
-        BACK_TO_TOP_BUTTON: "<strong>Back to Top</strong> button"
-        BACK_TO_TOP_BUTTON_HELP: Enable `Back to Top` button when scroll page.
+        BACK_TO_TOP_BUTTON: "Back to Top button"
+        BACK_TO_TOP_BUTTON_HELP: "Enable <strong>Back to Top</strong> button when scroll page."
         CUSTOM_CSS: Load custom CSS
         CUSTOM_CSS_HELP: Loads custom CSS styles from theme://assets/css/custom.css
         CUSTOM_JS: Load custom JS
@@ -101,6 +101,17 @@ DELIVERNEXT:
               BLANK: "Open in a new window"
             ICON: Icon for Social Media
             ICON_HELP: Font Awesome icon name for social media. Enter just the icon name (e.g., "facebook", "twitter", "linkedin")
+      BLOG:
+        TAB: Blog
+        SETTINGS: Blog Settings
+        SIDEBAR_MAX_TAGS: Maximum tags shown in sidebar
+        SIDEBAR_MAX_TAGS_HELP: "Leave empty to show all tags. Enter a number to limit how many tags appear (e.g., 5, 10). Can be overridden per blog page."
+        SIDEBAR_MAX_TAGS_PLACEHOLDER: "Leave empty to show all"
+        FEATURED_POSTS:
+          SECTION: Featured Posts
+          LABEL: Show featured posts in sidebar
+          NUMBER: Number of featured posts
+          NUMBER_HELP: "Maximum number of featured posts to show (1-5)"
     DEFAULT:
       TITLE_SECTION: Title options
       SHOW_TITLE: Show Title
@@ -372,9 +383,14 @@ DELIVERNEXT:
         BLOG_ROUTE: Blog Route
         BLOG_ROUTE_HELP: The route to the main blog page that contains the "Show ..." configuration
         SHOW_BREADCRUMBS: Show Breadcrumbs
+        FEATURED: Featured Post
+        FEATURED_HELP: Mark this post as featured to display in the sidebar featured posts widget
         SIDEBAR_SETTINGS: Sidebar settings
         SHOW_SIDEBAR: Show Sidebar
         SIDEBAR_CONTENT: "Sidebar Content"
+        SIDEBAR_LIMIT_TAGS: Maximum tags shown in this blog sidebar
+        SIDEBAR_LIMIT_TAGS_HELP: "Leave empty to use theme default. Enter a number to override (e.g., 5, 10)"
+        SIDEBAR_LIMIT_TAGS_PLACEHOLDER: "Leave empty to use theme default"
         SIDEBAR_DEFAULT_TEXT: "#### Widget de Texto\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
         SHOW_FEATURED_POSTS: Show Featured Posts
         SHOW_CATEGORIES: Show Categories

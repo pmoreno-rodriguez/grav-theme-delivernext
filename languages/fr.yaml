@@ -10,8 +10,8 @@ DELIVERNEXT:
         USE_MINIFIED_CSS: Utiliser une feuille CSS minifiée
         USE_MINIFIED_CSS_HELP: Lorsqu'il est activé, les fichiers CSS seront servis minifiés. Ce paramètre a priorité sur l'option Mode production.
         STICKY_MENU: Menu fixe
-        BACK_TO_TOP_BUTTON: "<strong>Remonter</strong>"
-        BACK_TO_TOP_BUTTON_HELP: Activer le bouton « Remonter » lors du défilement de la page
+        BACK_TO_TOP_BUTTON: "Bouton Remonter"
+        BACK_TO_TOP_BUTTON_HELP: "Activer le bouton <strong>Remonter</strong> lors du défilement de la page"
         CUSTOM_CSS: Charger un CSS personnalisé
         CUSTOM_CSS_HELP: "Charge les styles CSS personnalisés depuis theme://assets/css/custom.css"
         CUSTOM_JS: Charger un JS personnalisé
@@ -101,6 +101,17 @@ DELIVERNEXT:
               BLANK: "Ouvrir dans une nouvelle fenêtre"
             ICON: Icône pour le réseau social
             ICON_HELP: 'Nom de l`icône Font Awesome pour les réseaux sociaux. Entrez uniquement le nom de l`icône (ex: "facebook", "twitter", "linkedin")'
+      BLOG:
+        TAB: Blog
+        SETTINGS: Paramètres du Blog
+        SIDEBAR_MAX_TAGS: Nombre maximum d'étiquettes dans la barre latérale
+        SIDEBAR_MAX_TAGS_HELP: "Laisser vide pour afficher toutes les étiquettes. Entrez un nombre pour limiter (ex: 5, 10). Peut être remplacé par page de blog."
+        SIDEBAR_MAX_TAGS_PLACEHOLDER: "Laisser vide pour afficher toutes"
+        FEATURED_POSTS:
+          SECTION: Articles en vedette
+          LABEL: Afficher les articles en vedette dans la barre latérale
+          NUMBER: Nombre d'articles en vedette
+          NUMBER_HELP: "Nombre maximum d'articles en vedette à afficher (1-5)"
     DEFAULT:
       TITLE_SECTION: Options du titre
       SHOW_TITLE: Afficher le titre
@@ -372,9 +383,14 @@ DELIVERNEXT:
         BLOG_ROUTE: Chemin du blog
         BLOG_ROUTE_HELP: Chemin vers la page principale du blog qui contient la configuration « Afficher ... »
         SHOW_BREADCRUMBS: Afficher le fil d’Ariane
+        FEATURED: Article en vedette
+        FEATURED_HELP: Marquez cet article comme vedette pour l'afficher dans le widget des articles en vedette de la barre latérale
         SIDEBAR_SETTINGS: Paramètres de la barre latérale
         SHOW_SIDEBAR: Afficher la barre latérale
         SIDEBAR_CONTENT: "Contenu de la barre latérale"
+        SIDEBAR_LIMIT_TAGS: Nombre maximum d'étiquettes dans la barre latérale de ce blog
+        SIDEBAR_LIMIT_TAGS_HELP: "Laisser vide pour utiliser la valeur par défaut du thème. Entrez un nombre pour remplacer (ex: 5, 10)"
+        SIDEBAR_LIMIT_TAGS_PLACEHOLDER: "Laisser vide pour utiliser la valeur du thème"
         SIDEBAR_DEFAULT_TEXT: "#### Widget Texte\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
         SHOW_FEATURED_POSTS: Afficher les articles en vedette
         SHOW_CATEGORIES: Afficher les catégories

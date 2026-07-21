@@ -10,8 +10,8 @@ DELIVERNEXT:
         USE_MINIFIED_CSS: Usar CSS minificado
         USE_MINIFIED_CSS_HELP: Cuando está habilitado, los archivos CSS se entregarán minificados. Esta configuración tiene prioridad sobre la opción de Modo de Producción.
         STICKY_MENU: Menú fijo
-        BACK_TO_TOP_BUTTON: Botón de <strong>Volver arriba</strong>
-        BACK_TO_TOP_BUTTON_HELP: Habilita el botón `Volver arriba` al desplazar la página.
+        BACK_TO_TOP_BUTTON: Botón de Volver arriba
+        BACK_TO_TOP_BUTTON_HELP: "Habilita el botón <strong>Volver arriba</strong> al desplazar la página."
         CUSTOM_CSS: Cargar CSS personalizado
         CUSTOM_CSS_HELP: Carga estilos CSS personalizados desde theme://assets/css/custom.css
         CUSTOM_JS: Cargar JS personalizado
@@ -101,6 +101,17 @@ DELIVERNEXT:
               BLANK: "Abrir en una nueva ventana"
             ICON: Icono para la Red Social
             ICON_HELP: 'Nombre del icono de Font Awesome para redes sociales. Ingresa solo el nombre del icono (ej: "facebook", "twitter", "linkedin")'
+      BLOG:
+        TAB: Blog
+        SETTINGS: Configuración del Blog
+        SIDEBAR_MAX_TAGS: Máximo de etiquetas en el sidebar
+        SIDEBAR_MAX_TAGS_HELP: "Dejar vacío para mostrar todas las etiquetas. Ingresa un número para limitar (ej: 5, 10). Se puede sobrescribir por página de blog."
+        SIDEBAR_MAX_TAGS_PLACEHOLDER: "Dejar vacío para mostrar todas"
+        FEATURED_POSTS:
+          SECTION: Artículos Destacados
+          LABEL: Mostrar artículos destacados en el sidebar
+          NUMBER: Número de artículos destacados
+          NUMBER_HELP: "Número máximo de artículos destacados a mostrar (1-5)"
     DEFAULT:
       TITLE_SECTION: Opciones de título
       SHOW_TITLE: Mostrar Título
@@ -372,9 +383,14 @@ DELIVERNEXT:
         BLOG_ROUTE: Ruta del Blog
         BLOG_ROUTE_HELP: La ruta a la página principal del blog que contiene la configuración "Mostrar ..."
         SHOW_BREADCRUMBS: Mostrar Migas de Pan
+        FEATURED: Artículo Destacado
+        FEATURED_HELP: Marca este artículo como destacado para mostrarlo en el widget de artículos destacados del sidebar
         SIDEBAR_SETTINGS: Configuración de la barra lateral
         SHOW_SIDEBAR: Mostrar Barra Lateral
         SIDEBAR_CONTENT: "Contenido del Sidebar"
+        SIDEBAR_LIMIT_TAGS: Máximo de etiquetas en el sidebar de este blog
+        SIDEBAR_LIMIT_TAGS_HELP: "Dejar vacío para usar el valor por defecto del tema. Ingresa un número para sobrescribir (ej: 5, 10)"
+        SIDEBAR_LIMIT_TAGS_PLACEHOLDER: "Dejar vacío para usar el valor del tema"
         SIDEBAR_DEFAULT_TEXT: "#### Widget de Texto\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna."
         SHOW_FEATURED_POSTS: Mostrar Publicaciones Destacadas
         SHOW_CATEGORIES: Mostrar Categorías
