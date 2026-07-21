@@ -1,0 +1,48 @@
+form:
+  validation: loose
+
+  fields:
+
+    blog_section:
+      type: section
+      title: DELIVERNEXT.ADMIN.THEME.BLOG.SETTINGS
+      underline: false
+      fields:
+
+        sidebar_max_tags:
+          type: text
+          label: DELIVERNEXT.ADMIN.THEME.BLOG.SIDEBAR_MAX_TAGS
+          help: DELIVERNEXT.ADMIN.THEME.BLOG.SIDEBAR_MAX_TAGS_HELP
+          size: small
+          placeholder: DELIVERNEXT.ADMIN.THEME.BLOG.SIDEBAR_MAX_TAGS_PLACEHOLDER
+          validate:
+            type: int
+            min: 0
+
+        featured_posts_section:
+          type: section
+          title: DELIVERNEXT.ADMIN.THEME.BLOG.FEATURED_POSTS.SECTION
+          underline: false
+          fields:
+
+            featuredposts:
+              type: toggle
+              label: DELIVERNEXT.ADMIN.THEME.BLOG.FEATURED_POSTS.LABEL
+              highlight: 1
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+
+            featuredposts_number:
+              type: range
+              label: DELIVERNEXT.ADMIN.THEME.BLOG.FEATURED_POSTS.NUMBER
+              help: DELIVERNEXT.ADMIN.THEME.BLOG.FEATURED_POSTS.NUMBER_HELP
+              default: 3
+              min: 1
+              max: 5
+              validate:
+                min: 1
+                max: 5

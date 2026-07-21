@@ -21,6 +21,16 @@ form:
       rows: 5            
       markdown: true 
     
+    header.sidebar_limit_tags:
+      type: text
+      label: DELIVERNEXT.ADMIN.BLOG.CONFIGURATION.SIDEBAR_LIMIT_TAGS
+      help: DELIVERNEXT.ADMIN.BLOG.CONFIGURATION.SIDEBAR_LIMIT_TAGS_HELP
+      size: small
+      placeholder: DELIVERNEXT.ADMIN.BLOG.CONFIGURATION.SIDEBAR_LIMIT_TAGS_PLACEHOLDER
+      validate:
+        type: int
+        min: 0 
+    
     # header.show_featured:
     #   type: toggle
     #   toggleable: true

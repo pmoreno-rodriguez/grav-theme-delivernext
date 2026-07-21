@@ -5,6 +5,19 @@ form:
       type: spacer
       title:  DELIVERNEXT.ADMIN.BLOG.CONFIGURATION.LABEL
       
+    header.featured:
+      type: toggle
+      toggleable: true
+      label: DELIVERNEXT.ADMIN.BLOG.CONFIGURATION.FEATURED
+      help: DELIVERNEXT.ADMIN.BLOG.CONFIGURATION.FEATURED_HELP
+      highlight: 0
+      default: 0
+      options:
+        1: PLUGIN_ADMIN.ENABLED
+        0: PLUGIN_ADMIN.DISABLED
+      validate:
+        type: bool
+
     header.show_sidebar:
       type: toggle
       toggleable: true

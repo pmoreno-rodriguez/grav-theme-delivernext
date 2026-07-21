@@ -18,6 +18,8 @@
     {% include 'partials/sidebar/simplesearch_searchbox.html.twig' %}
 </div>
 {% endif %}
+{# Featured posts #}
+{% include 'partials/sidebar/featuredposts.html.twig' %}
 {# Show Related Pages if plugin is enabled #}
 {% if showRelatedPages %}
 <div class="sidebar-content">
@@ -40,9 +42,15 @@
 {% endif %}
 {# Show Taxonomylist if plugin is enabled #}
 {% if showTaxonomyList %}
+{% set limit_tags = page.header.sidebar_limit_tags ?? theme_var('sidebar_max_tags') %}
 <div class="sidebar-content">
     <h4>{{ 'DELIVERNEXT.SIDEBAR.TAXONOMYLIST.LABEL'|t }}</h4>
-    {% include 'partials/sidebar/taxonomylist.html.twig' with {'base_url':base_url, 'taxonomy':'tag'}  %}
+    {% include 'partials/sidebar/taxonomylist.html.twig' with {
+        'base_url': base_url, 
+        'taxonomy': 'tag',
+        'filterend': limit_tags is not empty ? limit_tags : null,
+        'children_only': true
+    } %}
 </div>
 {% endif %}
 {# Show Archives if plugin is enabled #}
