@@ -1,18 +1,10 @@
-{# Set page datePublished in folowing order with support for translations #}
-{# FIRST: Page publication date #}
-{# SECOND: Page date #}
-{# LAST: Page modification date #}
+{# Date fallback order: publish_date → page.date → page.modified #}
+{% set raw_date = page.header.publish_date ?: (page.date ?: page.modified) %}
 
-{# SET DEFAULT GRAV LANGUAGE #}
-{% apply spaceless %}
+{% set intl_available = config.plugins.intl.enabled|default(false) %}
 
-{% set lang = grav.language.getActive ?? grav.config.site.default_lang %}
-{% set short_format = system.pages.dateformat.short %}
-
-{# Determine which date to use #}
-{% set datePublished = page.header.publish_date ?? page.date ?? page.modified %}
-
-{# Format using native Twig date filter #}
-{{ datePublished|date(short_format) }}
-
-{% endapply %}
+{% if intl_available %}
+  {% include 'partials/page/date-intl.html.twig' with {raw_date: raw_date} %}
+{% else %}
+  {% include 'partials/page/date-fallback.html.twig' with {raw_date: raw_date} %}
+{% endif %}
