@@ -1,3 +1,11 @@
+# v2.4.0
+## 07/24/2026
+
+1. [](#new)
+    * Added Intl plugin integration for localized date formatting across theme (dates, archives, etc)
+2. [](#improved)
+    * Improved featured posts mobile responsive layout
+
 # v2.3.1
 ## 07/21/2026
 
